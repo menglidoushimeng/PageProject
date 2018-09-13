@@ -1,0 +1,6 @@
+framework module Pods_PageProject {
+  umbrella header "Pods-PageProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
