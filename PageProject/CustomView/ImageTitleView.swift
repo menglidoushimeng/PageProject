@@ -19,7 +19,7 @@ class ImageTitleView: UIView {
             return titleLb.text!
         }
     }
-    // 描述显示
+    // 比例显示
     var descText:String {
         set {
             
@@ -36,10 +36,13 @@ class ImageTitleView: UIView {
             return imageView.image!
         }
     }
-    // 蒙层比例 0 ~ 1
+    // 蒙层比例
     var proportion:CGFloat {
         set {
             proportionNum = newValue
+            if proportionNum < 0.05 {
+                proportionNum += 0.02
+            }
             if proportionNum > 1 {
                proportionNum = 1
             }
@@ -67,12 +70,14 @@ class ImageTitleView: UIView {
     
     private func viewSetting() {
         self.addSubview(imageView)
-        imageView.contentMode = UIViewContentMode.scaleAspectFill
         self.addSubview(titleLb)
-        titleLb.font = UIFont.systemFont(ofSize: 17)
+        imageView.image = UIImage.init(named: "dict_unitdo")
+        titleLb.text = "Title";
+        titleLb.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.light)
         titleLb.textColor =  UIColor.black
         titleLb.textAlignment = NSTextAlignment.center
         descLb.textColor = UIColor.black
+        descLb.text = "desc"
         descLb.textAlignment = NSTextAlignment.center
         descLb.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
         descLb.textColor = UIColor.black.withAlphaComponent(0.5)
@@ -108,8 +113,8 @@ class ImageTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutIfNeeded() {
-        super.layoutIfNeeded()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         let imageViewFrame = imageView.frame
         imageLayer.frame = CGRect.init(x: 0, y: 0, width: imageViewFrame.size.width, height: imageViewFrame.size.height * (1 - proportionNum))
     }

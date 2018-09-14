@@ -13,9 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-// Example
         let view = ImageTitleView()
         self.view.addSubview(view)
         view.snp.makeConstraints { (make) in
@@ -25,10 +22,6 @@ class ViewController: UIViewController {
             make.height.equalTo(150)
         }
         view.proportion = 0.5
-        view.titleText = "标题"
-        view.descText = "0/0"
-        view.showImage = UIImage.init(named: "dict_playtextbig")!
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
