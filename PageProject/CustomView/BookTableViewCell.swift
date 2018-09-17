@@ -11,9 +11,22 @@ import UIKit
 class BookTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
+        if index/2 != 0 {
+            downBtn.isHidden = true
+        }else{
+            rightArrowImageV.isHidden = false
+            practiseImageV.isHidden = false
+        }
+        
     }
+    
+    
+    
+    
+    
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

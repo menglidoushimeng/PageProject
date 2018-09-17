@@ -43,6 +43,7 @@ class BookHeaderTableViewCell: UITableViewCell {
             
         }
         
+        
         bootomView.addSubview(wordView)
         wordView.snp.makeConstraints { (make) in
             make.left.equalTo(listenView.snp.right)

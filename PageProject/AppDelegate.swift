@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let bookVc = story.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
-        self.window?.rootViewController = bookVc
+        let navi = RootNavigationController(rootViewController: bookVc)
+        self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
         return true
     }
