@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 enum HeaderTapEnum {
+    case share // 分享
     case listen // 听课文
     case word // 单词
     case sentence // 短语
@@ -119,11 +120,14 @@ class BookHeaderTableViewCell: UITableViewCell {
         textView.titleText = "课文"
         textView.descText = "4/24"
         textView.proportion = 4.000/24
-         textView.btnAction = {(tag) in
+        textView.btnAction = {(tag) in
             weakSelf?.HeaderViewAction(.text)
             
         }
         
+    }
+    @IBAction func shareBtnAction(_ sender: UIButton) {
+        self.HeaderViewAction(.share)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -43,12 +43,23 @@
                             <constraint firstAttribute="height" constant="10" id="hfM-9P-MuE"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzU-Ze-XYi">
+                        <rect key="frame" x="485" y="15" width="31" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="分享">
+                            <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="shareBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OyK-6f-oCx"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="m3H-cH-ksT" secondAttribute="trailing" id="Bke-L7-hH4"/>
                     <constraint firstItem="5dB-os-YTM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FA1-Es-IrD"/>
                     <constraint firstItem="kHU-Pc-pmA" firstAttribute="top" secondItem="DgP-M3-xmh" secondAttribute="bottom" constant="20" id="HwC-qa-8dc"/>
                     <constraint firstAttribute="bottom" secondItem="kHU-Pc-pmA" secondAttribute="bottom" constant="20" id="JB1-ha-6Li"/>
+                    <constraint firstAttribute="trailing" secondItem="NzU-Ze-XYi" secondAttribute="trailing" constant="15" id="JbN-wB-cMl"/>
                     <constraint firstItem="m3H-cH-ksT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KKC-cT-cde"/>
                     <constraint firstItem="DgP-M3-xmh" firstAttribute="top" secondItem="5dB-os-YTM" secondAttribute="bottom" constant="10" id="MNT-k5-LWl"/>
                     <constraint firstAttribute="bottom" secondItem="m3H-cH-ksT" secondAttribute="bottom" id="Sky-BC-2Is"/>
@@ -56,6 +67,7 @@
                     <constraint firstItem="DgP-M3-xmh" firstAttribute="centerX" secondItem="5dB-os-YTM" secondAttribute="centerX" id="Xkp-AA-h0h"/>
                     <constraint firstAttribute="trailing" secondItem="kHU-Pc-pmA" secondAttribute="trailing" constant="10" id="buN-oK-87N"/>
                     <constraint firstItem="kHU-Pc-pmA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ooI-2J-swl"/>
+                    <constraint firstItem="NzU-Ze-XYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="x1z-Pp-sfo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

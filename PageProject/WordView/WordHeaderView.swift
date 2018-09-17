@@ -32,7 +32,7 @@ class WordHeaderView: UIView {
             make.left.equalToSuperview()
             make.top.equalToSuperview()
             make.right.equalToSuperview()
-            make.bottom.equalTo(self.snp.bottom).offset(-10)
+            make.bottom.equalTo(self.snp.bottom).offset(-2)
         }
        
         contentView.addSubview(listenView)
@@ -40,7 +40,7 @@ class WordHeaderView: UIView {
         listenView.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
             make.top.equalToSuperview()
-            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
+            make.bottom.equalTo(contentView.snp.bottom)
             make.width.equalTo(screenW/3)
         }
         listenView.showImage = UIImage.init(named: "dict_playtext")!
@@ -48,7 +48,7 @@ class WordHeaderView: UIView {
         listenView.descText = " "
         listenView.proportion = 1
         
-        self.addSubview(wordView)
+        contentView.addSubview(wordView)
         wordView.snp.makeConstraints { (make) in
             make.left.equalTo(listenView.snp.right)
             make.top.equalToSuperview()
@@ -61,7 +61,7 @@ class WordHeaderView: UIView {
         wordView.descText = "38/400"
         wordView.proportion = 38.000/400
         
-        self.addSubview(phraseView)
+        contentView.addSubview(phraseView)
         phraseView.snp.makeConstraints { (make) in
             make.left.equalTo(wordView.snp.right)
             make.top.equalToSuperview()
@@ -76,12 +76,12 @@ class WordHeaderView: UIView {
         phraseView.proportion = 12/200
        
         self.addSubview(bottomLineView)
-        bottomLineView.backgroundColor = UIColor.lightGray
+        bottomLineView.backgroundColor = UIColor.init(red: 221/255.000, green: 221/255.000, blue: 221/255.000, alpha: 1)
         bottomLineView.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
             make.bottom.equalToSuperview()
             make.right.equalToSuperview()
-            make.height.equalTo(5)
+            make.height.equalTo(2)
         }
     
     }

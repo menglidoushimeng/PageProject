@@ -14,6 +14,14 @@ class BookViewController: UIViewController {
     
     var bookDataSource:BookModel? // 教科书数据源
     @IBOutlet weak var bookTableView: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         self.navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,7 +68,7 @@ extension BookViewController : UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
-            var bookUnit = bookDataSource?.dict_book_units![indexPath.row] as! BookUnitModel // 获取cell对应的model
+//            var bookUnit = bookDataSource?.dict_book_units![indexPath.row] as! BookUnitModel // 获取cell对应的model
             cell.selectionStyle = .none
             cell.index = indexPath
             if indexPath.row % 2 == 0 {
@@ -82,7 +90,12 @@ extension BookViewController : UITableViewDataSource {
         if section == 0 {
             return 1
         } else {
+            if bookDataSource == nil || bookDataSource?.dict_book_units == nil {
+            return 10
+            }
+            else {
             return (bookDataSource?.dict_book_units?.count)!
+            }
         }
     }
     
