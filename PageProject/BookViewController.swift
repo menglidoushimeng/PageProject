@@ -8,11 +8,13 @@
 
 import UIKit
 
+
 class BookViewController: UIViewController {
 
     @IBOutlet weak var bookTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.viewSetting()
 
         // Do any additional setup after loading the view.
@@ -23,6 +25,7 @@ class BookViewController: UIViewController {
         self.bookTableView.register(UINib.init(nibName: "BookHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookHeaderTableViewCell")
         self.bookTableView.register(UINib.init(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "BookTableViewCell")
         self.bookTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,9 +50,13 @@ extension BookViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BookHeaderTableViewCell", for: indexPath) as! BookHeaderTableViewCell
+            cell.selectionStyle = .none
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
+            cell.selectionStyle = .none
+            
+           // cell.index = indexPath.row 
             return cell
         }
     }
@@ -73,5 +80,9 @@ extension BookViewController : UITableViewDelegate {
         } else {
             return 80
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let wordVC = WordViewController()
+        self.navigationController?.pushViewController(wordVC, animated: true)
     }
 }
