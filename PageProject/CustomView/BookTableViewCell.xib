@@ -19,46 +19,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="434" height="135.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="unitname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-U0-yGO">
-                        <rect key="frame" x="20" y="10" width="67" height="101"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starter Unit 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-U0-yGO">
+                        <rect key="frame" x="20" y="10" width="98.5" height="101"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P97-cF-C5a">
-                        <rect key="frame" x="20" y="111" width="38.5" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="03:57" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P97-cF-C5a">
+                        <rect key="frame" x="20" y="111" width="33" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordcount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJR-2N-kEx">
-                        <rect key="frame" x="68.5" y="111" width="60" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJR-2N-kEx">
+                        <rect key="frame" x="63" y="111" width="27" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phrasecount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-lm-O3F">
-                        <rect key="frame" x="138.5" y="111" width="70.5" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4短语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-lm-O3F">
+                        <rect key="frame" x="100" y="111" width="32.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sentencecount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Av-iG-lkQ">
-                        <rect key="frame" x="219" y="111" width="84" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0句" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Av-iG-lkQ">
+                        <rect key="frame" x="142.5" y="111" width="20" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="paragraphcount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-GE-7k9">
-                        <rect key="frame" x="313" y="111" width="89.5" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0段" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-GE-7k9">
+                        <rect key="frame" x="172.5" y="111" width="20" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="前往" translatesAutoresizingMaskIntoConstraints="NO" id="78G-UP-L59">
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="前往" translatesAutoresizingMaskIntoConstraints="NO" id="78G-UP-L59">
                         <rect key="frame" x="403" y="56" width="21" height="24"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_unitdo" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-wA-LrL">
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_unitdo" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-wA-LrL">
                         <rect key="frame" x="363" y="48" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="AAD-Hr-0kS"/>
@@ -66,11 +66,14 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cho-ov-zbL">
-                        <rect key="frame" x="374" y="59.5" width="45" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <rect key="frame" x="368" y="57.5" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="下载" image="down">
                             <color key="titleColor" red="0.074509803920000006" green="0.56470588239999997" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="downLoadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mqq-Ji-ady"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -93,21 +96,20 @@
                     <constraint firstItem="Cho-ov-zbL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hjy-gA-zGV"/>
                     <constraint firstItem="OFR-GE-7k9" firstAttribute="centerY" secondItem="WJR-2N-kEx" secondAttribute="centerY" id="nRF-2Q-52t"/>
                     <constraint firstItem="P97-cF-C5a" firstAttribute="leading" secondItem="vcQ-U0-yGO" secondAttribute="leading" id="pHX-lZ-pvt"/>
-                    <constraint firstAttribute="trailing" secondItem="78G-UP-L59" secondAttribute="trailing" constant="10" id="sil-9p-WOf"/>
                     <constraint firstItem="OFR-GE-7k9" firstAttribute="leading" secondItem="0Av-iG-lkQ" secondAttribute="trailing" constant="10" id="xtG-VA-JJt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="courseLab" destination="P97-cF-C5a" id="kl6-bn-7EL"/>
-                <outlet property="downBtn" destination="Cho-ov-zbL" id="bjE-2o-64a"/>
-                <outlet property="paragraphCountLab" destination="OFR-GE-7k9" id="eo1-by-tUH"/>
-                <outlet property="phraseCountLab" destination="0Cn-lm-O3F" id="5Lm-eJ-5eS"/>
-                <outlet property="practiseImageV" destination="XDN-wA-LrL" id="qFp-uY-wMp"/>
-                <outlet property="rightArrowImageV" destination="78G-UP-L59" id="5io-KK-qnC"/>
-                <outlet property="sentenceCountLab" destination="0Av-iG-lkQ" id="YSh-iT-XdJ"/>
-                <outlet property="unitNameLab" destination="vcQ-U0-yGO" id="SxY-Vs-JdV"/>
-                <outlet property="wordCountLab" destination="WJR-2N-kEx" id="Yio-t7-F77"/>
+                <outlet property="courseLb" destination="P97-cF-C5a" id="jDl-YQ-edc"/>
+                <outlet property="downBtn" destination="Cho-ov-zbL" id="BPF-Zr-ueP"/>
+                <outlet property="paragraphcountLb" destination="OFR-GE-7k9" id="4EZ-a4-Iq7"/>
+                <outlet property="phrasetcountLb" destination="0Cn-lm-O3F" id="f2Y-cJ-E44"/>
+                <outlet property="practiseImageV" destination="XDN-wA-LrL" id="EVY-HW-aV7"/>
+                <outlet property="rightArrowImageV" destination="78G-UP-L59" id="l1I-bT-HZa"/>
+                <outlet property="sentencecountLb" destination="0Av-iG-lkQ" id="haO-ia-ER2"/>
+                <outlet property="unitNameLb" destination="vcQ-U0-yGO" id="AS3-Ac-fXy"/>
+                <outlet property="wordcountLb" destination="WJR-2N-kEx" id="dxE-gU-1nx"/>
             </connections>
             <point key="canvasLocation" x="4" y="16"/>
         </tableViewCell>
