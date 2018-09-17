@@ -8,7 +8,11 @@
 
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
 class ImageTitleView: UIView {
+    
+    
     
    // 标题内容
    var titleText:String {
@@ -37,7 +41,7 @@ class ImageTitleView: UIView {
         }
     }
     // 蒙层比例
-    var proportion:CGFloat {
+    var proportion:CGFloat { // 0 ~ 1
         set {
             proportionNum = newValue
             if proportionNum < 0.05 {
@@ -54,14 +58,29 @@ class ImageTitleView: UIView {
             return  proportionNum
         }
     }
+    var btnEnable:Bool { // default is true
+        set {
+            tapBtn.isUserInteractionEnabled = newValue
+        }
+        get {
+            return tapBtn.isUserInteractionEnabled
+        }
+    }
     
+    var viewTag:NSInteger = 0
     
     private var imageView = UIImageView()
     private var titleLb = UILabel()
     private var descLb = UILabel()
     private var imageLayer = CAShapeLayer()
     private var proportionNum:CGFloat = 0.00
+    private var tapBtn = UIButton()
     
+    var btnAction = {
+        (tag:NSInteger) -> ()
+       in
+        
+    }
     
     override init(frame:CGRect) {
         super.init(frame:frame)
@@ -69,6 +88,17 @@ class ImageTitleView: UIView {
     }
     
     private func viewSetting() {
+        self.addSubview(tapBtn)
+        
+        _ = tapBtn.rx.tap.subscribe(onNext:{
+             self.btnAction(self.viewTag)
+            
+        })
+        tapBtn.snp.makeConstraints { (make) in
+            make.top.left.width.bottom.equalToSuperview()
+        }
+        tapBtn.backgroundColor = UIColor.clear
+        tapBtn.setTitle("", for: .normal)
         self.addSubview(imageView)
         self.addSubview(titleLb)
         imageView.image = UIImage.init(named: "dict_unitdo")

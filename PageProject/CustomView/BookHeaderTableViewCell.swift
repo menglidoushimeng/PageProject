@@ -38,6 +38,10 @@ class BookHeaderTableViewCell: UITableViewCell {
         listenView.titleText = "听课文"
         listenView.descText = " "
         listenView.proportion = 1
+        listenView.btnAction = {(tag) in
+            print("点击了按钮")
+            
+        }
         
         bootomView.addSubview(wordView)
         wordView.snp.makeConstraints { (make) in
