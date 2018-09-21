@@ -95,9 +95,11 @@ extension BookViewController : UITableViewDataSource {
         if section == 0 {
             return 1
         } else {
- #if debug
+ #if DEBUG
+            print("走了debug")
             return 10
  #else
+            print("走了debug之外")
             return (bookDataSource?.dict_book_units?.count)!
  #endif
         }
@@ -109,7 +111,7 @@ extension BookViewController : UITableViewDelegate {
         if indexPath.section == 0 {
             return UIScreen.main.bounds.size.width
         } else {
-            return 80
+            return 60
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -22,6 +22,7 @@
 		5E0354AB214A355E0040BC2E /* PageProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0354AA214A355E0040BC2E /* PageProjectTests.swift */; };
 		5E0354B6214A355E0040BC2E /* PageProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0354B5214A355E0040BC2E /* PageProjectUITests.swift */; };
 		5E0354C5214A37630040BC2E /* ImageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0354C4214A37630040BC2E /* ImageTitleView.swift */; };
+		5E2E03D72154CA77001D6C48 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03D62154CA77001D6C48 /* ColorExtension.swift */; };
 		5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */; };
 		5EE588CC214B3DBA003221A9 /* BookHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE588CA214B3DBA003221A9 /* BookHeaderTableViewCell.xib */; };
 		5EE588CF214B3DCE003221A9 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588CD214B3DCE003221A9 /* BookTableViewCell.swift */; };
@@ -67,6 +68,7 @@
 		5E0354B5214A355E0040BC2E /* PageProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageProjectUITests.swift; sourceTree = "<group>"; };
 		5E0354B7214A355E0040BC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0354C4214A37630040BC2E /* ImageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleView.swift; sourceTree = "<group>"; };
+		5E2E03D62154CA77001D6C48 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		5EE588CA214B3DBA003221A9 /* BookHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		5EE588CD214B3DCE003221A9 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,15 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15A4C5A3214CEAE5008D2B52 /* WordView */ = {
-			isa = PBXGroup;
-			children = (
-				15A4C5A4214CEB70008D2B52 /* WordHeaderView.swift */,
-				15A4C5A6214CF303008D2B52 /* WordSectionTableViewCell.swift */,
-			);
-			path = WordView;
-			sourceTree = "<group>";
-		};
 		15DA05AF734B979495422AE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +147,11 @@
 		5E035491214A355C0040BC2E /* PageProject */ = {
 			isa = PBXGroup;
 			children = (
-				5E2E03C5215498DB001D6C48 /* New Group */,
-				15A4C5A3214CEAE5008D2B52 /* WordView */,
-				5E0354C3214A373C0040BC2E /* CustomView */,
+				5E2E03D02154C3DD001D6C48 /* CommonConfig */,
+				5E2E03CC2154C379001D6C48 /* Root */,
+				5E2E03C62154C318001D6C48 /* Class */,
 				5E035492214A355C0040BC2E /* AppDelegate.swift */,
 				5E035494214A355C0040BC2E /* ViewController.swift */,
-				15A4C59F214CE8FE008D2B52 /* RootNavigationController.swift */,
-				5EE588D1214B3E2F003221A9 /* BookViewController.swift */,
-				15A4C5A1214CEAC2008D2B52 /* WordViewController.swift */,
 				5E035496214A355C0040BC2E /* Main.storyboard */,
 				5E03549C214A355D0040BC2E /* Assets.xcassets */,
 				5E03549E214A355D0040BC2E /* LaunchScreen.storyboard */,
@@ -189,24 +179,101 @@
 			path = PageProjectUITests;
 			sourceTree = "<group>";
 		};
-		5E0354C3214A373C0040BC2E /* CustomView */ = {
+		5E2E03C62154C318001D6C48 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				5E0354C4214A37630040BC2E /* ImageTitleView.swift */,
+				5E2E03CD2154C38D001D6C48 /* Unit */,
+				5E2E03CB2154C361001D6C48 /* Common */,
+				5E2E03C72154C325001D6C48 /* BookDetail */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		5E2E03C72154C325001D6C48 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E03CA2154C34C001D6C48 /* Model */,
+				5E2E03C92154C33F001D6C48 /* View */,
+				5E2E03C82154C339001D6C48 /* VC */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		5E2E03C82154C339001D6C48 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5EE588D1214B3E2F003221A9 /* BookViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5E2E03C92154C33F001D6C48 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */,
 				5EE588CA214B3DBA003221A9 /* BookHeaderTableViewCell.xib */,
 				5EE588CD214B3DCE003221A9 /* BookTableViewCell.swift */,
 				5EE588CE214B3DCE003221A9 /* BookTableViewCell.xib */,
-				15953D18214E95560058A5AB /* BookModel.swift */,
 			);
-			path = CustomView;
+			path = View;
 			sourceTree = "<group>";
 		};
-		5E2E03C5215498DB001D6C48 /* New Group */ = {
+		5E2E03CA2154C34C001D6C48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15953D18214E95560058A5AB /* BookModel.swift */,
 			);
-			path = "New Group";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E2E03CB2154C361001D6C48 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5E0354C4214A37630040BC2E /* ImageTitleView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5E2E03CC2154C379001D6C48 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				15A4C59F214CE8FE008D2B52 /* RootNavigationController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5E2E03CD2154C38D001D6C48 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E03CF2154C39B001D6C48 /* View */,
+				5E2E03CE2154C396001D6C48 /* VC */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		5E2E03CE2154C396001D6C48 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				15A4C5A1214CEAC2008D2B52 /* WordViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5E2E03CF2154C39B001D6C48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15A4C5A4214CEB70008D2B52 /* WordHeaderView.swift */,
+				15A4C5A6214CF303008D2B52 /* WordSectionTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E2E03D02154C3DD001D6C48 /* CommonConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E03D62154CA77001D6C48 /* ColorExtension.swift */,
+			);
+			path = CommonConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +472,7 @@
 				5E035495214A355C0040BC2E /* ViewController.swift in Sources */,
 				15A4C5A2214CEAC2008D2B52 /* WordViewController.swift in Sources */,
 				15A4C5A5214CEB70008D2B52 /* WordHeaderView.swift in Sources */,
+				5E2E03D72154CA77001D6C48 /* ColorExtension.swift in Sources */,
 				15A4C5A0214CE8FE008D2B52 /* RootNavigationController.swift in Sources */,
 				5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */,
 				15953D19214E95560058A5AB /* BookModel.swift in Sources */,
@@ -592,6 +660,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.PageProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

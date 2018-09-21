@@ -109,14 +109,13 @@ class ImageTitleView: UIView {
         self.addSubview(titleLb)
         imageView.image = UIImage.init(named: "dict_unitdo")
         titleLb.text = "Title";
-        titleLb.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.light)
-        titleLb.textColor =  UIColor.black
+        titleLb.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
+        titleLb.textColor =  ColorExtension().largeGray
         titleLb.textAlignment = NSTextAlignment.center
-        descLb.textColor = UIColor.black
         descLb.text = "desc"
         descLb.textAlignment = NSTextAlignment.center
         descLb.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
-        descLb.textColor = UIColor.black.withAlphaComponent(0.5)
+        descLb.textColor = ColorExtension().smallGray
         self.addSubview(descLb)
         descLb.snp.makeConstraints { (make) in
             make.left.equalToSuperview()

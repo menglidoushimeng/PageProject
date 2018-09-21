@@ -22,12 +22,12 @@ class BookTableViewCell: UITableViewCell {
                 downBtn.isHidden = false
                 rightArrowImageV.isHidden = true
                 practiseImageV.isHidden = true
-                unitNameLb.textColor = UIColor.init(red: 99/255.0, green:99/255.0, blue:  99/255.0, alpha: 1)
+                unitNameLb.textColor = ColorExtension().smallGray
             } else {
                 downBtn.isHidden = true
                 rightArrowImageV.isHidden = false
                 practiseImageV.isHidden = false
-                 unitNameLb.textColor = UIColor.black
+                 unitNameLb.textColor = ColorExtension().largeGray
             }
         }
     }

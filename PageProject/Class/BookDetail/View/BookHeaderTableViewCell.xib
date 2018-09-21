@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,13 +37,17 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3H-cH-ksT">
                         <rect key="frame" x="0.0" y="417.5" width="531" height="10"/>
-                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="hfM-9P-MuE"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzU-Ze-XYi">
-                        <rect key="frame" x="485" y="15" width="31" height="30"/>
+                        <rect key="frame" x="461" y="0.0" width="70" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="mRX-lI-U8h"/>
+                            <constraint firstAttribute="height" constant="42" id="oSr-0C-mev"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="分享">
                             <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,7 +62,7 @@
                     <constraint firstItem="5dB-os-YTM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FA1-Es-IrD"/>
                     <constraint firstItem="kHU-Pc-pmA" firstAttribute="top" secondItem="DgP-M3-xmh" secondAttribute="bottom" constant="20" id="HwC-qa-8dc"/>
                     <constraint firstAttribute="bottom" secondItem="kHU-Pc-pmA" secondAttribute="bottom" constant="20" id="JB1-ha-6Li"/>
-                    <constraint firstAttribute="trailing" secondItem="NzU-Ze-XYi" secondAttribute="trailing" constant="15" id="JbN-wB-cMl"/>
+                    <constraint firstAttribute="trailing" secondItem="NzU-Ze-XYi" secondAttribute="trailing" id="JbN-wB-cMl"/>
                     <constraint firstItem="m3H-cH-ksT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KKC-cT-cde"/>
                     <constraint firstItem="DgP-M3-xmh" firstAttribute="top" secondItem="5dB-os-YTM" secondAttribute="bottom" constant="10" id="MNT-k5-LWl"/>
                     <constraint firstAttribute="bottom" secondItem="m3H-cH-ksT" secondAttribute="bottom" id="Sky-BC-2Is"/>
@@ -67,7 +70,7 @@
                     <constraint firstItem="DgP-M3-xmh" firstAttribute="centerX" secondItem="5dB-os-YTM" secondAttribute="centerX" id="Xkp-AA-h0h"/>
                     <constraint firstAttribute="trailing" secondItem="kHU-Pc-pmA" secondAttribute="trailing" constant="10" id="buN-oK-87N"/>
                     <constraint firstItem="kHU-Pc-pmA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ooI-2J-swl"/>
-                    <constraint firstItem="NzU-Ze-XYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="x1z-Pp-sfo"/>
+                    <constraint firstItem="NzU-Ze-XYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="x1z-Pp-sfo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
