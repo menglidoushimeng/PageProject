@@ -23,6 +23,9 @@
 		5E0354B6214A355E0040BC2E /* PageProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0354B5214A355E0040BC2E /* PageProjectUITests.swift */; };
 		5E0354C5214A37630040BC2E /* ImageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0354C4214A37630040BC2E /* ImageTitleView.swift */; };
 		5E2E03D72154CA77001D6C48 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03D62154CA77001D6C48 /* ColorExtension.swift */; };
+		5E2E03D92154D523001D6C48 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03D82154D523001D6C48 /* RootViewModel.swift */; };
+		5E2E03DC2154D54A001D6C48 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */; };
+		5E2E03DE2154DA22001D6C48 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03DD2154DA22001D6C48 /* RootViewController.swift */; };
 		5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */; };
 		5EE588CC214B3DBA003221A9 /* BookHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EE588CA214B3DBA003221A9 /* BookHeaderTableViewCell.xib */; };
 		5EE588CF214B3DCE003221A9 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588CD214B3DCE003221A9 /* BookTableViewCell.swift */; };
@@ -69,6 +72,9 @@
 		5E0354B7214A355E0040BC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0354C4214A37630040BC2E /* ImageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleView.swift; sourceTree = "<group>"; };
 		5E2E03D62154CA77001D6C48 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		5E2E03D82154D523001D6C48 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		5E2E03DD2154DA22001D6C48 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		5EE588CA214B3DBA003221A9 /* BookHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		5EE588CD214B3DCE003221A9 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,9 +198,10 @@
 		5E2E03C72154C325001D6C48 /* BookDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5E2E03C82154C339001D6C48 /* VC */,
+				5E2E03DA2154D528001D6C48 /* VM */,
 				5E2E03CA2154C34C001D6C48 /* Model */,
 				5E2E03C92154C33F001D6C48 /* View */,
-				5E2E03C82154C339001D6C48 /* VC */,
 			);
 			path = BookDetail;
 			sourceTree = "<group>";
@@ -238,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				15A4C59F214CE8FE008D2B52 /* RootNavigationController.swift */,
+				5E2E03D82154D523001D6C48 /* RootViewModel.swift */,
+				5E2E03DD2154DA22001D6C48 /* RootViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -274,6 +283,14 @@
 				5E2E03D62154CA77001D6C48 /* ColorExtension.swift */,
 			);
 			path = CommonConfig;
+			sourceTree = "<group>";
+		};
+		5E2E03DA2154D528001D6C48 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,9 +490,12 @@
 				15A4C5A2214CEAC2008D2B52 /* WordViewController.swift in Sources */,
 				15A4C5A5214CEB70008D2B52 /* WordHeaderView.swift in Sources */,
 				5E2E03D72154CA77001D6C48 /* ColorExtension.swift in Sources */,
+				5E2E03DC2154D54A001D6C48 /* BookViewModel.swift in Sources */,
+				5E2E03DE2154DA22001D6C48 /* RootViewController.swift in Sources */,
 				15A4C5A0214CE8FE008D2B52 /* RootNavigationController.swift in Sources */,
 				5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */,
 				15953D19214E95560058A5AB /* BookModel.swift in Sources */,
+				5E2E03D92154D523001D6C48 /* RootViewModel.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
 				15A4C5A7214CF303008D2B52 /* WordSectionTableViewCell.swift in Sources */,

@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
-class BookViewController: UIViewController {
 
-    
-    var bookDataSource:BookModel? // 教科书数据源
+
+
+class BookViewController: RootViewController {
+    var bookViewModel = BookViewModel();
      var bookTableView = UITableView()
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
@@ -25,12 +24,13 @@ class BookViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.viewSetting()
+       
 
         // Do any additional setup after loading the view.
     }
-    func viewSetting() {
+    override func viewSetting() {
+        super.viewSetting();
+        self.bookViewModel.delegate = self;
         self.view.addSubview(bookTableView)
         bookTableView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalToSuperview()
@@ -62,60 +62,27 @@ class BookViewController: UIViewController {
 extension BookViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BookHeaderTableViewCell", for: indexPath) as! BookHeaderTableViewCell
-            cell.selectionStyle = .none
-            cell.HeaderViewAction = {(enumType) in
-                
-               print("视图头部点击事件")
-            }
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
-//            var bookUnit = bookDataSource?.dict_book_units![indexPath.row] as! BookUnitModel // 获取cell对应的model
-            cell.selectionStyle = .none
-            cell.index = indexPath
-            if indexPath.row % 2 == 0 {
-                cell.cellType = .unLoad
-            } else {
-                cell.cellType = .load
-            }
-            cell.cellDownLoadBlock = {(index) in
-                print("点击了下载按钮");
-            }
-            return cell
-        }
+        return bookViewModel.cellForRow(tableView:tableView,indexPath: indexPath)
     }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return bookViewModel.numberOfSection(in:tableView)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if section == 0 {
-            return 1
-        } else {
- #if DEBUG
-            print("走了debug")
-            return 10
- #else
-            print("走了debug之外")
-            return (bookDataSource?.dict_book_units?.count)!
- #endif
-        }
+        return bookViewModel.numberOfRowsInSection(tableView:tableView, section:section)
     }
-    
 }
 extension BookViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return UIScreen.main.bounds.size.width
-        } else {
-            return 60
-        }
+     return  bookViewModel.heightForRowAt(tableView: tableView, indexPath: indexPath)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        bookViewModel.didSelectRowAt(tableView: tableView, indexPath: indexPath)
+    }
+}
+
+extension BookViewController: BookViewModelDelegate {
+    func onNextViewController() {
         let wordVC = WordViewController()
-        self.navigationController?.pushViewController(wordVC, animated: true)
+         self.navigationController?.pushViewController(wordVC, animated: true)
     }
 }
