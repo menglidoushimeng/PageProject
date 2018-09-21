@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 class BookViewController: UIViewController {
 
     
     var bookDataSource:BookModel? // 教科书数据源
-    @IBOutlet weak var bookTableView: UITableView!
+     var bookTableView = UITableView()
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          self.navigationController?.navigationBar.isHidden = true
@@ -30,12 +31,15 @@ class BookViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func viewSetting() {
+        self.view.addSubview(bookTableView)
+        bookTableView.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalToSuperview()
+        }
         self.bookTableView.dataSource = self as UITableViewDataSource
         self.bookTableView.delegate = self as UITableViewDelegate
         self.bookTableView.register(UINib.init(nibName: "BookHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookHeaderTableViewCell")
         self.bookTableView.register(UINib.init(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "BookTableViewCell")
         self.bookTableView.separatorStyle = UITableViewCellSeparatorStyle.none
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,15 +91,15 @@ extension BookViewController : UITableViewDataSource {
         return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         if section == 0 {
             return 1
         } else {
-            if bookDataSource == nil || bookDataSource?.dict_book_units == nil {
+ #if debug
             return 10
-            }
-            else {
+ #else
             return (bookDataSource?.dict_book_units?.count)!
-            }
+ #endif
         }
     }
     

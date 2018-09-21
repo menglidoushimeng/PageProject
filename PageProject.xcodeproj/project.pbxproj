@@ -154,6 +154,7 @@
 		5E035491214A355C0040BC2E /* PageProject */ = {
 			isa = PBXGroup;
 			children = (
+				5E2E03C5215498DB001D6C48 /* New Group */,
 				15A4C5A3214CEAE5008D2B52 /* WordView */,
 				5E0354C3214A373C0040BC2E /* CustomView */,
 				5E035492214A355C0040BC2E /* AppDelegate.swift */,
@@ -199,6 +200,13 @@
 				15953D18214E95560058A5AB /* BookModel.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		5E2E03C5215498DB001D6C48 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

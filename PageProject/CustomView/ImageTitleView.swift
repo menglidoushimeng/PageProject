@@ -19,15 +19,21 @@ class ImageTitleView: UIView {
         set {
 
             titleLb.text = newValue
+            if (titleLb.text?.isEmpty)! {
+                titleLb.text = " "
+            }
         } get {
             return titleLb.text!
         }
     }
-    // 比例显示
+    // 描述内容
     var descText:String {
         set {
             
            descLb.text = newValue
+            if (descLb.text?.isEmpty)! {
+                descLb.text = " "
+            }
         } get {
             return descLb.text!
         }

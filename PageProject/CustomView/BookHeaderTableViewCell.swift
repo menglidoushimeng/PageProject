@@ -4,7 +4,7 @@
 //
 //  Created by 梦里都是梦 on 2018/9/14.
 //  Copyright © 2018年 梦里都是梦. All rights reserved.
-//
+// 
 
 import UIKit
 import SnapKit
@@ -52,7 +52,7 @@ class BookHeaderTableViewCell: UITableViewCell {
         
         listenView.showImage = UIImage.init(named: "dict_playtext")!
         listenView.titleText = "听课文"
-        listenView.descText = " "
+        listenView.descText = ""
         listenView.proportion = 1
         listenView.btnAction = {(tag) in
             weakSelf?.HeaderViewAction(.listen)

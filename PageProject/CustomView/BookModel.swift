@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+
 class BookUnitModel: NSObject {
     var bookid:NSNumber?
     var course:String?
@@ -48,4 +50,5 @@ class BookModel: NSObject {
     var dict_books:Array<BookDetailModel>?
     var dict_cfgparam:Array<BookCfgparamModel>?
     var upd_content_latestid:NSNumber?
+    
 }
