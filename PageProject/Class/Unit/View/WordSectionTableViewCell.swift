@@ -62,8 +62,8 @@ class WordSectionTableViewCell: UITableViewCell {
         }
         wordView.showImage = UIImage.init(named: "dict_piexpressionsknowwell")!
         wordView.titleText = "单词"
-        wordView.descText = "38/400"
-        wordView.proportion = 38.000/400
+        wordView.descText = "380/400"
+        wordView.proportion = 380.000/400
      
         self.addSubview(sentenceView)
         sentenceView.snp.makeConstraints { (make) in
@@ -74,8 +74,8 @@ class WordSectionTableViewCell: UITableViewCell {
         }
         sentenceView.showImage = UIImage.init(named: "dict_pisentenceslegendary")!
         sentenceView.titleText = "短语"
-        sentenceView.descText = "16/152"
-        sentenceView.proportion = 16.000/152
+        sentenceView.descText = "150/152"
+        sentenceView.proportion = 150.000/152
         
       
     }
@@ -169,7 +169,7 @@ class WordSectionTableViewCell: UITableViewCell {
         }
         
     }
-    
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

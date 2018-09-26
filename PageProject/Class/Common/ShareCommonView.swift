@@ -17,15 +17,18 @@ enum ShareActionStyle {
 }
 
 
-class ShareCommonView: RootView {
+class ShareCommonView: UIView {
     
-   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.viewSetting()
+    }
     
-    override func viewSetting () {
-        self.qqBtn.layer.cornerRadius = 3;
-        self.qzoneBtn.layer.cornerRadius = 3;
-        self.wechatBtn.layer.cornerRadius = 3;
-        self.momentsBtn.layer.cornerRadius = 3;
+    func viewSetting () {
+        self.qqBtn.layer.cornerRadius = 5;
+        self.qzoneBtn.layer.cornerRadius = 5;
+        self.wechatBtn.layer.cornerRadius = 5;
+        self.momentsBtn.layer.cornerRadius = 5;
     }
     
     @IBOutlet weak var qqBtn: UIButton!

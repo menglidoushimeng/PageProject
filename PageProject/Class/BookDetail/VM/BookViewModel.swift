@@ -12,6 +12,7 @@ import RxCocoa
 
 protocol BookViewModelDelegate:RootViewModelDelegate {
     /******* 自定义协议  ********/
+    func shareViewShow()
 }
 
 
@@ -19,7 +20,7 @@ class BookViewModel: RootViewModel {
      var bookDataSource:BookModel? // 教科书数据源
     
     
-    
+     weak var bookDelegate:BookViewModelDelegate?
     
     
     
@@ -31,9 +32,14 @@ class BookViewModel: RootViewModel {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BookHeaderTableViewCell", for: indexPath) as! BookHeaderTableViewCell
             cell.selectionStyle = .none
-            cell.HeaderViewAction = {(enumType) in
-                
-                print("视图头部点击事件")
+            cell.HeaderViewAction = {(enumType:HeaderTapEnum) in
+                switch enumType {
+                case .share : do{
+                    self.bookDelegate?.shareViewShow()
+                }
+                    break;
+                default : break
+                }
             }
             return cell
         } else {
@@ -91,6 +97,6 @@ class BookViewModel: RootViewModel {
     
     func didSelectRowAt( tableView: UITableView,  indexPath: IndexPath) {
         
-        delegate?.onNextViewController()
+        bookDelegate?.onNextViewController()
     }
 }

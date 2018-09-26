@@ -14,6 +14,25 @@ import UIKit
 class BookViewController: RootViewController {
      var bookViewModel = BookViewModel();
      var bookTableView = UITableView()
+    lazy var cover:Cover = { () -> Cover in
+        let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
+            
+        }, color: UIColor.black.withAlphaComponent(0.7), removeSelf: true)
+        coverView.addSubview(self.shareView)
+        self.shareView.snp.makeConstraints({ (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.size.width / 2)
+        })
+        return coverView
+    }()
+    lazy var shareView:ShareCommonView = {() -> ShareCommonView in
+        let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
+        lazyShareView.shareActionStyle = { (style:ShareActionStyle) in
+            
+        }
+        return lazyShareView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -22,7 +41,7 @@ class BookViewController: RootViewController {
     }
     override func viewSetting() {
         super.viewSetting();
-        self.bookViewModel.delegate = self;
+        self.bookViewModel.bookDelegate = self;
         self.view.addSubview(bookTableView)
         bookTableView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalToSuperview()
@@ -73,9 +92,14 @@ extension BookViewController : UITableViewDelegate {
 }
 
 extension BookViewController: BookViewModelDelegate {
+    func shareViewShow() {
+        UIApplication.shared.keyWindow?.addSubview(self.cover)
+    }
+    
     func onNextViewController() {
         let wordVC = WordViewController()
         wordVC.navigationBarHidden = true
          self.navigationController?.pushViewController(wordVC, animated: true)
     }
+    
 }

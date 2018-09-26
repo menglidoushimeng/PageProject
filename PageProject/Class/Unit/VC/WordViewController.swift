@@ -12,8 +12,24 @@ class WordViewController: RootViewController {
 
     var headerView = WordHeaderView()
     var wordTableView : UITableView!
-    //隐藏状态栏
-
+    lazy var cover:Cover = { () -> Cover in
+        let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
+            
+        }, color: UIColor.black.withAlphaComponent(0.7), removeSelf: true)
+        coverView.addSubview(self.shareView)
+        self.shareView.snp.makeConstraints({ (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.size.width / 2)
+        })
+        return coverView
+    }()
+    lazy var shareView:ShareCommonView = {() -> ShareCommonView in
+        let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
+        lazyShareView.shareActionStyle = { (style:ShareActionStyle) in
+            
+        }
+        return lazyShareView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +91,7 @@ extension WordViewController : HeaderViewDelegate {
     }
     
     func shareAction() {
-        
+        UIApplication.shared.keyWindow?.addSubview(self.cover)
     }
     
     

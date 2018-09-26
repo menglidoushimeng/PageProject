@@ -11,5 +11,5 @@ import UIKit
     func onNextViewController()
 }
 class RootViewModel: NSObject {
-    weak var delegate:RootViewModelDelegate?
+   weak var delegate:RootViewModelDelegate?
 }
