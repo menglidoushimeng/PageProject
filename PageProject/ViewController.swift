@@ -14,15 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let view = ImageTitleView()
-        self.view.addSubview(view)
-        view.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalTo(100)
-            make.height.equalTo(150)
-        }
-        view.proportion = 0.5
        
         // Do any additional setup after loading the view, typically from a nib.
     }

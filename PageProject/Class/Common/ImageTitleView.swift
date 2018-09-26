@@ -50,9 +50,6 @@ class ImageTitleView: UIView {
     var proportion:CGFloat { // 0 ~ 1
         set {
             proportionNum = newValue
-            if proportionNum < 0.05 {
-                proportionNum += 0.02
-            }
             if proportionNum > 1 {
                proportionNum = 1
             }
@@ -108,6 +105,7 @@ class ImageTitleView: UIView {
         self.addSubview(imageView)
         self.addSubview(titleLb)
         imageView.image = UIImage.init(named: "dict_unitdo")
+        imageView.contentMode = .scaleAspectFit
         titleLb.text = "Title";
         titleLb.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
         titleLb.textColor =  ColorExtension().largeGray
@@ -130,10 +128,10 @@ class ImageTitleView: UIView {
             make.height.greaterThanOrEqualTo(15)
         }
         imageView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
-            make.bottom.equalTo(titleLb.snp.top).offset(-5)
+            make.top.equalToSuperview().offset(10)
+            make.bottom.equalTo(titleLb.snp.top).offset(-10)
             make.centerX.equalToSuperview()
-            make.width.equalTo(imageView.snp.height)
+            make.width.lessThanOrEqualTo(self.snp.width)
         }
         
         imageView.layer.addSublayer(imageLayer)

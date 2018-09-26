@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let story = UIStoryboard.init(name: "Main", bundle: nil)
 //        let bookVc = story.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
         let bookVc = BookViewController()
+        bookVc.navigationBarHidden = true
         let navi = RootNavigationController(rootViewController: bookVc)
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()

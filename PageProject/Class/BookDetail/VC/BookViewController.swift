@@ -12,16 +12,8 @@ import UIKit
 
 
 class BookViewController: RootViewController {
-    var bookViewModel = BookViewModel();
+     var bookViewModel = BookViewModel();
      var bookTableView = UITableView()
-    override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         self.navigationController?.navigationBar.isHidden = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -83,6 +75,7 @@ extension BookViewController : UITableViewDelegate {
 extension BookViewController: BookViewModelDelegate {
     func onNextViewController() {
         let wordVC = WordViewController()
+        wordVC.navigationBarHidden = true
          self.navigationController?.pushViewController(wordVC, animated: true)
     }
 }

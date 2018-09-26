@@ -9,11 +9,24 @@
 import UIKit
 
 class RootViewController: UIViewController {
-
+    
+    var navigationBarHidden:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBarSetting()
         self.viewSetting()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = navigationBarHidden
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    func navigationBarSetting() {
+        
     }
     func viewSetting() {
         
