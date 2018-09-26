@@ -36,6 +36,14 @@
 		5EEECDAE215A3087000FB516 /* ShareCommonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEECDAD215A3087000FB516 /* ShareCommonView.xib */; };
 		5EEECDB0215A344D000FB516 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDAF215A344D000FB516 /* RootView.swift */; };
 		5EEECDB2215A3645000FB516 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDB1215A3645000FB516 /* Cover.swift */; };
+		5EEECDB7215B2AFB000FB516 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDB6215B2AFB000FB516 /* MineViewController.swift */; };
+		5EEECDBA215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDB8215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift */; };
+		5EEECDBB215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEECDB9215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib */; };
+		5EEECDBE215B5972000FB516 /* MineHeaderLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDBC215B5972000FB516 /* MineHeaderLoginTableViewCell.swift */; };
+		5EEECDBF215B5972000FB516 /* MineHeaderLoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEECDBD215B5972000FB516 /* MineHeaderLoginTableViewCell.xib */; };
+		5EEECDC4215B690E000FB516 /* MineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDC2215B690E000FB516 /* MineTableViewCell.swift */; };
+		5EEECDC5215B690E000FB516 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEECDC3215B690E000FB516 /* MineTableViewCell.xib */; };
+		5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDC7215B83C4000FB516 /* MineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +98,14 @@
 		5EEECDAD215A3087000FB516 /* ShareCommonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareCommonView.xib; sourceTree = "<group>"; };
 		5EEECDAF215A344D000FB516 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5EEECDB1215A3645000FB516 /* Cover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
+		5EEECDB6215B2AFB000FB516 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		5EEECDB8215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderUnLoginTableViewCell.swift; sourceTree = "<group>"; };
+		5EEECDB9215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderUnLoginTableViewCell.xib; sourceTree = "<group>"; };
+		5EEECDBC215B5972000FB516 /* MineHeaderLoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderLoginTableViewCell.swift; sourceTree = "<group>"; };
+		5EEECDBD215B5972000FB516 /* MineHeaderLoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderLoginTableViewCell.xib; sourceTree = "<group>"; };
+		5EEECDC2215B690E000FB516 /* MineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableViewCell.swift; sourceTree = "<group>"; };
+		5EEECDC3215B690E000FB516 /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		5EEECDC7215B83C4000FB516 /* MineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		61B29C1AA2071859559610AB /* Pods_PageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D30B28AC5DD032E51AA6B /* Pods-PageProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D07E8CD7BB9F8AB1F85CB87F /* Pods-PageProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +214,7 @@
 		5E2E03C62154C318001D6C48 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				5EEECDB3215B2ACF000FB516 /* Mine */,
 				5E2E03CD2154C38D001D6C48 /* Unit */,
 				5E2E03CB2154C361001D6C48 /* Common */,
 				5E2E03C72154C325001D6C48 /* BookDetail */,
@@ -308,6 +325,45 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
+		5EEECDB3215B2ACF000FB516 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5EEECDC6215B83AB000FB516 /* Model */,
+				5EEECDB5215B2AE0000FB516 /* View */,
+				5EEECDB4215B2AD7000FB516 /* VC */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5EEECDB4215B2AD7000FB516 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5EEECDB6215B2AFB000FB516 /* MineViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5EEECDB5215B2AE0000FB516 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EEECDB8215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift */,
+				5EEECDB9215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib */,
+				5EEECDBC215B5972000FB516 /* MineHeaderLoginTableViewCell.swift */,
+				5EEECDBD215B5972000FB516 /* MineHeaderLoginTableViewCell.xib */,
+				5EEECDC2215B690E000FB516 /* MineTableViewCell.swift */,
+				5EEECDC3215B690E000FB516 /* MineTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EEECDC6215B83AB000FB516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EEECDC7215B83C4000FB516 /* MineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,10 +472,13 @@
 			files = (
 				5E0354A0214A355D0040BC2E /* LaunchScreen.storyboard in Resources */,
 				5EEECDAE215A3087000FB516 /* ShareCommonView.xib in Resources */,
+				5EEECDC5215B690E000FB516 /* MineTableViewCell.xib in Resources */,
 				5E03549D214A355D0040BC2E /* Assets.xcassets in Resources */,
 				5E035498214A355C0040BC2E /* Main.storyboard in Resources */,
 				5EE588CC214B3DBA003221A9 /* BookHeaderTableViewCell.xib in Resources */,
 				5EE588D0214B3DCE003221A9 /* BookTableViewCell.xib in Resources */,
+				5EEECDBF215B5972000FB516 /* MineHeaderLoginTableViewCell.xib in Resources */,
+				5EEECDBB215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +565,8 @@
 				5EEECDAA2159C742000FB516 /* ScreenBounsConfig.swift in Sources */,
 				15A4C5A2214CEAC2008D2B52 /* WordViewController.swift in Sources */,
 				15A4C5A5214CEB70008D2B52 /* WordHeaderView.swift in Sources */,
+				5EEECDBE215B5972000FB516 /* MineHeaderLoginTableViewCell.swift in Sources */,
+				5EEECDC4215B690E000FB516 /* MineTableViewCell.swift in Sources */,
 				5E2E03D72154CA77001D6C48 /* ColorExtension.swift in Sources */,
 				5EEECDB0215A344D000FB516 /* RootView.swift in Sources */,
 				5E2E03DC2154D54A001D6C48 /* BookViewModel.swift in Sources */,
@@ -515,9 +576,12 @@
 				15953D19214E95560058A5AB /* BookModel.swift in Sources */,
 				5E2E03D92154D523001D6C48 /* RootViewModel.swift in Sources */,
 				5EEECDB2215A3645000FB516 /* Cover.swift in Sources */,
+				5EEECDBA215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
+				5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */,
 				15A4C5A7214CF303008D2B52 /* WordSectionTableViewCell.swift in Sources */,
+				5EEECDB7215B2AFB000FB516 /* MineViewController.swift in Sources */,
 				5EE588CF214B3DCE003221A9 /* BookTableViewCell.swift in Sources */,
 				5E0354C5214A37630040BC2E /* ImageTitleView.swift in Sources */,
 				5EEECDAC215A288A000FB516 /* ShareCommonView.swift in Sources */,

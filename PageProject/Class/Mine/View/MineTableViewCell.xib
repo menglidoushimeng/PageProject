@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="221" id="KGk-i7-Jjw" customClass="MineTableViewCell" customModule="PageProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="488" height="221"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="488" height="220.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="xiK-uB-Ksk">
+                        <rect key="frame" x="15" y="94.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="Kwp-8F-Nsq"/>
+                            <constraint firstAttribute="height" constant="32" id="Nho-G2-Jhs"/>
+                            <constraint firstAttribute="width" constant="32" id="Pqi-7Y-BJ5"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="l1X-t4-1um"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_gotodo" translatesAutoresizingMaskIntoConstraints="NO" id="Ofu-M2-RdX">
+                        <rect key="frame" x="460" y="86.5" width="28" height="48"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQk-e6-ZYU">
+                        <rect key="frame" x="62" y="100.5" width="33" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苏教版牛津(三起)五上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-b7-oXt">
+                        <rect key="frame" x="95" y="104.5" width="119.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更换课本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6O-K4-L2V">
+                        <rect key="frame" x="402.5" y="102" width="57.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_red_dot" translatesAutoresizingMaskIntoConstraints="NO" id="eha-YE-e2R">
+                        <rect key="frame" x="98" y="91" width="13" height="13"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xiK-uB-Ksk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="4jR-6C-clQ"/>
+                    <constraint firstItem="p6O-K4-L2V" firstAttribute="centerY" secondItem="Ofu-M2-RdX" secondAttribute="centerY" id="5wd-lQ-Snp"/>
+                    <constraint firstItem="Ofu-M2-RdX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DxS-DA-DkG"/>
+                    <constraint firstItem="Ofu-M2-RdX" firstAttribute="leading" secondItem="p6O-K4-L2V" secondAttribute="trailing" id="EIr-x3-NKt"/>
+                    <constraint firstItem="MQk-e6-ZYU" firstAttribute="centerY" secondItem="xiK-uB-Ksk" secondAttribute="centerY" id="ILG-sV-BHn"/>
+                    <constraint firstAttribute="trailing" secondItem="Ofu-M2-RdX" secondAttribute="trailing" id="Pby-L6-UTi"/>
+                    <constraint firstItem="xiK-uB-Ksk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XCQ-3C-X4A"/>
+                    <constraint firstItem="dQv-b7-oXt" firstAttribute="leading" secondItem="MQk-e6-ZYU" secondAttribute="trailing" id="if6-DJ-hF3"/>
+                    <constraint firstItem="MQk-e6-ZYU" firstAttribute="leading" secondItem="xiK-uB-Ksk" secondAttribute="trailing" constant="15" id="nOL-kX-DCp"/>
+                    <constraint firstItem="MQk-e6-ZYU" firstAttribute="top" secondItem="eha-YE-e2R" secondAttribute="bottom" constant="-3.5" id="qNq-IR-2nU"/>
+                    <constraint firstItem="dQv-b7-oXt" firstAttribute="bottom" secondItem="MQk-e6-ZYU" secondAttribute="bottom" constant="-1" id="qwI-cH-Ivj"/>
+                    <constraint firstItem="eha-YE-e2R" firstAttribute="leading" secondItem="MQk-e6-ZYU" secondAttribute="trailing" constant="3" id="ws9-Lb-tgV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImg" destination="xiK-uB-Ksk" id="mXQ-nw-6Jb"/>
+                <outlet property="descLb" destination="dQv-b7-oXt" id="MOG-42-g9j"/>
+                <outlet property="redImgView" destination="eha-YE-e2R" id="pbI-j0-6qy"/>
+                <outlet property="rightLb" destination="p6O-K4-L2V" id="uS7-JN-nOW"/>
+                <outlet property="titleLb" destination="MQk-e6-ZYU" id="gyT-Hc-Czu"/>
+            </connections>
+            <point key="canvasLocation" x="424" y="167"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dict_gotodo" width="28" height="48"/>
+        <image name="down" width="32" height="32"/>
+        <image name="menu_red_dot" width="13" height="13"/>
+    </resources>
+</document>

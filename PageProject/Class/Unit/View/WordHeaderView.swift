@@ -49,7 +49,7 @@ class WordHeaderView: UIView {
         turnBackBtn.setImage(UIImage.init(named: "dict_grayroundreturn"), for: .normal)
         turnBackBtn.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
-            make.top.equalTo(ScreenBounsConfig().isIphoneXHeight(height: 20))
+            make.top.equalTo(self.safeAreaLayoutGuide)
             make.height.width.equalTo(36)
         }
         turnBackBtn.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)

@@ -55,18 +55,18 @@
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="前往" translatesAutoresizingMaskIntoConstraints="NO" id="78G-UP-L59">
-                        <rect key="frame" x="403" y="56" width="21" height="24"/>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_gotodo" translatesAutoresizingMaskIntoConstraints="NO" id="78G-UP-L59">
+                        <rect key="frame" x="406" y="44" width="28" height="48"/>
                     </imageView>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_unitdo" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-wA-LrL">
-                        <rect key="frame" x="355" y="44" width="48" height="48"/>
+                        <rect key="frame" x="358" y="44" width="48" height="48"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="48" id="AAD-Hr-0kS"/>
                             <constraint firstAttribute="height" constant="48" id="eJB-un-hhZ"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cho-ov-zbL">
-                        <rect key="frame" x="368" y="57.5" width="51" height="21"/>
+                        <rect key="frame" x="352" y="52" width="67" height="32"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="下载" image="down">
                             <color key="titleColor" red="0.054901960784313725" green="0.63921568627450975" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,7 +87,7 @@
                     <constraint firstItem="vcQ-U0-yGO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SWg-bs-pTB"/>
                     <constraint firstAttribute="bottom" secondItem="P97-cF-C5a" secondAttribute="bottom" constant="10" id="TKM-BP-V7B"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OFR-GE-7k9" secondAttribute="trailing" constant="10" id="X0x-gj-5bN"/>
-                    <constraint firstAttribute="trailing" secondItem="78G-UP-L59" secondAttribute="trailing" constant="10" id="YW7-5O-Zdf"/>
+                    <constraint firstAttribute="trailing" secondItem="78G-UP-L59" secondAttribute="trailing" id="YW7-5O-Zdf"/>
                     <constraint firstItem="XDN-wA-LrL" firstAttribute="centerY" secondItem="78G-UP-L59" secondAttribute="centerY" id="YoM-Zf-aFD"/>
                     <constraint firstItem="WJR-2N-kEx" firstAttribute="centerY" secondItem="P97-cF-C5a" secondAttribute="centerY" id="ZGv-Pj-L4N"/>
                     <constraint firstItem="vcQ-U0-yGO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZQ7-00-NZk"/>
@@ -115,8 +115,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dict_gotodo" width="28" height="48"/>
         <image name="dict_unitdo" width="144" height="144"/>
-        <image name="down" width="16" height="16"/>
-        <image name="前往" width="21" height="24"/>
+        <image name="down" width="32" height="32"/>
     </resources>
 </document>
