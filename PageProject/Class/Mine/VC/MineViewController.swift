@@ -170,4 +170,13 @@ extension MineViewController:UITableViewDelegate {
             return 48
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = listDataSource[indexPath.row - 1] as! MineModel
+        if model.title == "课本下载记录" {
+            let vc = DownLoadListViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
+    }
 }

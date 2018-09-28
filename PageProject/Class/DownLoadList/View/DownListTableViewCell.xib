@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="154" id="KGk-i7-Jjw" customClass="DownListTableViewCell" customModule="PageProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dic_entrance" translatesAutoresizingMaskIntoConstraints="NO" id="UGC-f6-MzZ">
+                        <rect key="frame" x="10" y="10" width="98.5" height="129.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UGC-f6-MzZ" secondAttribute="height" multiplier="95:125" id="llk-5L-8a2"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piwordlistdone" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-kB-Y03">
+                        <rect key="frame" x="108.5" y="69.5" width="52" height="45.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="height" multiplier="110:96" id="ToM-gF-PcV"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesdone" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-2F-7UY">
+                        <rect key="frame" x="212.5" y="69.5" width="52" height="45.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-Tv-dEu">
+                        <rect key="frame" x="108.5" y="125" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imu-tz-KX1">
+                        <rect key="frame" x="160.5" y="125" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-uu-0x7">
+                        <rect key="frame" x="264.5" y="125" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piparagraphsdone" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-lt-KpN">
+                        <rect key="frame" x="264.5" y="69.5" width="52" height="45.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89f-2x-5CN">
+                        <rect key="frame" x="212.5" y="125" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwp-LA-Tbq">
+                        <rect key="frame" x="352" y="91.5" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="jYV-TK-BaV"/>
+                            <constraint firstAttribute="height" constant="48" id="oXC-6x-BpA"/>
+                        </constraints>
+                        <state key="normal" image="dict_dustbin"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-AP-qxO">
+                        <rect key="frame" x="108.5" y="148.5" width="291.5" height="1"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ovp-Ut-YuL"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piexpressionsdone" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-Hy-RSj">
+                        <rect key="frame" x="160.5" y="69.5" width="52" height="45.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="89f-2x-5CN" firstAttribute="bottom" secondItem="oNb-Tv-dEu" secondAttribute="bottom" id="14n-dH-TTT"/>
+                    <constraint firstItem="ebu-uu-0x7" firstAttribute="bottom" secondItem="oNb-Tv-dEu" secondAttribute="bottom" id="1os-Zl-PWo"/>
+                    <constraint firstItem="UGC-f6-MzZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5KL-g2-o7T"/>
+                    <constraint firstItem="oNb-Tv-dEu" firstAttribute="top" secondItem="5Ze-kB-Y03" secondAttribute="bottom" constant="10" id="65M-tw-rK8"/>
+                    <constraint firstAttribute="bottom" secondItem="Nwp-LA-Tbq" secondAttribute="bottom" constant="10" id="91p-gZ-Blw"/>
+                    <constraint firstItem="5Ze-kB-Y03" firstAttribute="centerX" secondItem="oNb-Tv-dEu" secondAttribute="centerX" id="9A2-c4-B10"/>
+                    <constraint firstItem="z9O-2F-7UY" firstAttribute="centerX" secondItem="89f-2x-5CN" secondAttribute="centerX" id="CLR-oE-y34"/>
+                    <constraint firstAttribute="trailing" secondItem="Nwp-LA-Tbq" secondAttribute="trailing" id="EsJ-gm-zn2"/>
+                    <constraint firstAttribute="trailing" secondItem="jxk-AP-qxO" secondAttribute="trailing" id="FHE-dM-8ZK"/>
+                    <constraint firstItem="5Ze-kB-Y03" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.13" id="FHz-b6-QCB"/>
+                    <constraint firstItem="bNL-lt-KpN" firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="width" id="FsT-X4-cjW"/>
+                    <constraint firstItem="imu-tz-KX1" firstAttribute="width" secondItem="oNb-Tv-dEu" secondAttribute="width" id="KAj-z1-MDS"/>
+                    <constraint firstItem="bNL-lt-KpN" firstAttribute="centerX" secondItem="ebu-uu-0x7" secondAttribute="centerX" id="KSS-xm-VbM"/>
+                    <constraint firstItem="z9O-2F-7UY" firstAttribute="leading" secondItem="bo8-Hy-RSj" secondAttribute="trailing" id="Mcz-jG-9Xf"/>
+                    <constraint firstItem="z9O-2F-7UY" firstAttribute="height" secondItem="5Ze-kB-Y03" secondAttribute="height" id="MqJ-aM-uAh"/>
+                    <constraint firstItem="imu-tz-KX1" firstAttribute="bottom" secondItem="oNb-Tv-dEu" secondAttribute="bottom" id="UGG-aI-hXc"/>
+                    <constraint firstItem="z9O-2F-7UY" firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="width" id="UOl-O0-5YK"/>
+                    <constraint firstItem="bo8-Hy-RSj" firstAttribute="leading" secondItem="5Ze-kB-Y03" secondAttribute="trailing" id="WWo-aE-smX"/>
+                    <constraint firstItem="bo8-Hy-RSj" firstAttribute="height" secondItem="5Ze-kB-Y03" secondAttribute="height" id="Wsh-CU-DFv"/>
+                    <constraint firstItem="bo8-Hy-RSj" firstAttribute="centerX" secondItem="imu-tz-KX1" secondAttribute="centerX" id="XTA-HU-4O4"/>
+                    <constraint firstItem="jxk-AP-qxO" firstAttribute="leading" secondItem="oNb-Tv-dEu" secondAttribute="leading" id="XfF-8D-WhO"/>
+                    <constraint firstItem="bNL-lt-KpN" firstAttribute="leading" secondItem="z9O-2F-7UY" secondAttribute="trailing" id="Zcs-co-ewY"/>
+                    <constraint firstItem="5Ze-kB-Y03" firstAttribute="leading" secondItem="UGC-f6-MzZ" secondAttribute="trailing" id="aWq-Y8-ryk"/>
+                    <constraint firstItem="z9O-2F-7UY" firstAttribute="centerY" secondItem="5Ze-kB-Y03" secondAttribute="centerY" id="bDJ-Pl-qs0"/>
+                    <constraint firstItem="89f-2x-5CN" firstAttribute="width" secondItem="oNb-Tv-dEu" secondAttribute="width" id="eMp-ml-hpg"/>
+                    <constraint firstItem="bNL-lt-KpN" firstAttribute="height" secondItem="5Ze-kB-Y03" secondAttribute="height" id="fEO-H0-jCa"/>
+                    <constraint firstItem="bo8-Hy-RSj" firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="width" id="ftT-sA-LX6"/>
+                    <constraint firstItem="oNb-Tv-dEu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5Ze-kB-Y03" secondAttribute="leading" id="ifK-B9-il7"/>
+                    <constraint firstItem="bo8-Hy-RSj" firstAttribute="centerY" secondItem="5Ze-kB-Y03" secondAttribute="centerY" id="jEI-y6-H0t"/>
+                    <constraint firstItem="oNb-Tv-dEu" firstAttribute="bottom" secondItem="UGC-f6-MzZ" secondAttribute="bottom" id="mzL-HA-C5e"/>
+                    <constraint firstItem="UGC-f6-MzZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qbj-dv-D9k"/>
+                    <constraint firstAttribute="bottom" secondItem="UGC-f6-MzZ" secondAttribute="bottom" constant="10" id="taS-c7-1Qq"/>
+                    <constraint firstAttribute="bottom" secondItem="jxk-AP-qxO" secondAttribute="bottom" id="uMi-93-ffj"/>
+                    <constraint firstItem="bNL-lt-KpN" firstAttribute="centerY" secondItem="5Ze-kB-Y03" secondAttribute="centerY" id="vR3-JZ-h8k"/>
+                    <constraint firstItem="ebu-uu-0x7" firstAttribute="width" secondItem="oNb-Tv-dEu" secondAttribute="width" id="xZs-7q-kdd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="156.80000000000001" y="66.566716641679164"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dic_entrance" width="240" height="426"/>
+        <image name="dict_dustbin" width="50" height="50"/>
+        <image name="dict_piexpressionsdone" width="110" height="96"/>
+        <image name="dict_piparagraphsdone" width="110" height="96"/>
+        <image name="dict_pisentencesdone" width="110" height="96"/>
+        <image name="dict_piwordlistdone" width="110" height="96"/>
+    </resources>
+</document>

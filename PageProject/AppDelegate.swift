@@ -36,6 +36,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mineNavi = RootNavigationController(rootViewController: mineVc)
         let tabbar = UITabBarController.init()
         tabbar.viewControllers = [bookNavi,mineNavi]
+        
+        let bookTabbarItem = UITabBarItem.init(title: "课文", image: UIImage.init(named: "dict_navigation1off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation1on")?.withRenderingMode(.alwaysOriginal))
+        
+        bookTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
+        bookTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
+        
+        let mineTabbarItem = UITabBarItem.init(title: "我的", image: UIImage.init(named: "dict_navigation3off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation3on")?.withRenderingMode(.alwaysOriginal))
+        mineTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
+        mineTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
+        
+        bookVc.tabBarItem = bookTabbarItem
+        mineVc.tabBarItem = mineTabbarItem
+        
         self.window?.rootViewController = tabbar
         self.window?.makeKeyAndVisible()
     }

@@ -26,10 +26,20 @@ class RootViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     func navigationBarSetting() {
+        self.navigationController?.navigationBar.tintColor = ColorExtension().largeGray
+        guard self.navigationController?.viewControllers.count ?? 0 <= 1 else {
+            let leftItem = UIBarButtonItem.init(image: UIImage.init(named: "dict_iconbigreturn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(leftBarItemAction(leftItem:)))
+            self.navigationItem.leftBarButtonItem = leftItem
+            return
+        }
+        
         
     }
     func viewSetting() {
         
+    }
+    @objc func leftBarItemAction(leftItem:UIBarButtonItem) {
+     self.navigationController?.popViewController(animated: true)
     }
 
     /*
