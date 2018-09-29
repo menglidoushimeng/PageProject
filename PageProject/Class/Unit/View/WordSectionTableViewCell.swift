@@ -8,20 +8,29 @@
 
 import UIKit
 
+@objc protocol WordViewCellDelegate {
+    // leftBtn 判断为左边按钮还是右边按钮
+    func cellDidSelected(indexPath:IndexPath, leftBtn:Bool)
+}
+
+
 enum WordSctionType:Int {
     // 当前页面布局情况
-    case leftOneQuestionWithTitle
-    case leftTwoQuestionWithTitle
-    case leftOneQuestion
-    case leftTwoQuestion
-    case rightOneQuestion
-    case rightTwoQuestion
+    case leftOneQuestionWithTitle // 具备title 并有1个点击按钮 视图靠左
+    case leftTwoQuestionWithTitle // 具备title 并有2个点击按钮 视图靠左
+    case leftOneQuestion // 有1个点击按钮 视图靠左
+    case leftTwoQuestion // 有2个点击按钮 视图靠左
+    case rightOneQuestion // 有1个点击按钮 视图靠右
+    case rightTwoQuestion // 有2个点击按钮 视图靠右
 }
 
 
 
 class WordSectionTableViewCell: UITableViewCell {
-
+    
+    
+    weak var delegate:WordViewCellDelegate?
+    var indexPath:IndexPath = IndexPath.init(row: 0, section: 0)
     
     var sectionNameLab = UILabel()
     var wordView = ImageTitleView()
@@ -64,6 +73,9 @@ class WordSectionTableViewCell: UITableViewCell {
         wordView.titleText = "单词"
         wordView.descText = "380/400"
         wordView.proportion = 380.000/400
+        wordView.btnAction = { tag in
+            self.delegate?.cellDidSelected(indexPath: self.indexPath, leftBtn: true)
+        }
      
         self.addSubview(sentenceView)
         sentenceView.snp.makeConstraints { (make) in
@@ -76,7 +88,9 @@ class WordSectionTableViewCell: UITableViewCell {
         sentenceView.titleText = "短语"
         sentenceView.descText = "150/152"
         sentenceView.proportion = 150.000/152
-        
+        sentenceView.btnAction = { tag in
+            self.delegate?.cellDidSelected(indexPath: self.indexPath, leftBtn: false)
+        }
       
     }
     override func layoutSubviews() {

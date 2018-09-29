@@ -77,6 +77,8 @@ extension WordViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WordSectionTableViewCell", for: indexPath) as! WordSectionTableViewCell
         cell.selectionStyle = .none
+        cell.indexPath = indexPath
+        cell.delegate = self
         if indexPath.row % 2 == 0 {
             cell.cellStype = .leftTwoQuestionWithTitle
         } else {
@@ -84,6 +86,10 @@ extension WordViewController : UITableViewDataSource {
         }
         return cell
     }
+}
+extension WordViewController : UITableViewDelegate {
+    
+    
 }
 extension WordViewController : HeaderViewDelegate {
     func turnBackAction() {
@@ -96,9 +102,12 @@ extension WordViewController : HeaderViewDelegate {
     
     
 }
-extension WordViewController : UITableViewDelegate {
-   
-    
+extension WordViewController : WordViewCellDelegate {
+    func cellDidSelected(indexPath: IndexPath, leftBtn: Bool) {
+        let sectionVc =  SectionViewController()
+        sectionVc.navigationBarHidden = false
+        self.navigationController?.pushViewController(sectionVc, animated: true)
+    }
 }
 
 

@@ -34,8 +34,8 @@ class MineViewController: RootViewController {
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(tableView)
         self.tableView.snp.makeConstraints { (make) in
-            make.bottom.left.right.equalTo(self.view.safeAreaLayoutGuide)
-            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(32)
+            make.bottom.left.right.equalTo(self.safe)
+            make.top.equalTo(self.safe).offset(32)
             
         }
         self.tableView.bounces = false

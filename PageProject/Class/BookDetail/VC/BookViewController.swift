@@ -99,7 +99,7 @@ extension BookViewController: BookViewModelDelegate {
     func onNextViewController() {
         let wordVC = WordViewController()
         wordVC.navigationBarHidden = true
-         self.navigationController?.pushViewController(wordVC, animated: true)
+        self.navigationController?.pushViewController(wordVC, animated: true)
     }
     
 }

@@ -11,6 +11,11 @@ import UIKit
 class RootViewController: UIViewController {
     
     var navigationBarHidden:Bool = false
+    var safe:UILayoutGuide {
+        get {
+            return self.view.safeAreaLayoutGuide
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBarSetting()
@@ -20,6 +25,7 @@ class RootViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = navigationBarHidden
+        self.navigationController?.tabBarController?.tabBar.isHidden = !(self.navigationController?.viewControllers.count ?? 0 <= 1)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -38,6 +44,7 @@ class RootViewController: UIViewController {
     func viewSetting() {
         
     }
+    
     @objc func leftBarItemAction(leftItem:UIBarButtonItem) {
      self.navigationController?.popViewController(animated: true)
     }
