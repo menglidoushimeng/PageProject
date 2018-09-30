@@ -99,6 +99,15 @@ extension WordViewController : HeaderViewDelegate {
     func shareAction() {
         UIApplication.shared.keyWindow?.addSubview(self.cover)
     }
+    func listText() {
+        print("听课文")
+    }
+    func wordsCard() {
+        print("单词卡")
+    }
+    func sentenceCard() {
+        print("短语卡")
+    }
     
     
 }

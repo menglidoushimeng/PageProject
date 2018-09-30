@@ -69,6 +69,9 @@
                             <constraint firstAttribute="height" constant="48" id="oXC-6x-BpA"/>
                         </constraints>
                         <state key="normal" image="dict_dustbin"/>
+                        <connections>
+                            <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xoa-AQ-4D2"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-AP-qxO">
                         <rect key="frame" x="108.5" y="148.5" width="291.5" height="1"/>
@@ -120,6 +123,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deleteBtn" destination="Nwp-LA-Tbq" id="iv9-L1-Qld"/>
+            </connections>
             <point key="canvasLocation" x="156.80000000000001" y="66.566716641679164"/>
         </tableViewCell>
     </objects>

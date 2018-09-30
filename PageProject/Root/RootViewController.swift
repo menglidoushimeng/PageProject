@@ -33,6 +33,7 @@ class RootViewController: UIViewController {
     }
     func navigationBarSetting() {
         self.navigationController?.navigationBar.tintColor = ColorExtension().largeGray
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         guard self.navigationController?.viewControllers.count ?? 0 <= 1 else {
             let leftItem = UIBarButtonItem.init(image: UIImage.init(named: "dict_iconbigreturn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(leftBarItemAction(leftItem:)))
             self.navigationItem.leftBarButtonItem = leftItem
@@ -42,7 +43,7 @@ class RootViewController: UIViewController {
         
     }
     func viewSetting() {
-        
+        self.view.backgroundColor = UIColor.white
     }
     
     @objc func leftBarItemAction(leftItem:UIBarButtonItem) {

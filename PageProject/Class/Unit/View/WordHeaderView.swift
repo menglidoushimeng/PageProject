@@ -9,8 +9,11 @@
 import UIKit
 
 @objc protocol HeaderViewDelegate {
-    func turnBackAction();
-    func shareAction()
+    @objc optional func turnBackAction();
+    @objc optional func shareAction()
+    @objc optional func listText()
+    @objc optional func wordsCard()
+    @objc optional func sentenceCard()
 }
 
 class WordHeaderView: UIView {
@@ -80,6 +83,9 @@ class WordHeaderView: UIView {
         listenView.titleText = "听课文"
         listenView.descText = " "
         listenView.proportion = 1
+        listenView.btnAction = { [weak self] tag in
+            self?.delegate?.listText?()
+        }
         
         contentView.addSubview(wordView)
         wordView.snp.makeConstraints { (make) in
@@ -93,6 +99,9 @@ class WordHeaderView: UIView {
         wordView.titleText = "单词"
         wordView.descText = "38/400"
         wordView.proportion = 38.000/400
+        wordView.btnAction = { [weak self] tag in
+            self?.delegate?.wordsCard?()
+        }
         
         contentView.addSubview(phraseView)
         phraseView.snp.makeConstraints { (make) in
@@ -107,6 +116,9 @@ class WordHeaderView: UIView {
         phraseView.titleText = "短语"
         phraseView.descText = "12/200"
         phraseView.proportion = 12/200
+        phraseView.btnAction = { [weak self] tag in
+            self?.delegate?.sentenceCard?()
+        }
        
         self.addSubview(bottomLineView)
         bottomLineView.backgroundColor = ColorExtension().lineGray
@@ -124,11 +136,11 @@ class WordHeaderView: UIView {
     }
     //分享按钮点击事件
     @objc func shareAction(_ button:UIButton) {
-        delegate?.shareAction()
+        delegate?.shareAction?()
     }
     
     //返回按钮点击事件
     @objc func backAction(_ button:UIButton){
-        delegate?.turnBackAction()
+        delegate?.turnBackAction?()
     }
 }

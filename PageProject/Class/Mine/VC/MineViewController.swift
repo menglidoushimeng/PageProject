@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MineViewController: RootViewController {
     let tableView = UITableView()
@@ -21,11 +23,12 @@ class MineViewController: RootViewController {
     let settingBtn = UIButton();
     let settingBtnRed = UIImageView.init(image: UIImage.init(named: "menu_red_dot"))
     
+    let disposetBag = DisposeBag()
     
     let listDataSource = MineModel.MineModelArr()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     override func viewSetting() {
@@ -107,6 +110,11 @@ class MineViewController: RootViewController {
             
         }
         settingBtn.setImage(UIImage.init(named: "dict_icontextsetup"), for: .normal)
+        
+        settingBtn.rx.tap.bind {
+            let setVC = SettingViewController()
+            self.navigationController?.pushViewController(setVC, animated: true)
+        }.disposed(by: disposetBag)
         
         self.view.addSubview(settingBtnRed)
         settingBtnRed.snp.makeConstraints { (make) in

@@ -38,6 +38,26 @@ class BookViewModel: RootViewModel {
                     self.bookDelegate?.shareViewShow()
                 }
                     break;
+                case .listen : do {
+                    print("听课文")
+                }
+                    break;
+                case .word : do {
+                    print("单词")
+                }
+                break;
+                case .sentence : do {
+                    print("短语")
+                }
+                break;
+                case .keySentence : do {
+                    print("重点句型")
+                }
+                break;
+                case .text : do {
+                    print("朗读课文")
+                }
+                break;
                 default : break
                 }
             }
@@ -71,13 +91,7 @@ class BookViewModel: RootViewModel {
         if section == 0 {
             return 1
         } else {
-            #if DEBUG
-            print("走了debug")
-            return 10
-            #else
-            print("走了debug之外")
-            return (bookDataSource?.dict_book_units?.count)!
-            #endif
+            return bookDataSource?.dict_book_units?.count ?? 0
         }
     }
     

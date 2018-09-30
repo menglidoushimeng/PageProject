@@ -8,17 +8,28 @@
 
 import UIKit
 
+@objc protocol DeleteDelegate {
+    @objc optional func delete(indexPath:IndexPath)
+}
+
 class DownListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var deleteBtn: UIButton!
+    var indexPath:IndexPath?
+    
+    weak var delegate:DeleteDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    @IBAction func deleteAction(_ sender: UIButton) {
+        delegate?.delete?(indexPath: indexPath!)
+    }
 }

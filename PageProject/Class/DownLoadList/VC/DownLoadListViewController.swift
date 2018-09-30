@@ -53,6 +53,9 @@ extension DownLoadListViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DownListTableViewCell", for: indexPath) as! DownListTableViewCell
+        cell.selectionStyle = .none
+        cell.indexPath = indexPath
+        cell.delegate = self
         return cell
     }
     
@@ -61,3 +64,19 @@ extension DownLoadListViewController:UITableViewDataSource {
 extension DownLoadListViewController:UITableViewDelegate {
     
 }
+extension DownLoadListViewController:DeleteDelegate {
+    func delete(indexPath: IndexPath) {
+        let alert = RootAlertController.init(title: nil, message: "确定删除该课本已下载的内容?", preferredStyle: .alert)
+        let cancel = UIAlertAction.init(title: "取消", style: .cancel) { (action) in
+            
+        }
+        let sure = UIAlertAction.init(title: "删除", style: .default) { (action) in
+            
+        }
+        alert.addAction(cancel)
+        alert.addAction(sure)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+

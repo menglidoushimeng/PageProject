@@ -32,6 +32,8 @@
 		5E2E03D92154D523001D6C48 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03D82154D523001D6C48 /* RootViewModel.swift */; };
 		5E2E03DC2154D54A001D6C48 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */; };
 		5E2E03DE2154DA22001D6C48 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E03DD2154DA22001D6C48 /* RootViewController.swift */; };
+		5E3F1CCE21605D810012FD42 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F1CCD21605D810012FD42 /* SettingViewController.swift */; };
+		5E3F1CD02160A72D0012FD42 /* RootAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F1CCF2160A72D0012FD42 /* RootAlertController.swift */; };
 		5ECD6038215F0B4300074438 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD6037215F0B4300074438 /* SectionHeaderView.swift */; };
 		5ECD603A215F0B8E00074438 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECD6039215F0B8E00074438 /* SectionHeaderView.xib */; };
 		5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */; };
@@ -102,6 +104,8 @@
 		5E2E03D82154D523001D6C48 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		5E2E03DD2154DA22001D6C48 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5E3F1CCD21605D810012FD42 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5E3F1CCF2160A72D0012FD42 /* RootAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAlertController.swift; sourceTree = "<group>"; };
 		5ECD6037215F0B4300074438 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		5ECD6039215F0B8E00074438 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 		5E2E03C62154C318001D6C48 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F1CCB21605D430012FD42 /* Setting */,
 				5E1FCE4C215E228B006264CE /* Section */,
 				5E210E93215DB9A900EE80F1 /* DownLoadList */,
 				5EEECDB3215B2ACF000FB516 /* Mine */,
@@ -350,6 +355,7 @@
 				5E2E03D82154D523001D6C48 /* RootViewModel.swift */,
 				5E2E03DD2154DA22001D6C48 /* RootViewController.swift */,
 				5EEECDAF215A344D000FB516 /* RootView.swift */,
+				5E3F1CCF2160A72D0012FD42 /* RootAlertController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -395,6 +401,22 @@
 				5E2E03DB2154D54A001D6C48 /* BookViewModel.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		5E3F1CCB21605D430012FD42 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				5E3F1CCC21605D4B0012FD42 /* VC */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		5E3F1CCC21605D4B0012FD42 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5E3F1CCD21605D810012FD42 /* SettingViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		5EEECDB3215B2ACF000FB516 /* Mine */ = {
@@ -655,12 +677,14 @@
 				5E2E03D92154D523001D6C48 /* RootViewModel.swift in Sources */,
 				5EEECDB2215A3645000FB516 /* Cover.swift in Sources */,
 				5E210E97215DB9DC00EE80F1 /* DownLoadListViewController.swift in Sources */,
+				5E3F1CD02160A72D0012FD42 /* RootAlertController.swift in Sources */,
 				5EEECDBA215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
 				5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */,
 				15A4C5A7214CF303008D2B52 /* WordSectionTableViewCell.swift in Sources */,
 				5EEECDB7215B2AFB000FB516 /* MineViewController.swift in Sources */,
+				5E3F1CCE21605D810012FD42 /* SettingViewController.swift in Sources */,
 				5EE588CF214B3DCE003221A9 /* BookTableViewCell.swift in Sources */,
 				5E0354C5214A37630040BC2E /* ImageTitleView.swift in Sources */,
 				5EEECDAC215A288A000FB516 /* ShareCommonView.swift in Sources */,
