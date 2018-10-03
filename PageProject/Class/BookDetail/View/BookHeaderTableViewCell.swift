@@ -41,6 +41,13 @@ class BookHeaderTableViewCell: UITableViewCell {
     
     func viewSetting() {
         weak var weakSelf = self
+        
+        bookImg.layer.cornerRadius = UIScreen.main.bounds.size.width / 8;
+        bookImg.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        bookImg.layer.shadowOffset = CGSize.init(width: 0, height: 10)
+        bookImg.layer.shadowOpacity = 1;
+        bookImg.layer.shadowRadius = 10
+        
         bootomView.addSubview(listenView)
         listenView.snp.makeConstraints { (make) in
             make.left.equalToSuperview()

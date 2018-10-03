@@ -32,10 +32,10 @@ class SectionViewController: RootViewController {
         sectionTableView.backgroundColor = ColorExtension().bottomGray
         sectionTableView.delegate = self as UITableViewDelegate
         sectionTableView.dataSource = self as UITableViewDataSource
-        sectionTableView.estimatedRowHeight = 40;
+        sectionTableView.estimatedRowHeight = 100;
         sectionTableView.rowHeight = UITableViewAutomaticDimension;
         sectionTableView.separatorStyle = .none
-        sectionTableView.rowHeight = UIScreen.main.bounds.size.width * 3 / 8
+        
         sectionTableView.register(UINib.init(nibName: "SectionTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "SectionTableViewCell")
         
         sectionTableView.estimatedSectionHeaderHeight = UIScreen.main.bounds.size.width  / 2
@@ -68,8 +68,20 @@ extension SectionViewController:UITableViewDataSource {
 }
 extension SectionViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeaderView")
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeaderView") as! SectionHeaderView
+        headerView.delegate = self
         return headerView;
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
    
+}
+extension SectionViewController:SectionHeaderDelegate {
+    func stateFunction() {
+        print("掌握状态")
+    }
+    func challengeFunction() {
+        print("挑战奥金星")
+    }
 }

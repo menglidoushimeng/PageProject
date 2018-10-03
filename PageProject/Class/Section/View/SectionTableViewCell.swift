@@ -10,6 +10,8 @@ import UIKit
 
 class SectionTableViewCell: UITableViewCell {
 
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,6 @@ class SectionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+   
     
 }

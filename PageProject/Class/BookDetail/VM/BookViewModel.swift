@@ -91,7 +91,11 @@ class BookViewModel: RootViewModel {
         if section == 0 {
             return 1
         } else {
+            #if DEBUG
+            return 10
+            #else
             return bookDataSource?.dict_book_units?.count ?? 0
+            #endif
         }
     }
     

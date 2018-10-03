@@ -31,7 +31,7 @@ class SettingViewController: RootViewController {
     private let versionRed = UIImageView.init(image: UIImage.init(named: "menu_red_dot"))
     
     private let shareBtn = UIButton.init(color: UIColor.white);
-    private let shareLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "推进给朋友", textColor: ColorExtension().largeGray)
+    private let shareLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "推荐给朋友", textColor: ColorExtension().largeGray)
     private let shareImg = UIImageView.init(image: UIImage.init(named: "dict_gotodo"))
     
     private let questionsBtn = UIButton.init(color: UIColor.white);

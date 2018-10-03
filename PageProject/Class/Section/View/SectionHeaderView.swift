@@ -8,8 +8,22 @@
 
 import UIKit
 
-class SectionHeaderView: UITableViewHeaderFooterView {
+@objc protocol SectionHeaderDelegate {
+    @objc optional func stateFunction()
+    @objc optional func challengeFunction()
+}
 
+class SectionHeaderView: UITableViewHeaderFooterView {
+    
+    weak var delegate:SectionHeaderDelegate?
+    
+    @IBOutlet weak var nextStateLb: UILabel!
+    @IBOutlet weak var nextDescLb: UILabel!
+    
+    @IBOutlet weak var stateBtn: UIButton!
+    @IBOutlet weak var stateDescLb: UILabel!
+    
+    @IBOutlet weak var stateImg: UIImageView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +31,11 @@ class SectionHeaderView: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
+    @IBAction func stateAction(_ sender: UIButton) {
+        delegate?.stateFunction?()
+    }
+    @IBAction func challengeAction(_ sender: UIButton) {
+         delegate?.challengeFunction?()
+    }
 
 }

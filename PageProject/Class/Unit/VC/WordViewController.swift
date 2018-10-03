@@ -25,8 +25,8 @@ class WordViewController: RootViewController {
     }()
     lazy var shareView:ShareCommonView = {() -> ShareCommonView in
         let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
-        lazyShareView.shareActionStyle = { (style:ShareActionStyle) in
-            
+        lazyShareView.shareActionStyle = { [weak self](style:ShareActionStyle) in
+            self?.cover.removeFromSuperview()
         }
         return lazyShareView
     }()

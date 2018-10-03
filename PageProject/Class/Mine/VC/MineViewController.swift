@@ -142,7 +142,7 @@ extension MineViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let isLogin = false
+            let isLogin = true
             
             if isLogin {
                let cell = tableView.dequeueReusableCell(withIdentifier: "MineHeaderLoginTableViewCell", for: indexPath) as! MineHeaderLoginTableViewCell
@@ -179,12 +179,16 @@ extension MineViewController:UITableViewDelegate {
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            return
+        }
         let model = listDataSource[indexPath.row - 1] as! MineModel
         if model.title == "课本下载记录" {
             let vc = DownLoadListViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            print(model.title)
         }
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.isSelected = false
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
