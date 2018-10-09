@@ -14,7 +14,7 @@ class MineViewController: RootViewController {
     let tableView = UITableView()
     
     let lvLb = UILabel();
-    let flashImgView = UIImageView.init(image: UIImage.init(named: "dict_sexboy"))
+    let flashImgView = UIImageView.init(image: UIImage.init(named: "dict_experiencepointbig"))
     let redTextLb = UILabel()
     let grayTextLb = UILabel()
     let starImgView =  UIImageView.init(image: UIImage.init(named: "dict_aostar"))
@@ -66,7 +66,7 @@ class MineViewController: RootViewController {
         flashImgView.snp.makeConstraints { (make) in
             make.left.equalTo(lvLb.snp.right).offset(18)
             make.centerY.equalTo(lvLb.snp.centerY)
-            make.height.width.equalTo(15)
+            make.height.width.equalTo(20)
         }
         
         self.view.addSubview(redTextLb)
@@ -74,7 +74,7 @@ class MineViewController: RootViewController {
         redTextLb.text = "10000"
         redTextLb.font = UIFont.systemFont(ofSize: 10)
         redTextLb.snp.makeConstraints { (make) in
-            make.left.equalTo(flashImgView.snp.right).offset(5)
+            make.left.equalTo(flashImgView.snp.right)
             make.centerY.equalTo(flashImgView.snp.centerY)
         }
         
@@ -142,7 +142,7 @@ extension MineViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let isLogin = true
+            let isLogin = false
             
             if isLogin {
                let cell = tableView.dequeueReusableCell(withIdentifier: "MineHeaderLoginTableViewCell", for: indexPath) as! MineHeaderLoginTableViewCell

@@ -31,7 +31,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="8YS-4c-utE" secondAttribute="height" id="d6n-ZN-bu3"/>
                     </constraints>
-                    <state key="normal" image="dict_logonwechat"/>
+                    <state key="normal" image="dict_shareqq"/>
                     <connections>
                         <action selector="qqShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vix-FK-wO1"/>
                     </connections>
@@ -39,7 +39,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxf-1i-lMP">
                     <rect key="frame" x="163.5" y="63.5" width="103" height="103"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="dict_logonwechat"/>
+                    <state key="normal" image="dict_shareqqzone"/>
                     <connections>
                         <action selector="qzoneShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="fEc-qj-SB8"/>
                     </connections>
@@ -47,7 +47,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byg-td-Hap">
                     <rect key="frame" x="296.5" y="63.5" width="103.5" height="103"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="dict_logonwechat"/>
+                    <state key="normal" image="dict_sharewechat"/>
                     <connections>
                         <action selector="wechatShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="KMT-bp-zOC"/>
                     </connections>
@@ -55,7 +55,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-Uo-mYD">
                     <rect key="frame" x="430" y="63.5" width="103" height="103"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="dict_logonwechat"/>
+                    <state key="normal" image="dict_sharemoment"/>
                     <connections>
                         <action selector="momentsShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bLC-jm-Mik"/>
                     </connections>
@@ -134,10 +134,13 @@
                 <outlet property="qzoneBtn" destination="Sxf-1i-lMP" id="03C-f5-xsf"/>
                 <outlet property="wechatBtn" destination="byg-td-Hap" id="HGc-OU-P0u"/>
             </connections>
-            <point key="canvasLocation" x="-234" y="184"/>
+            <point key="canvasLocation" x="-97" y="181"/>
         </view>
     </objects>
     <resources>
-        <image name="dict_logonwechat" width="41" height="41"/>
+        <image name="dict_sharemoment" width="61" height="61"/>
+        <image name="dict_shareqq" width="61" height="61"/>
+        <image name="dict_shareqqzone" width="61" height="61"/>
+        <image name="dict_sharewechat" width="61" height="61"/>
     </resources>
 </document>

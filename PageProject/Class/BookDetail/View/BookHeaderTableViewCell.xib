@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="531" height="427.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_phrasecard" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-os-YTM">
-                        <rect key="frame" x="193.5" y="40" width="144" height="163"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_waitbackground" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-os-YTM">
+                        <rect key="frame" x="225" y="40" width="81" height="163"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="人教版.七上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgP-M3-xmh">
                         <rect key="frame" x="220" y="213" width="91.5" height="21"/>
@@ -79,10 +79,10 @@
                 <outlet property="bookNameLb" destination="DgP-M3-xmh" id="nOW-tx-6Jl"/>
                 <outlet property="bootomView" destination="kHU-Pc-pmA" id="cyj-p4-Vba"/>
             </connections>
-            <point key="canvasLocation" x="41.5" y="58"/>
+            <point key="canvasLocation" x="282" y="-22"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dict_phrasecard" width="144" height="144"/>
+        <image name="dict_waitbackground" width="81" height="81"/>
     </resources>
 </document>
