@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
+
 @objc protocol RootViewModelDelegate {
-    func onNextViewController()
+  @objc optional  func onNextViewController()
 }
 class RootViewModel: NSObject {
    weak var delegate:RootViewModelDelegate?

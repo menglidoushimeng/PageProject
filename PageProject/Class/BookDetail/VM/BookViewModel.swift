@@ -9,30 +9,61 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
-protocol BookViewModelDelegate:RootViewModelDelegate {
+protocol BookViewModelDelegate:RootTableViewViewModelDelegate {
     /******* 自定义协议  ********/
     func shareViewShow()
 }
 
 
-class BookViewModel: RootViewModel {
-     var bookDataSource:BookModel? // 教科书数据源
+class BookViewModel: RootTableViewViewModel {
+   
+    weak var bookDelegate:BookViewModelDelegate?
+    func shareActionStyle(_ :ShareActionStyle) {
+        
+    }
     
+    override init() {
+        super.init()
+        self.dataSource = self.bookUnitModelSource()
+        
+    }
     
-     weak var bookDelegate:BookViewModelDelegate?
-    
-    
+    func bookUnitModelSource() -> Array<Array<RootTableViewCellModel>> {
+        let headModel = RootTableViewCellModel()
+        headModel.cellIdentifier = String(describing: type(of:BookHeaderTableViewCell()))
+        let headers = [headModel]
+        
+        let bookUnits = NSMutableArray.init()
+        
+        for _ in 1...10{
+            let unitModel = RootTableViewCellModel()
+            unitModel.cellIdentifier = String(describing: type(of:BookTableViewCell()))
+            
+            bookUnits.add(unitModel)
+        }
+//        for unit in BookModel().dict_book_units ?? []{
+//            let unitModel = RootTableViewCellModel()
+//            unitModel.cellIdentifier = String(describing: type(of:BookTableViewCell()))
+//            unitModel.cellModel = unit
+//            bookUnits.add(unitModel)
+//        }
+        return [headers,bookUnits as! Array<RootTableViewCellModel>]
+    }
     
 /*********************  DataSource  *********************/
     
     
-    func cellForRow(tableView: UITableView,indexPath: IndexPath) -> UITableViewCell {
+   override func cellForRow(_ tableView: UITableView,_ indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = super.cellForRow(tableView, indexPath) 
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BookHeaderTableViewCell", for: indexPath) as! BookHeaderTableViewCell
-            cell.selectionStyle = .none
-            cell.HeaderViewAction = {(enumType:HeaderTapEnum) in
+            let headerCell = cell as! BookHeaderTableViewCell
+            headerCell.selectionStyle = .none
+            
+            headerCell.HeaderViewAction = {(enumType:HeaderTapEnum) in
                 switch enumType {
                 case .share : do{
                     self.bookDelegate?.shareViewShow()
@@ -58,53 +89,32 @@ class BookViewModel: RootViewModel {
                     print("朗读课文")
                 }
                 break;
-                default : break
                 }
             }
-            return cell
+            
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
-            //            var bookUnit = bookDataSource?.dict_book_units![indexPath.row] as! BookUnitModel // 获取cell对应的model
-            cell.selectionStyle = .none
-            cell.index = indexPath
+            let bookCell = cell as! BookTableViewCell
+            bookCell.selectionStyle = .none
+            bookCell.index = indexPath
             if indexPath.row % 2 == 0 {
-                cell.cellType = .unLoad
+                bookCell.cellType = .unLoad
             } else {
-                cell.cellType = .load
+                bookCell.cellType = .load
             }
-            cell.cellDownLoadBlock = {(index) in
+            bookCell.cellDownLoadBlock = {(index) in
                 print("点击了下载按钮");
             }
-            return cell
+            
         }
+        return cell
     }
     
-    
-    func numberOfSection(in tableView: UITableView) -> Int {
-        
-        return 2
-    }
-    
-    
-    func numberOfRowsInSection(tableView: UITableView, section: Int) -> Int {
-        
-        if section == 0 {
-            return 1
-        } else {
-            #if DEBUG
-            return 10
-            #else
-            return bookDataSource?.dict_book_units?.count ?? 0
-            #endif
-        }
-    }
     
     
 /*********************  Delegate  *********************/
     
     
-    func heightForRowAt(tableView: UITableView,  indexPath: IndexPath) -> CGFloat {
-        
+   override func heightForRowAt(_ tableView: UITableView,  _ indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return UIScreen.main.bounds.size.width
         } else {
@@ -113,8 +123,11 @@ class BookViewModel: RootViewModel {
     }
     
     
-    func didSelectRowAt( tableView: UITableView,  indexPath: IndexPath) {
-        
-        bookDelegate?.onNextViewController()
+   override func didSelectRowAt( _ tableView: UITableView,  _ indexPath: IndexPath) {
+        let rows = self.dataSource?[indexPath.section]
+        let model = rows![indexPath.row]
+        bookDelegate?.didSelectedCell?(model)
     }
 }
+
+

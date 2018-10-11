@@ -11,6 +11,8 @@ import UIKit
 class WordViewController: RootViewController {
 
     var headerView = WordHeaderView()
+    let wordViewModel = WordViewModel()
+    
     var wordTableView : UITableView!
     lazy var cover:Cover = { () -> Cover in
         let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
@@ -33,14 +35,19 @@ class WordViewController: RootViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+
+    override func viewSetting() {
+        super.viewSetting()
+        wordViewModel.getDataSouce()
+        wordViewModel.tabDelegate = self as RootTableViewViewModelDelegate
         self.view.backgroundColor = UIColor.white
         //添加headerView
         addHeaderView()
         //添加TablaeView
         addTableView()
     }
-
-    
    
     
     //添加headerView
@@ -72,19 +79,10 @@ class WordViewController: RootViewController {
 
 extension WordViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return wordViewModel.numberOfRowsInSection(tableView,section)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WordSectionTableViewCell", for: indexPath) as! WordSectionTableViewCell
-        cell.selectionStyle = .none
-        cell.indexPath = indexPath
-        cell.delegate = self
-        if indexPath.row % 2 == 0 {
-            cell.cellStype = .leftTwoQuestionWithTitle
-        } else {
-            cell.cellStype = .rightTwoQuestion
-        }
-        return cell
+        return wordViewModel.cellForRow(tableView,indexPath)
     }
 }
 extension WordViewController : UITableViewDelegate {
@@ -111,12 +109,13 @@ extension WordViewController : HeaderViewDelegate {
     
     
 }
-extension WordViewController : WordViewCellDelegate {
-    func cellDidSelected(indexPath: IndexPath, leftBtn: Bool) {
+
+extension WordViewController:RootTableViewViewModelDelegate {
+    func didSelectedCell(_ model: RootTableViewCellModel) {
         let sectionVc =  SectionViewController()
         sectionVc.navigationBarHidden = false
         self.navigationController?.pushViewController(sectionVc, animated: true)
     }
+    
 }
-
 

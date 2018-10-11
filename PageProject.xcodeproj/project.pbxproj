@@ -54,6 +54,9 @@
 		5EEECDC4215B690E000FB516 /* MineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDC2215B690E000FB516 /* MineTableViewCell.swift */; };
 		5EEECDC5215B690E000FB516 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEECDC3215B690E000FB516 /* MineTableViewCell.xib */; };
 		5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEECDC7215B83C4000FB516 /* MineModel.swift */; };
+		5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAA8216EE685009434BB /* RootTableViewViewModel.swift */; };
+		5EF4FAAB216EE78D009434BB /* RootTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */; };
+		5EF4FAAE216F30E4009434BB /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAD216F30E4009434BB /* WordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,9 @@
 		5EEECDC2215B690E000FB516 /* MineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableViewCell.swift; sourceTree = "<group>"; };
 		5EEECDC3215B690E000FB516 /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
 		5EEECDC7215B83C4000FB516 /* MineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
+		5EF4FAA8216EE685009434BB /* RootTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewViewModel.swift; sourceTree = "<group>"; };
+		5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewCellModel.swift; sourceTree = "<group>"; };
+		5EF4FAAD216F30E4009434BB /* WordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewModel.swift; sourceTree = "<group>"; };
 		61B29C1AA2071859559610AB /* Pods_PageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D30B28AC5DD032E51AA6B /* Pods-PageProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D07E8CD7BB9F8AB1F85CB87F /* Pods-PageProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -356,6 +362,8 @@
 				5E2E03DD2154DA22001D6C48 /* RootViewController.swift */,
 				5EEECDAF215A344D000FB516 /* RootView.swift */,
 				5E3F1CCF2160A72D0012FD42 /* RootAlertController.swift */,
+				5EF4FAA8216EE685009434BB /* RootTableViewViewModel.swift */,
+				5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 		5E2E03CD2154C38D001D6C48 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				5EF4FAAC216F30B6009434BB /* VM */,
 				5E2E03CF2154C39B001D6C48 /* View */,
 				5E2E03CE2154C396001D6C48 /* VC */,
 			);
@@ -456,6 +465,14 @@
 				5EEECDC7215B83C4000FB516 /* MineModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5EF4FAAC216F30B6009434BB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				5EF4FAAD216F30E4009434BB /* WordViewModel.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,11 +640,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PageProject/Pods-PageProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -636,11 +655,13 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -660,8 +681,10 @@
 				5E03549B214A355C0040BC2E /* PageProject.xcdatamodeld in Sources */,
 				5E1FCE57215E236D006264CE /* SectionTableViewCell.swift in Sources */,
 				5E035495214A355C0040BC2E /* ViewController.swift in Sources */,
+				5EF4FAAB216EE78D009434BB /* RootTableViewCellModel.swift in Sources */,
 				5E1FCE50215E22C3006264CE /* SectionViewController.swift in Sources */,
 				5EEECDAA2159C742000FB516 /* ScreenBounsConfig.swift in Sources */,
+				5EF4FAAE216F30E4009434BB /* WordViewModel.swift in Sources */,
 				15A4C5A2214CEAC2008D2B52 /* WordViewController.swift in Sources */,
 				15A4C5A5214CEB70008D2B52 /* WordHeaderView.swift in Sources */,
 				5ECD6038215F0B4300074438 /* SectionHeaderView.swift in Sources */,
@@ -679,6 +702,7 @@
 				5E210E97215DB9DC00EE80F1 /* DownLoadListViewController.swift in Sources */,
 				5E3F1CD02160A72D0012FD42 /* RootAlertController.swift in Sources */,
 				5EEECDBA215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift in Sources */,
+				5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
 				5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */,

@@ -8,12 +8,15 @@
 
 import UIKit
 
-
+import RxDataSources
+import RxSwift
+import RxCocoa
 
 
 class BookViewController: RootViewController {
-     var bookViewModel = BookViewModel();
+    let bookViewModel = BookViewModel()
      var bookTableView = UITableView()
+    
     lazy var cover:Cover = { () -> Cover in
         let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
             
@@ -28,6 +31,7 @@ class BookViewController: RootViewController {
     lazy var shareView:ShareCommonView = {() -> ShareCommonView in
         let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
         lazyShareView.shareActionStyle = { [weak self](style:ShareActionStyle) in
+            self?.bookViewModel.shareActionStyle(style)
             self?.cover.removeFromSuperview()
             
         }
@@ -52,6 +56,11 @@ class BookViewController: RootViewController {
         self.bookTableView.register(UINib.init(nibName: "BookHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookHeaderTableViewCell")
         self.bookTableView.register(UINib.init(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "BookTableViewCell")
         self.bookTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+
+        
+        self.bookTableView.rx.itemSelected.subscribe(onNext: { (indexPath) in
+             self.bookViewModel.didSelectRowAt(self.bookTableView,  indexPath)
+        }).disposed(by: disposeBag)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,21 +83,22 @@ class BookViewController: RootViewController {
 extension BookViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return bookViewModel.cellForRow(tableView:tableView,indexPath: indexPath)
+        return bookViewModel.cellForRow(tableView,indexPath)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return bookViewModel.numberOfSection(in:tableView)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookViewModel.numberOfRowsInSection(tableView:tableView, section:section)
+        return bookViewModel.numberOfRowsInSection(tableView, section)
     }
 }
 extension BookViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-     return  bookViewModel.heightForRowAt(tableView: tableView, indexPath: indexPath)
+     return  bookViewModel.heightForRowAt(tableView, indexPath)
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        bookViewModel.didSelectRowAt(tableView: tableView, indexPath: indexPath)
+       
     }
 }
 
@@ -96,11 +106,11 @@ extension BookViewController: BookViewModelDelegate {
     func shareViewShow() {
         UIApplication.shared.keyWindow?.addSubview(self.cover)
     }
-    
-    func onNextViewController() {
+    func didSelectedCell(_ model: RootTableViewCellModel) {
         let wordVC = WordViewController()
         wordVC.navigationBarHidden = true
         self.navigationController?.pushViewController(wordVC, animated: true)
     }
+    
     
 }

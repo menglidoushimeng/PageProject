@@ -51,4 +51,6 @@ class BookModel: NSObject {
     var dict_cfgparam:Array<BookCfgparamModel>?
     var upd_content_latestid:NSNumber?
     
+    
+    
 }

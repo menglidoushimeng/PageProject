@@ -48,7 +48,6 @@ class SettingViewController: RootViewController {
     
     private let note = UILabel.init(font: UIFont.systemFont(ofSize: 12), text: "期待您联系我们，提出建议和意见", textColor: ColorExtension().smallGray)
 
-    private let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.actionSetting()

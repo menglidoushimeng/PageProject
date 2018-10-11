@@ -8,6 +8,7 @@ target 'PageProject' do
   # pod 'Reachability.swift' #监测网络
   pod 'RxSwift', '~> 4.2.0' #响应式 不涉及UI
   pod 'RxCocoa', '~> 4.2.0' #响应式 涉及UI
+  pod 'RxDataSources' #响应式 数据处理
   pod 'SnapKit', '~> 4.0.0' #mansonry
   pod 'Kingfisher', '~> 4.9.0' #SDWebImage
   pod 'DGElasticPullToRefresh', '~> 1.1' #MJRefresh

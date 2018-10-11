@@ -7,10 +7,15 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
+import RxDataSources
 class RootViewController: UIViewController {
     
     var navigationBarHidden:Bool = false
+    
+    var disposeBag = DisposeBag()
+    
     var safe:UILayoutGuide {
         get {
             return self.view.safeAreaLayoutGuide
