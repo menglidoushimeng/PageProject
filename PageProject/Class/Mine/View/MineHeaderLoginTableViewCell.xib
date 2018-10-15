@@ -19,6 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="500" height="249.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_shadowuser" translatesAutoresizingMaskIntoConstraints="NO" id="ZCK-16-IRU">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="249.5"/>
+                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylT-32-BQx">
                         <rect key="frame" x="187.5" y="52.5" width="125" height="124.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,9 +42,13 @@
                 <constraints>
                     <constraint firstItem="CVR-aj-j3a" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="2QS-hr-LJM"/>
                     <constraint firstItem="ylT-32-BQx" firstAttribute="bottom" secondItem="CVR-aj-j3a" secondAttribute="bottom" id="3xg-JO-MlX"/>
+                    <constraint firstItem="ZCK-16-IRU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5Gu-IT-MQW"/>
                     <constraint firstItem="CVR-aj-j3a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-10" id="Aiq-jI-WZS"/>
+                    <constraint firstItem="ZCK-16-IRU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O9J-fW-VWT"/>
+                    <constraint firstAttribute="bottom" secondItem="ZCK-16-IRU" secondAttribute="bottom" id="U5B-1C-7pj"/>
                     <constraint firstItem="CVR-aj-j3a" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="a8a-tw-EWf"/>
                     <constraint firstItem="ylT-32-BQx" firstAttribute="trailing" secondItem="CVR-aj-j3a" secondAttribute="trailing" id="bFd-8L-M3g"/>
+                    <constraint firstAttribute="trailing" secondItem="ZCK-16-IRU" secondAttribute="trailing" id="gDg-Bn-Wfv"/>
                     <constraint firstItem="NRf-5v-rZm" firstAttribute="centerX" secondItem="CVR-aj-j3a" secondAttribute="centerX" id="lTR-N7-BIA"/>
                     <constraint firstItem="ylT-32-BQx" firstAttribute="leading" secondItem="CVR-aj-j3a" secondAttribute="leading" id="n46-0l-LX0"/>
                     <constraint firstItem="NRf-5v-rZm" firstAttribute="top" secondItem="CVR-aj-j3a" secondAttribute="bottom" constant="20" id="pGu-L3-45h"/>
@@ -54,10 +61,11 @@
                 <outlet property="nickNameLb" destination="NRf-5v-rZm" id="diA-gx-X0x"/>
                 <outlet property="shadowView" destination="ylT-32-BQx" id="ZhM-gp-ro4"/>
             </connections>
-            <point key="canvasLocation" x="102.40000000000001" y="144.3778110944528"/>
+            <point key="canvasLocation" x="102.40000000000001" y="143.92803598200899"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="13" width="1280" height="720"/>
+        <image name="dict_shadowuser" width="241" height="130"/>
     </resources>
 </document>

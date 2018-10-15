@@ -66,19 +66,19 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下一级:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-uC-m7N">
-                    <rect key="frame" x="347" y="28" width="47" height="17"/>
+                    <rect key="frame" x="347" y="19" width="47" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="掌握" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIJ-Kv-ILa">
-                    <rect key="frame" x="399" y="28" width="29" height="17"/>
+                    <rect key="frame" x="399" y="19" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.97647058823529409" green="0.66666666666666663" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-J8-Jvw">
-                    <rect key="frame" x="130" y="45" width="298" height="21.5"/>
+                    <rect key="frame" x="130" y="36" width="298" height="21.5"/>
                     <attributedString key="attributedText">
                         <fragment content="还需升级">
                             <attributes>
@@ -119,7 +119,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_crown" translatesAutoresizingMaskIntoConstraints="NO" id="qhg-DJ-w7L">
-                    <rect key="frame" x="400.5" y="5" width="26" height="18"/>
+                    <rect key="frame" x="407" y="8" width="13" height="9"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="SFb-Th-afE"/>
+                        <constraint firstAttribute="width" constant="13" id="VVb-46-Hq5"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-gM-UyT">
                     <rect key="frame" x="120" y="82" width="76" height="48"/>
@@ -138,11 +142,12 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Jqr-bQ-UrN"/>
                     </constraints>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                     <state key="normal">
                         <attributedString key="attributedTitle">
                             <fragment content="预习→">
                                 <attributes>
-                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <font key="NSFont" size="14" name="STSongti-SC-Regular"/>
                                     <real key="NSKern" value="0.0"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" minimumLineHeight="28" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -153,8 +158,8 @@
                             </fragment>
                             <fragment content="通关">
                                 <attributes>
-                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="18" name="STSongti-SC-Bold"/>
+                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="18" name="PingFangTC-Semibold"/>
                                     <real key="NSKern" value="0.0"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" minimumLineHeight="28" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                         <tabStops/>
@@ -164,7 +169,7 @@
                             </fragment>
                             <fragment content="→复习">
                                 <attributes>
-                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <font key="NSFont" size="14" name="STSongti-SC-Regular"/>
                                     <real key="NSKern" value="0.0"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" minimumLineHeight="28" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -175,7 +180,7 @@
                             </fragment>
                             <fragment content=" ">
                                 <attributes>
-                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <font key="NSFont" size="24" name="Times-Roman"/>
                                     <real key="NSKern" value="0.0"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" minimumLineHeight="28" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -221,7 +226,7 @@ Cg
                 <constraint firstItem="qhg-DJ-w7L" firstAttribute="centerX" secondItem="KIJ-Kv-ILa" secondAttribute="centerX" id="DEz-1m-2FQ"/>
                 <constraint firstItem="fFk-Tx-kGU" firstAttribute="leading" secondItem="2hb-gM-UyT" secondAttribute="leading" id="GeX-BJ-4Gb"/>
                 <constraint firstItem="fFk-Tx-kGU" firstAttribute="centerX" secondItem="2hb-gM-UyT" secondAttribute="centerX" id="HIf-gy-Azc"/>
-                <constraint firstItem="qhg-DJ-w7L" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="top" constant="5" id="Ib7-67-692"/>
+                <constraint firstItem="qhg-DJ-w7L" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="top" constant="8" id="Ib7-67-692"/>
                 <constraint firstItem="930-vF-afX" firstAttribute="top" secondItem="VwF-h1-l1w" secondAttribute="bottom" constant="3" id="J1p-0i-hox"/>
                 <constraint firstItem="4WW-RV-5n3" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="J3z-mb-2ps"/>
                 <constraint firstItem="0ay-uC-m7N" firstAttribute="centerY" secondItem="KIJ-Kv-ILa" secondAttribute="centerY" id="KNj-uS-gaD"/>
@@ -240,7 +245,7 @@ Cg
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="00D-bk-FFv" secondAttribute="top" id="kSK-yg-sO5"/>
                 <constraint firstItem="4WW-RV-5n3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="pD5-mk-Re6"/>
                 <constraint firstItem="7Ph-cw-JGk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="qnI-MW-YJJ"/>
-                <constraint firstItem="KIJ-Kv-ILa" firstAttribute="top" secondItem="qhg-DJ-w7L" secondAttribute="bottom" constant="5" id="qpE-Bw-C4n"/>
+                <constraint firstItem="KIJ-Kv-ILa" firstAttribute="top" secondItem="qhg-DJ-w7L" secondAttribute="bottom" constant="2" id="qpE-Bw-C4n"/>
                 <constraint firstItem="4WW-RV-5n3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sDt-IE-wcj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

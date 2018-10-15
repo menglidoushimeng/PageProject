@@ -19,7 +19,7 @@ class MineModel: NSObject {
     
     class func MineModelArr() -> NSMutableArray {
         let modelArr = NSMutableArray.init()
-        let imageArr = ["dict_currentbook","dict_mydownload","dict_shareandriodgray","dict_shareandriodgray"]
+        let imageArr = ["dict_currentbook","dict_mydownload","dict_shareandriodgray","dict_grouplist"]
         let titleArr = ["课本","课本下载记录","推荐给朋友","群排行榜"];
         let descArr = ["苏教版牛津（三起）五上","","",""];
         let rightArr = ["更换课本","","","建群、加群"];

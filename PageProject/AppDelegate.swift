@@ -36,8 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mineNavi = RootNavigationController(rootViewController: mineVc)
         let tabbar = UITabBarController.init()
         tabbar.viewControllers = [bookNavi,mineNavi]
+        tabbar.tabBar.tintColor = ColorExtension().wordBlue
         
-        let bookTabbarItem = UITabBarItem.init(title: "课文", image: UIImage.init(named: "dict_navigation1off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation1on")?.withRenderingMode(.alwaysOriginal))
+        let bookTabbarItem = UITabBarItem.init(title: "课本", image: UIImage.init(named: "dict_navigation1off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation1on")?.withRenderingMode(.alwaysOriginal))
         
         bookTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
         bookTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)

@@ -8,15 +8,18 @@
 
 import UIKit
 
-enum BookCellType {
-    case unLoad // 未下载
-    case load // 已下载
+enum BookCellType:String {
+    case practice = "dict_unitdo" // 练习
+    case understand = "dict_unitknowwell" // 知晓
+    case grasp = "dict_unitmastery" // 掌握
+    case glodStar = "dict_aostar" // 奥金星
+    case unLoad = "" // 未下载
 }
 
 // cell的类型
 class BookTableViewCell: UITableViewCell {
     var index:IndexPath?
-    var cellType:BookCellType = .unLoad {
+    var cellType:BookCellType = .practice {
         didSet {
             if cellType == .unLoad {
                 downBtn.isHidden = false
@@ -27,7 +30,9 @@ class BookTableViewCell: UITableViewCell {
                 downBtn.isHidden = true
                 rightArrowImageV.isHidden = false
                 practiseImageV.isHidden = false
-                 unitNameLb.textColor = ColorExtension().largeGray
+                unitNameLb.textColor = ColorExtension().largeGray
+                self.practiseImageV.image = UIImage.init(named: cellType.rawValue)
+                
             }
         }
     }

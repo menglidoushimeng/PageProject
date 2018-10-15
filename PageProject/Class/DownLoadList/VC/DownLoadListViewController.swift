@@ -18,14 +18,15 @@ class DownLoadListViewController: RootViewController {
     override func navigationBarSetting() {
         super.navigationBarSetting()
         self.navigationItem.title = "课文下载记录"
+        self.navigationController?.navigationBar.shadowImage = UIImage.init()
     }
     override func viewSetting() {
         super.viewSetting()
         view.backgroundColor = ColorExtension().bottomGray
         view.addSubview(listTableView)
         listTableView.snp.makeConstraints { (make) in
-            make.left.bottom.right.equalTo(view.safeAreaLayoutGuide)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(10)
+            make.left.bottom.right.equalTo(self.safe)
+            make.top.equalTo(self.safe).offset(10)
         }
         listTableView.delegate = self as UITableViewDelegate
         listTableView.dataSource = self as UITableViewDataSource
@@ -56,6 +57,11 @@ extension DownLoadListViewController:UITableViewDataSource {
         cell.selectionStyle = .none
         cell.indexPath = indexPath
         cell.delegate = self
+        if indexPath.row % 2 == 0 {
+            cell.bookState = .load
+        } else {
+            cell.bookState = .unLoad
+        }
         return cell
     }
     

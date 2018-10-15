@@ -20,6 +20,8 @@ class SettingViewController: RootViewController {
         }
     }
     
+    private let scrollView = UIScrollView.init()
+    private let baseView = UIView()
     
     private let iphoneDownLoadView = UIView.init(backgroundColor: UIColor.white);
     private let iphoneDownLoadLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "允许手机流量下载", textColor: ColorExtension().largeGray)
@@ -35,7 +37,7 @@ class SettingViewController: RootViewController {
     private let shareImg = UIImageView.init(image: UIImage.init(named: "dict_gotodo"))
     
     private let questionsBtn = UIButton.init(color: UIColor.white);
-    private let questionsLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "常见问题", textColor: ColorExtension().largeGray)
+    private let questionsLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "常见问题解答", textColor: ColorExtension().largeGray)
     private let questionsImg = UIImageView.init(image: UIImage.init(named: "dict_gotodo"))
     
     private let qqBtn = UIButton.init(color: UIColor.white);
@@ -47,7 +49,12 @@ class SettingViewController: RootViewController {
     private let wechat = UILabel.init(font: UIFont.systemFont(ofSize: 14), text: "小飞机英语", textColor: ColorExtension().smallGray)
     
     private let note = UILabel.init(font: UIFont.systemFont(ofSize: 12), text: "期待您联系我们，提出建议和意见", textColor: ColorExtension().smallGray)
+    
+    
+    let outBtn = UIButton.init()
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.actionSetting()
@@ -57,16 +64,27 @@ class SettingViewController: RootViewController {
     override func navigationBarSetting() {
         super.navigationBarSetting()
         self.navigationItem.title = "设置"
+        self.navigationController?.navigationBar.shadowImage = UIImage.init()
     }
     override func viewSetting() {
         super.viewSetting()
         self.view.backgroundColor = ColorExtension().bottomGray
-        self.view.addSubview(iphoneDownLoadView)
-        self.view.addSubview(iphoneDownLoadLabel)
-        self.view.addSubview(iphoneDownLoadSelected)
+        
+        self.view.addSubview(self.scrollView)
+        
+        scrollView.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalTo(self.safe)
+        }
+   
+       
+        
+        self.scrollView.addSubview(iphoneDownLoadView)
+        self.scrollView.addSubview(iphoneDownLoadLabel)
+        self.scrollView.addSubview(iphoneDownLoadSelected)
         iphoneDownLoadView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.safe).offset(10)
-            make.left.right.equalTo(self.safe)
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview()
+            make.width.equalTo(self.safe.snp.width)
             make.height.equalTo(60)
         }
         iphoneDownLoadLabel.snp.makeConstraints { (make) in
@@ -75,7 +93,7 @@ class SettingViewController: RootViewController {
         }
         iphoneDownLoadSelected.snp.makeConstraints { (make) in
             make.centerY.equalTo(iphoneDownLoadView.snp.centerY)
-            make.right.equalToSuperview().offset(-10)
+            make.right.equalTo(self.safe).offset(-10)
         }
         iphoneDownLoadSelected.rx.tap.bind { [weak self] in
             self?.iphoneDownLoadSelected.isSelected =  !(self?.iphoneDownLoadSelected.isSelected)!
@@ -85,12 +103,13 @@ class SettingViewController: RootViewController {
         
         
         
-        self.view.addSubview(versionBtn)
-        self.view.addSubview(versionLabel)
-        self.view.addSubview(version)
-        self.view.addSubview(versionRed)
+        self.scrollView.addSubview(versionBtn)
+        self.scrollView.addSubview(versionLabel)
+        self.scrollView.addSubview(version)
+        self.scrollView.addSubview(versionRed)
         versionBtn.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.safe)
+            make.left.equalTo(self.scrollView.snp.left)
+            make.width.equalTo(self.iphoneDownLoadView.snp.width)
             make.top.equalTo(iphoneDownLoadView.snp.bottom)
             make.height.equalTo(iphoneDownLoadView.snp.height)
         }
@@ -100,19 +119,20 @@ class SettingViewController: RootViewController {
         }
         version.snp.makeConstraints { (make) in
             make.centerY.equalTo(versionBtn.snp.centerY)
-            make.right.equalToSuperview().offset(-30)
+            make.right.equalTo(self.safe).offset(-30)
         }
         versionRed.snp.makeConstraints { (make) in
-            make.left.equalTo(versionLabel.snp.right)
-            make.bottom.equalTo(versionLabel.snp.top).offset(5)
+            make.left.equalTo(versionLabel.snp.right).offset(4)
+            make.bottom.equalTo(versionLabel.snp.top).offset(10)
         }
-        
-        
-        self.view.addSubview(shareBtn)
-        self.view.addSubview(shareLabel)
-        self.view.addSubview(shareImg)
+
+
+        self.scrollView.addSubview(shareBtn)
+        self.scrollView.addSubview(shareLabel)
+        self.scrollView.addSubview(shareImg)
         shareBtn.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.safe)
+            make.left.equalTo(self.scrollView.snp.left)
+            make.width.equalTo(self.iphoneDownLoadView.snp.width)
             make.top.equalTo(versionBtn.snp.bottom)
             make.height.equalTo(iphoneDownLoadView.snp.height)
         }
@@ -122,15 +142,16 @@ class SettingViewController: RootViewController {
         }
         shareImg.snp.makeConstraints { (make) in
             make.centerY.equalTo(shareBtn.snp.centerY)
-            make.right.equalToSuperview()
+            make.right.equalTo(self.safe)
         }
-        
-        
-        self.view.addSubview(questionsBtn)
-        self.view.addSubview(questionsLabel)
-        self.view.addSubview(questionsImg)
+
+
+        self.scrollView.addSubview(questionsBtn)
+        self.scrollView.addSubview(questionsLabel)
+        self.scrollView.addSubview(questionsImg)
         questionsBtn.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.safe)
+            make.left.equalTo(self.scrollView.snp.left)
+            make.width.equalTo(self.iphoneDownLoadView.snp.width)
             make.top.equalTo(shareBtn.snp.bottom).offset(10)
             make.height.equalTo(iphoneDownLoadView.snp.height)
         }
@@ -140,17 +161,18 @@ class SettingViewController: RootViewController {
         }
         questionsImg.snp.makeConstraints { (make) in
             make.centerY.equalTo(questionsBtn.snp.centerY)
-            make.right.equalTo(shareImg.snp.right)
+            make.right.equalTo(self.safe)
         }
-        
-        
-        
-        self.view.addSubview(qqBtn)
-        self.view.addSubview(qqLabel)
-        self.view.addSubview(qq)
+
+
+
+        self.scrollView.addSubview(qqBtn)
+        self.scrollView.addSubview(qqLabel)
+        self.scrollView.addSubview(qq)
         qq.textAlignment = .right
         qqBtn.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.safe)
+            make.left.equalTo(self.scrollView.snp.left)
+            make.width.equalTo(self.iphoneDownLoadView.snp.width)
             make.top.equalTo(questionsBtn.snp.bottom)
             make.height.equalTo(iphoneDownLoadView.snp.height)
         }
@@ -162,13 +184,14 @@ class SettingViewController: RootViewController {
             make.centerY.equalTo(qqBtn.snp.centerY)
             make.right.equalTo(version.snp.right)
         }
-        
-        
-        self.view.addSubview(wechatBtn)
-        self.view.addSubview(wechatLabel)
-        self.view.addSubview(wechat)
+
+
+        self.scrollView.addSubview(wechatBtn)
+        self.scrollView.addSubview(wechatLabel)
+        self.scrollView.addSubview(wechat)
         wechatBtn.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.safe)
+            make.left.equalTo(self.scrollView.snp.left)
+            make.width.equalTo(self.iphoneDownLoadView.snp.width)
             make.top.equalTo(qqBtn.snp.bottom)
             make.height.equalTo(iphoneDownLoadView.snp.height)
         }
@@ -180,17 +203,30 @@ class SettingViewController: RootViewController {
             make.centerY.equalTo(wechatBtn.snp.centerY)
             make.right.equalTo(version.snp.right)
         }
-        
-        self.view!.addSubview(note)
+
+        self.scrollView.addSubview(note)
         note.snp.makeConstraints { (make) in
             make.top.equalTo(wechatBtn.snp.bottom).offset(10)
             make.left.equalTo(wechatLabel.snp.left)
         }
-        
-        
+
+        self.scrollView.addSubview(outBtn)
+        outBtn.snp.makeConstraints { (make) in
+            make.left.equalTo(self.scrollView.snp.left).offset(30)
+            make.centerX.equalTo(self.scrollView.snp.centerX)
+            make.top.equalTo(self.wechatBtn.snp.bottom).offset(200)
+            make.bottom.equalTo(self.scrollView.snp.bottom).offset(-30)
+            make.height.equalTo(40)
+        }
+        outBtn.setTitleColor(ColorExtension().questionOrange, for: .normal)
+        outBtn.setTitle("退出当前账号", for: .normal)
+        outBtn.layer.cornerRadius = 10
+        outBtn.layer.borderWidth = 1
+        outBtn.layer.borderColor = ColorExtension().questionOrange.cgColor
         
         
     }
+
     func actionSetting () {
         versionBtn.rx.tap.bind {[weak self] in
             print("版本")
@@ -209,6 +245,13 @@ class SettingViewController: RootViewController {
             }.disposed(by: disposeBag)
     }
 
+    
+   
+   
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -243,6 +286,7 @@ extension UIButton {
         self.addTarget(self, action: #selector(touchDown), for:UIControlEvents.touchDown)
         self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchUpOutside)
         self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchUpInside)
+        self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchCancel)
     }
     @objc func touchDown() {
         self.backgroundColor = ColorExtension().touchGray
@@ -256,3 +300,7 @@ extension UIButton {
         self.setImage(UIImage.init(named: selectedImg), for: .selected)
     }
 }
+
+
+
+

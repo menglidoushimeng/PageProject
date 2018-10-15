@@ -11,6 +11,9 @@ import RxSwift
 import RxCocoa
 
 class MineViewController: RootViewController {
+    
+    
+
     let tableView = UITableView()
     
     let lvLb = UILabel();
@@ -66,11 +69,12 @@ class MineViewController: RootViewController {
         flashImgView.snp.makeConstraints { (make) in
             make.left.equalTo(lvLb.snp.right).offset(18)
             make.centerY.equalTo(lvLb.snp.centerY)
-            make.height.width.equalTo(20)
+            make.height.equalTo(19)
+            make.width.equalTo(22)
         }
         
         self.view.addSubview(redTextLb)
-        redTextLb.textColor = ColorExtension().textRed
+        redTextLb.textColor = ColorExtension().wordBlue
         redTextLb.text = "10000"
         redTextLb.font = UIFont.systemFont(ofSize: 10)
         redTextLb.snp.makeConstraints { (make) in
@@ -118,8 +122,8 @@ class MineViewController: RootViewController {
         
         self.view.addSubview(settingBtnRed)
         settingBtnRed.snp.makeConstraints { (make) in
-            make.bottom.equalTo(settingBtn.snp.top).offset(18)
-            make.right.equalTo(settingBtn.snp.left).offset(8)
+            make.bottom.equalTo(settingBtn.snp.top).offset(22)
+            make.right.equalTo(settingBtn.snp.left).offset(4)
             make.height.width.equalTo(12)
         }
     }
@@ -133,7 +137,24 @@ class MineViewController: RootViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    lazy var cover:Cover = { () -> Cover in
+        let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
+            
+        }, color: UIColor.black.withAlphaComponent(0.7), removeSelf: true)
+        coverView.addSubview(self.shareView)
+        self.shareView.snp.makeConstraints({ (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.size.width / 2)
+        })
+        return coverView
+    }()
+    lazy var shareView:ShareCommonView = {() -> ShareCommonView in
+        let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
+        lazyShareView.shareActionStyle = { [weak self](style:ShareActionStyle) in
+            self?.cover.removeFromSuperview()
+        }
+        return lazyShareView
+    }()
 }
 extension MineViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -186,6 +207,8 @@ extension MineViewController:UITableViewDelegate {
         if model.title == "课本下载记录" {
             let vc = DownLoadListViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if model.title == "推荐给朋友" {
+            UIApplication.shared.keyWindow?.addSubview(self.cover)
         } else {
             print(model.title)
         }

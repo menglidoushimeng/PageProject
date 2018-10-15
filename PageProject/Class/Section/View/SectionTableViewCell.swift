@@ -8,9 +8,31 @@
 
 import UIKit
 
+enum SentencesStates:NSInteger {
+    case understand = 0 // 知晓
+    case grasp = 1 // 掌握
+}
+
 class SectionTableViewCell: UITableViewCell {
 
-
+    @IBOutlet weak var stateLb: UILabel!
+    @IBOutlet weak var englishLb: UILabel!
+    
+    @IBOutlet weak var chineseLb: UILabel!
+    
+    var cellState:SentencesStates = .understand {
+        didSet {
+            englishLb.numberOfLines = cellState.rawValue
+            chineseLb.numberOfLines = cellState.rawValue
+            if cellState == .understand {
+                stateLb.text = "知晓"
+                stateLb.textColor = ColorExtension().rightGreen
+            } else {
+                stateLb.text = "掌握"
+                stateLb.textColor = ColorExtension().masteryGold
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

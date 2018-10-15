@@ -16,7 +16,7 @@ import UIKit
     @objc optional func sentenceCard()
 }
 
-class WordHeaderView: UIView {
+class WordHeaderView: RootView {
     
     var listenView = ImageTitleView()
     var wordView = ImageTitleView()
@@ -52,7 +52,7 @@ class WordHeaderView: UIView {
         turnBackBtn.setImage(UIImage.init(named: "dict_grayroundreturn"), for: .normal)
         turnBackBtn.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
-            make.top.equalTo(self.safeAreaLayoutGuide)
+            make.top.equalTo(self.safe).offset(10)
             make.height.width.equalTo(36)
         }
         turnBackBtn.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)
@@ -75,7 +75,7 @@ class WordHeaderView: UIView {
         contentView.backgroundColor = UIColor.white
         listenView.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
-            make.top.equalToSuperview().offset(ScreenBounsConfig().NAVIGATIONBAR_HEIGHT)
+            make.top.equalToSuperview().offset(64)
             make.bottom.equalTo(contentView.snp.bottom)
             make.width.equalTo(screenW/3)
         }
@@ -90,15 +90,15 @@ class WordHeaderView: UIView {
         contentView.addSubview(wordView)
         wordView.snp.makeConstraints { (make) in
             make.left.equalTo(listenView.snp.right)
-            make.top.equalToSuperview().offset(ScreenBounsConfig().NAVIGATIONBAR_HEIGHT)
+            make.top.equalTo(listenView.snp.top)
             make.bottom.equalToSuperview()
             make.width.equalTo(listenView.snp.width)
             make.height.equalTo(listenView.snp.height)
         }
         wordView.showImage = UIImage.init(named: "dict_wordcard")!
-        wordView.titleText = "单词"
+        wordView.titleText = "单词卡"
         wordView.descText = "38/400"
-        wordView.proportion = 38.000/400
+        wordView.proportion = 1
         wordView.btnAction = { [weak self] tag in
             self?.delegate?.wordsCard?()
         }
@@ -106,16 +106,16 @@ class WordHeaderView: UIView {
         contentView.addSubview(phraseView)
         phraseView.snp.makeConstraints { (make) in
             make.left.equalTo(wordView.snp.right)
-            make.top.equalToSuperview().offset(ScreenBounsConfig().NAVIGATIONBAR_HEIGHT)
+            make.top.equalTo(listenView.snp.top)
             make.right.equalTo(self)
             make.bottom.equalToSuperview()
             make.width.equalTo(wordView.snp.width)
             make.height.equalTo(listenView.snp.height)
         }
         phraseView.showImage = UIImage.init(named: "dict_phrasecard")!
-        phraseView.titleText = "短语"
+        phraseView.titleText = "短语卡"
         phraseView.descText = "12/200"
-        phraseView.proportion = 12/200
+        phraseView.proportion = 1
         phraseView.btnAction = { [weak self] tag in
             self?.delegate?.sentenceCard?()
         }

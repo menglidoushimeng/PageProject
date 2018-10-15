@@ -14,6 +14,7 @@ target 'PageProject' do
   pod 'DGElasticPullToRefresh', '~> 1.1' #MJRefresh
   pod 'SwiftyJSON', '~> 4.1.0' #json解析
   pod 'NVActivityIndicatorView', '~> 4.3.0' #HUD
+  pod 'SwViewCapture', '~> 1.0.6'
   # target 'PageProjectTests' do
   # inherit! :search_paths
   # Pods for testing

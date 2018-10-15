@@ -8,16 +8,26 @@
 
 import UIKit
 
-class SectionViewController: RootViewController {
+class SectionViewController: RootUnShowStatesViewController {
     let sectionTableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     override func navigationBarSetting() {
         super.navigationBarSetting()
-        self.navigationItem.title = "SectionA"
+        
+        let itemLb = UILabel.init()
+        itemLb.text = "人教版新课标必修1 高一上\nMIUI.SectionA"
+        itemLb.numberOfLines = 2;
+        itemLb.textAlignment = .center
+        itemLb.textColor = ColorExtension().largeGray
+        itemLb.font = UIFont.systemFont(ofSize: 13)
+        itemLb.adjustsFontSizeToFitWidth = true
+        self.navigationItem.titleView = itemLb
+        
         self.navigationController?.navigationBar.barTintColor = ColorExtension().bottomGray
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -27,7 +37,8 @@ class SectionViewController: RootViewController {
         view.backgroundColor = ColorExtension().bottomGray
         view.addSubview(sectionTableView)
         sectionTableView.snp.makeConstraints { (make) in
-            make.top.left.bottom.right.equalTo(view.safeAreaLayoutGuide)
+             make.top.left.bottom.right.equalTo(self.safe)
+           
         }
         sectionTableView.backgroundColor = ColorExtension().bottomGray
         sectionTableView.delegate = self as UITableViewDelegate
@@ -61,6 +72,11 @@ extension SectionViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTableViewCell", for: indexPath) as! SectionTableViewCell
+        if indexPath.row % 2 == 0 {
+            cell.cellState = .understand
+        } else {
+            cell.cellState = .grasp
+        }
         return cell
     }
     

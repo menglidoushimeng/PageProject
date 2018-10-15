@@ -16,10 +16,30 @@ class RootViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    lazy var guide:UILayoutGuide = { () -> UILayoutGuide in
+        let guide = UILayoutGuide()
+        self.view.addLayoutGuide(guide)
+        guide.snp.makeConstraints({ (make) in
+            make.top.bottom.left.right.equalTo(self.view)
+        })
+        return guide
+    }()
+    
+    
     var safe:UILayoutGuide {
         get {
-            return self.view.safeAreaLayoutGuide
+            if #available(iOS 11.0, *) {
+                return self.view.safeAreaLayoutGuide
+            } else {
+                return self.guide
+            }
+            
         }
+    }
+    func isHeightVersion() -> Bool {
+        let version = UIDevice.current.systemVersion
+        let versionFloat = version._bridgeToObjectiveC().floatValue
+        return versionFloat >= 11
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,3 +86,5 @@ class RootViewController: UIViewController {
     */
 
 }
+
+

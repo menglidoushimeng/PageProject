@@ -19,20 +19,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dic_entrance" translatesAutoresizingMaskIntoConstraints="NO" id="UGC-f6-MzZ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czrjbgoforit_1" translatesAutoresizingMaskIntoConstraints="NO" id="UGC-f6-MzZ">
                         <rect key="frame" x="10" y="10" width="98.5" height="129.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="UGC-f6-MzZ" secondAttribute="height" multiplier="95:125" id="llk-5L-8a2"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piwordlistdone" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-kB-Y03">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piwordlistdoing" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-kB-Y03">
                         <rect key="frame" x="108.5" y="69.5" width="52" height="45.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="height" multiplier="110:96" id="ToM-gF-PcV"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesdone" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-2F-7UY">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesdoing" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-2F-7UY">
                         <rect key="frame" x="212.5" y="69.5" width="52" height="45.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-Tv-dEu">
@@ -53,7 +53,7 @@
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piparagraphsdone" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-lt-KpN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piparagraphsdoing" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-lt-KpN">
                         <rect key="frame" x="264.5" y="69.5" width="52" height="45.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89f-2x-5CN">
@@ -63,12 +63,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwp-LA-Tbq">
-                        <rect key="frame" x="352" y="91.5" width="48" height="48"/>
+                        <rect key="frame" x="335" y="91.5" width="50" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="48" id="jYV-TK-BaV"/>
                             <constraint firstAttribute="height" constant="48" id="oXC-6x-BpA"/>
                         </constraints>
-                        <state key="normal" image="dict_dustbin"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="(未下载)">
+                            <color key="titleColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                         <connections>
                             <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xoa-AQ-4D2"/>
                         </connections>
@@ -80,7 +82,7 @@
                             <constraint firstAttribute="height" constant="1" id="ovp-Ut-YuL"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piexpressionsdone" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-Hy-RSj">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piexpressionsdoing" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-Hy-RSj">
                         <rect key="frame" x="160.5" y="69.5" width="52" height="45.5"/>
                     </imageView>
                 </subviews>
@@ -92,7 +94,7 @@
                     <constraint firstAttribute="bottom" secondItem="Nwp-LA-Tbq" secondAttribute="bottom" constant="10" id="91p-gZ-Blw"/>
                     <constraint firstItem="5Ze-kB-Y03" firstAttribute="centerX" secondItem="oNb-Tv-dEu" secondAttribute="centerX" id="9A2-c4-B10"/>
                     <constraint firstItem="z9O-2F-7UY" firstAttribute="centerX" secondItem="89f-2x-5CN" secondAttribute="centerX" id="CLR-oE-y34"/>
-                    <constraint firstAttribute="trailing" secondItem="Nwp-LA-Tbq" secondAttribute="trailing" id="EsJ-gm-zn2"/>
+                    <constraint firstAttribute="trailing" secondItem="Nwp-LA-Tbq" secondAttribute="trailing" constant="15" id="EsJ-gm-zn2"/>
                     <constraint firstAttribute="trailing" secondItem="jxk-AP-qxO" secondAttribute="trailing" id="FHE-dM-8ZK"/>
                     <constraint firstItem="5Ze-kB-Y03" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.13" id="FHz-b6-QCB"/>
                     <constraint firstItem="bNL-lt-KpN" firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="width" id="FsT-X4-cjW"/>
@@ -124,17 +126,25 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bookBgImg" destination="UGC-f6-MzZ" id="mPj-xv-Ijp"/>
                 <outlet property="deleteBtn" destination="Nwp-LA-Tbq" id="iv9-L1-Qld"/>
+                <outlet property="paragraphsImg" destination="bNL-lt-KpN" id="skv-zB-HnA"/>
+                <outlet property="paragraphsLb" destination="ebu-uu-0x7" id="32K-WI-Dbn"/>
+                <outlet property="pressionsImg" destination="bo8-Hy-RSj" id="0LC-Oh-p7Y"/>
+                <outlet property="pressionsLb" destination="imu-tz-KX1" id="dlp-5N-89s"/>
+                <outlet property="sentencesImg" destination="z9O-2F-7UY" id="UoF-9s-VtJ"/>
+                <outlet property="sentencesLb" destination="89f-2x-5CN" id="ITM-vi-gAQ"/>
+                <outlet property="wordImg" destination="5Ze-kB-Y03" id="44z-Po-h7A"/>
+                <outlet property="wordLb" destination="oNb-Tv-dEu" id="A7a-B4-reQ"/>
             </connections>
-            <point key="canvasLocation" x="156.80000000000001" y="66.566716641679164"/>
+            <point key="canvasLocation" x="275" y="66"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dic_entrance" width="240" height="426"/>
-        <image name="dict_dustbin" width="50" height="50"/>
-        <image name="dict_piexpressionsdone" width="110" height="96"/>
-        <image name="dict_piparagraphsdone" width="110" height="96"/>
-        <image name="dict_pisentencesdone" width="110" height="96"/>
-        <image name="dict_piwordlistdone" width="110" height="96"/>
+        <image name="czrjbgoforit_1" width="230" height="300"/>
+        <image name="dict_piexpressionsdoing" width="110" height="96"/>
+        <image name="dict_piparagraphsdoing" width="110" height="96"/>
+        <image name="dict_pisentencesdoing" width="110" height="96"/>
+        <image name="dict_piwordlistdoing" width="110" height="96"/>
     </resources>
 </document>

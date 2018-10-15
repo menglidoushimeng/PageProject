@@ -14,6 +14,7 @@ import RxDataSources
 protocol BookViewModelDelegate:RootTableViewViewModelDelegate {
     /******* 自定义协议  ********/
     func shareViewShow()
+    
 }
 
 
@@ -96,10 +97,16 @@ class BookViewModel: RootTableViewViewModel {
             let bookCell = cell as! BookTableViewCell
             bookCell.selectionStyle = .none
             bookCell.index = indexPath
-            if indexPath.row % 2 == 0 {
+            if indexPath.row % 5 == 0 {
                 bookCell.cellType = .unLoad
-            } else {
-                bookCell.cellType = .load
+            } else if indexPath.row % 5 == 1 {
+                bookCell.cellType = .practice
+            } else if indexPath.row % 5 == 2 {
+                bookCell.cellType = .understand
+            } else if indexPath.row % 5 == 3 {
+                bookCell.cellType = .grasp
+            } else if indexPath.row % 5 == 4 {
+                bookCell.cellType = .glodStar
             }
             bookCell.cellDownLoadBlock = {(index) in
                 print("点击了下载按钮");
@@ -116,12 +123,18 @@ class BookViewModel: RootTableViewViewModel {
     
    override func heightForRowAt(_ tableView: UITableView,  _ indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
+            return UITableViewAutomaticDimension
+        } else {
+            return 60
+        }
+    }
+    override func estimatedHeightForRowAt(_ tableView: UITableView, _ indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
             return UIScreen.main.bounds.size.width
         } else {
             return 60
         }
     }
-    
     
    override func didSelectRowAt( _ tableView: UITableView,  _ indexPath: IndexPath) {
         let rows = self.dataSource?[indexPath.section]

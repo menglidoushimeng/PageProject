@@ -19,6 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="500" height="249.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_shadowuser" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-Fi-lTR">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="249.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiH-9e-nVp">
                         <rect key="frame" x="250" y="143" width="170" height="17"/>
                         <attributedString key="attributedText">
@@ -86,28 +89,33 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NUj-Fi-lTR" secondAttribute="bottom" id="2qh-ZD-98q"/>
                     <constraint firstItem="V7M-iN-iwR" firstAttribute="width" secondItem="jqe-PO-iaK" secondAttribute="width" id="B1T-E8-RB5"/>
                     <constraint firstItem="EDK-mY-9kE" firstAttribute="bottom" secondItem="jqe-PO-iaK" secondAttribute="bottom" id="BlX-th-I0w"/>
                     <constraint firstItem="V7M-iN-iwR" firstAttribute="height" secondItem="jqe-PO-iaK" secondAttribute="height" id="IyZ-vd-kVu"/>
                     <constraint firstItem="V7M-iN-iwR" firstAttribute="centerX" secondItem="qiH-9e-nVp" secondAttribute="centerX" id="Jj6-V7-bn5"/>
                     <constraint firstItem="xKF-Z9-JNb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KGR-Sn-zhj"/>
+                    <constraint firstAttribute="trailing" secondItem="NUj-Fi-lTR" secondAttribute="trailing" id="PJp-Ip-nFf"/>
                     <constraint firstItem="qiH-9e-nVp" firstAttribute="centerY" secondItem="EDK-mY-9kE" secondAttribute="centerY" id="QLL-64-ivz"/>
                     <constraint firstItem="jqe-PO-iaK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-15" id="UaQ-u4-gZx"/>
+                    <constraint firstItem="NUj-Fi-lTR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vaa-J7-fY5"/>
                     <constraint firstAttribute="trailing" secondItem="qiH-9e-nVp" secondAttribute="trailing" constant="80" id="ZyM-lx-RXD"/>
                     <constraint firstItem="EDK-mY-9kE" firstAttribute="width" secondItem="qiH-9e-nVp" secondAttribute="width" id="a69-pt-1f5"/>
                     <constraint firstItem="V7M-iN-iwR" firstAttribute="centerY" secondItem="jqe-PO-iaK" secondAttribute="centerY" id="bKT-j8-OEi"/>
                     <constraint firstItem="qiH-9e-nVp" firstAttribute="leading" secondItem="EDK-mY-9kE" secondAttribute="trailing" id="bme-Un-Eoh"/>
+                    <constraint firstItem="NUj-Fi-lTR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pXB-OR-bEh"/>
                     <constraint firstAttribute="bottom" secondItem="xKF-Z9-JNb" secondAttribute="bottom" constant="20" id="v2I-zX-RIw"/>
                     <constraint firstItem="EDK-mY-9kE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="vqS-DC-lau"/>
                     <constraint firstItem="jqe-PO-iaK" firstAttribute="centerX" secondItem="EDK-mY-9kE" secondAttribute="centerX" id="xD1-A2-tXe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="87"/>
+            <point key="canvasLocation" x="137.59999999999999" y="86.35682158920541"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dict_logonqq" width="41" height="41"/>
-        <image name="dict_logonwechat" width="41" height="41"/>
+        <image name="dict_logonqq" width="40" height="40"/>
+        <image name="dict_logonwechat" width="40" height="40"/>
+        <image name="dict_shadowuser" width="241" height="130"/>
     </resources>
 </document>

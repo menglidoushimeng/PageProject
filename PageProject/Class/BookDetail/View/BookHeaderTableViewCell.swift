@@ -57,7 +57,7 @@ class BookHeaderTableViewCell: UITableViewCell {
         }
         
         
-        listenView.showImage = UIImage.init(named: "dict_playtext")!
+        listenView.showImage = UIImage.init(named: "dict_playtextbig")!
         listenView.titleText = "听课文"
         listenView.descText = ""
         listenView.proportion = 1
@@ -74,7 +74,7 @@ class BookHeaderTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview()
             make.width.equalTo(bootomView.snp.width).multipliedBy(0.2)
         }
-        wordView.showImage = UIImage.init(named: "dict_playtext")!
+        wordView.showImage = UIImage.init(named: "dict_piwordlistdone")!
         wordView.titleText = "单词"
         wordView.descText = "38/400"
         wordView.proportion = 38.000/400
@@ -90,7 +90,7 @@ class BookHeaderTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview()
             make.width.equalTo(bootomView.snp.width).multipliedBy(0.2)
         }
-        sentenceView.showImage = UIImage.init(named: "dict_playtext")!
+        sentenceView.showImage = UIImage.init(named: "dict_piexpressionsdone")!
         sentenceView.titleText = "短语"
         sentenceView.descText = "16/152"
         sentenceView.proportion = 16.000/152
@@ -106,7 +106,7 @@ class BookHeaderTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview()
             make.width.equalTo(bootomView.snp.width).multipliedBy(0.2)
         }
-        keySentenceView.showImage = UIImage.init(named: "dict_playtext")!
+        keySentenceView.showImage = UIImage.init(named: "dict_pisentencesdone")!
         keySentenceView.titleText = "重点句型"
         keySentenceView.descText = "4/95"
         keySentenceView.proportion = 4.000/95
@@ -123,7 +123,7 @@ class BookHeaderTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview()
             make.width.equalTo(bootomView.snp.width).multipliedBy(0.2)
         }
-        textView.showImage = UIImage.init(named: "dict_playtext")!
+        textView.showImage = UIImage.init(named: "dict_piparagraphsdone")!
         textView.titleText = "课文"
         textView.descText = "4/24"
         textView.proportion = 4.000/24

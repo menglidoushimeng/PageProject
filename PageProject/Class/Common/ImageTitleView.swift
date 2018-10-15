@@ -124,12 +124,12 @@ class ImageTitleView: UIView {
         titleLb.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.bottom.equalTo(descLb.snp.top).offset(-5)
+            make.bottom.equalTo(descLb.snp.top).offset(-2)
             make.height.greaterThanOrEqualTo(15)
         }
         imageView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(10)
-            make.bottom.equalTo(titleLb.snp.top).offset(-10)
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalTo(titleLb.snp.top).offset(-5)
             make.centerX.equalToSuperview()
             make.width.lessThanOrEqualTo(self.snp.width)
         }

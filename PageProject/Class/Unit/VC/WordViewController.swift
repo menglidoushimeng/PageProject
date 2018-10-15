@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WordViewController: RootViewController {
+class WordViewController: RootUnShowStatesViewController {
 
     var headerView = WordHeaderView()
     let wordViewModel = WordViewModel()
@@ -53,17 +53,19 @@ class WordViewController: RootViewController {
     //添加headerView
     func addHeaderView(){
         headerView.delegate = self
-        headerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 140 + ScreenBounsConfig().NAVIGATIONBAR_HEIGHT)
-        self.view.addSubview(headerView)
     }
     //添加TablaeView
     func addTableView(){
-        wordTableView = UITableView(frame: CGRect(x: 0, y: 140 + ScreenBounsConfig().NAVIGATIONBAR_HEIGHT, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 140 - ScreenBounsConfig().NAVIGATIONBAR_HEIGHT))
+        wordTableView = UITableView()
         
         self.view.addSubview(wordTableView)
+        wordTableView.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalTo(self.safe)
+        }
         wordTableView.delegate = self as UITableViewDelegate
         wordTableView.dataSource = self as UITableViewDataSource
         wordTableView.separatorStyle = .none
+        wordTableView.sectionHeaderHeight = 160
         wordTableView.estimatedRowHeight = 180
         wordTableView.rowHeight =  UITableViewAutomaticDimension
         wordTableView.register(WordSectionTableViewCell.self, forCellReuseIdentifier: "WordSectionTableViewCell")
@@ -83,6 +85,9 @@ extension WordViewController : UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return wordViewModel.cellForRow(tableView,indexPath)
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.headerView;
     }
 }
 extension WordViewController : UITableViewDelegate {
