@@ -12,7 +12,7 @@ import RxCocoa
 
 class MineViewController: RootViewController {
     
-    
+    var isLogin = false;
 
     let tableView = UITableView()
     
@@ -163,7 +163,7 @@ extension MineViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let isLogin = false
+         
             
             if isLogin {
                let cell = tableView.dequeueReusableCell(withIdentifier: "MineHeaderLoginTableViewCell", for: indexPath) as! MineHeaderLoginTableViewCell
@@ -201,6 +201,8 @@ extension MineViewController:UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            isLogin = !isLogin;
+            tableView.reloadData()
             return
         }
         let model = listDataSource[indexPath.row - 1] as! MineModel

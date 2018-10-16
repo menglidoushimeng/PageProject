@@ -12,10 +12,8 @@ enum BookCellType:String {
     case practice = "dict_unitdo" // 练习
     case understand = "dict_unitknowwell" // 知晓
     case grasp = "dict_unitmastery" // 掌握
-    case glodStar = "dict_aostar" // 奥金星
     case unLoad = "" // 未下载
 }
-
 // cell的类型
 class BookTableViewCell: UITableViewCell {
     var index:IndexPath?
@@ -26,17 +24,23 @@ class BookTableViewCell: UITableViewCell {
                 rightArrowImageV.isHidden = true
                 practiseImageV.isHidden = true
                 unitNameLb.textColor = ColorExtension().smallGray
+                statImg.isHidden = true
             } else {
                 downBtn.isHidden = true
                 rightArrowImageV.isHidden = false
                 practiseImageV.isHidden = false
                 unitNameLb.textColor = ColorExtension().largeGray
                 self.practiseImageV.image = UIImage.init(named: cellType.rawValue)
+                statImg.isHidden = false
                 
             }
         }
     }
-    
+    var star:Bool = true {
+        didSet {
+            self.statImg.isHidden = star;
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -53,6 +57,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var rightArrowImageV: UIImageView!
     @IBOutlet weak var practiseImageV: UIImageView!
     
+    @IBOutlet weak var statImg: UIImageView!
     var cellDownLoadBlock = {(index:IndexPath) in}
     
     @IBAction func downLoadAction(_ sender: UIButton) {

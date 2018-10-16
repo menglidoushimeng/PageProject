@@ -75,6 +75,12 @@
                             <action selector="downLoadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mqq-Ji-ady"/>
                         </connections>
                     </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_aostar" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-v4-sq0">
+                        <rect key="frame" x="387" y="72.5" width="19" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aNJ-v4-sq0" secondAttribute="height" id="Nlp-Zg-yNf"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="78G-UP-L59" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4Se-o4-VAz"/>
@@ -92,10 +98,13 @@
                     <constraint firstItem="WJR-2N-kEx" firstAttribute="centerY" secondItem="P97-cF-C5a" secondAttribute="centerY" id="ZGv-Pj-L4N"/>
                     <constraint firstItem="vcQ-U0-yGO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZQ7-00-NZk"/>
                     <constraint firstAttribute="trailing" secondItem="Cho-ov-zbL" secondAttribute="trailing" constant="15" id="ZcV-2B-GbY"/>
+                    <constraint firstItem="aNJ-v4-sq0" firstAttribute="trailing" secondItem="XDN-wA-LrL" secondAttribute="trailing" id="cWp-vA-SkQ"/>
                     <constraint firstItem="0Av-iG-lkQ" firstAttribute="leading" secondItem="0Cn-lm-O3F" secondAttribute="trailing" constant="10" id="gqP-nu-LCe"/>
                     <constraint firstItem="Cho-ov-zbL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hjy-gA-zGV"/>
                     <constraint firstItem="OFR-GE-7k9" firstAttribute="centerY" secondItem="WJR-2N-kEx" secondAttribute="centerY" id="nRF-2Q-52t"/>
                     <constraint firstItem="P97-cF-C5a" firstAttribute="leading" secondItem="vcQ-U0-yGO" secondAttribute="leading" id="pHX-lZ-pvt"/>
+                    <constraint firstItem="aNJ-v4-sq0" firstAttribute="bottom" secondItem="XDN-wA-LrL" secondAttribute="bottom" id="xUh-OA-jDj"/>
+                    <constraint firstItem="aNJ-v4-sq0" firstAttribute="height" secondItem="XDN-wA-LrL" secondAttribute="height" multiplier="0.4" id="xYx-K8-oZ3"/>
                     <constraint firstItem="OFR-GE-7k9" firstAttribute="leading" secondItem="0Av-iG-lkQ" secondAttribute="trailing" constant="10" id="xtG-VA-JJt"/>
                 </constraints>
             </tableViewCellContentView>
@@ -108,13 +117,15 @@
                 <outlet property="practiseImageV" destination="XDN-wA-LrL" id="EVY-HW-aV7"/>
                 <outlet property="rightArrowImageV" destination="78G-UP-L59" id="l1I-bT-HZa"/>
                 <outlet property="sentencecountLb" destination="0Av-iG-lkQ" id="haO-ia-ER2"/>
+                <outlet property="statImg" destination="aNJ-v4-sq0" id="Wpi-jE-x8P"/>
                 <outlet property="unitNameLb" destination="vcQ-U0-yGO" id="AS3-Ac-fXy"/>
                 <outlet property="wordcountLb" destination="WJR-2N-kEx" id="dxE-gU-1nx"/>
             </connections>
-            <point key="canvasLocation" x="4" y="16"/>
+            <point key="canvasLocation" x="3.2000000000000002" y="15.292353823088456"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dict_aostar" width="36" height="36"/>
         <image name="dict_gotodo" width="28" height="48"/>
         <image name="dict_unitdo" width="48" height="48"/>
         <image name="down" width="16" height="16"/>

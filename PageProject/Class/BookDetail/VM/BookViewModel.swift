@@ -105,14 +105,19 @@ class BookViewModel: RootTableViewViewModel {
             bookCell.index = indexPath
             if indexPath.row % 5 == 0 {
                 bookCell.cellType = .unLoad
+                bookCell.star = true
             } else if indexPath.row % 5 == 1 {
                 bookCell.cellType = .practice
+                bookCell.star = true
             } else if indexPath.row % 5 == 2 {
                 bookCell.cellType = .understand
+                bookCell.star = true
             } else if indexPath.row % 5 == 3 {
                 bookCell.cellType = .grasp
+                bookCell.star = true
             } else if indexPath.row % 5 == 4 {
-                bookCell.cellType = .glodStar
+                bookCell.cellType = .grasp
+                bookCell.star = false
             }
             bookCell.cellDownLoadBlock = {(index) in
                 print("点击了下载按钮");
