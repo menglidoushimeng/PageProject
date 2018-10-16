@@ -31,7 +31,9 @@ class BookViewController: RootViewController {
     lazy var shareView:ShareCommonView = {() -> ShareCommonView in
         let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
         lazyShareView.shareActionStyle = { [weak self](style:ShareActionStyle) in
-            self?.shareImgCustion(style)
+            if style != .cancel {
+                self?.shareImgCustion(style)
+            }
           //  self?.bookViewModel.shareActionStyle(style)
             self?.cover.removeFromSuperview()
             
@@ -67,25 +69,23 @@ class BookViewController: RootViewController {
     
     /// 制作分享图
     func shareImgCustion(_ style:ShareActionStyle) {
-        self.bookTableView.swContentScrollCapture({ (image) in
-            let img = UIImage.init(named: "dict_qr")
-            let megreImg = ImageTool.mergeImges(image!, img!, CGRect.init(x: image!.size.width - 70, y: 0, width: 70, height: 70))
-
-            var headImg = UIImage.init(named: "13")
-            headImg = ImageTool.cornerImage(headImg!, CGSize.init(width: 40, height: 40), 20)
-
-            let megreHeadImg = ImageTool.mergeImges(megreImg, headImg!, CGRect.init(x: 10, y: 10, width: 40, height: 40))
-            
-            let megreStringImg = ImageTool.mergeImges(megreHeadImg, "昵称", CGPoint.init(x: 55, y: 18), ColorExtension().middenGray, UIFont.systemFont(ofSize: 23, weight: UIFont.Weight(rawValue: -1)))
-            
-            let shareImg = UIImageView.init(image: megreStringImg)
-            shareImg.frame = CGRect.init(x: 0, y: 30, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 30)
+        
+        ImageTool.shareImgCustion(self.bookTableView, UIImage.init(named: "13")!, "昵称") { (megreImg) in
+            let shareImg = UIImageView.init(image: megreImg)
+            shareImg.frame = UIScreen.main.bounds
             shareImg.contentMode = UIViewContentMode.scaleAspectFit
+            shareImg.backgroundColor = UIColor.white
             UIApplication.shared.keyWindow?.addSubview(shareImg)
-        })
+            shareImg.isUserInteractionEnabled = true;
+            shareImg.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(self.tapAction(_:))))
+        }
+        
+        
     }
     
-    
+    @objc func tapAction(_ tap:UITapGestureRecognizer) {
+        tap.view?.removeFromSuperview()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -129,6 +129,12 @@ extension BookViewController : UITableViewDelegate {
 }
 
 extension BookViewController: BookViewModelDelegate {
+    func headerAction() {
+        let wordVC = WordViewController()
+        wordVC.navigationBarHidden = true
+        self.navigationController?.pushViewController(wordVC, animated: true)
+    }
+    
     func shareViewShow() {
         UIApplication.shared.keyWindow?.addSubview(self.cover)
     }

@@ -21,6 +21,7 @@ class DownListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deleteBtn: UIButton!
     var indexPath:IndexPath?
+    @IBOutlet weak var stateLb: UILabel!
     
     @IBOutlet weak var wordImg: UIImageView!
     @IBOutlet weak var wordLb: UILabel!
@@ -40,6 +41,7 @@ class DownListTableViewCell: UITableViewCell {
     weak var delegate:DeleteDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.deleteBtn.imageView?.contentMode = .scaleAspectFit
         // Initialization code
     }
     
@@ -50,18 +52,16 @@ class DownListTableViewCell: UITableViewCell {
                 pressionsImg.image = UIImage.init(named: "dict_piexpressionsdone")
                 sentencesImg.image = UIImage.init(named: "dict_pisentencesdone")
                 paragraphsImg.image = UIImage.init(named: "dict_piparagraphsdone")
-                deleteBtn.setTitle("", for: .normal)
-                deleteBtn.isUserInteractionEnabled = true
-                deleteBtn.setImage(UIImage.init(named: ""), for: .normal)
+                deleteBtn.isHidden = false
+                stateLb.isHidden = true
                 
             } else {
                 wordImg.image = UIImage.init(named: "dict_piwordlistdoing")
                 pressionsImg.image = UIImage.init(named: "dict_piexpressionsdoing")
                 sentencesImg.image = UIImage.init(named: "dict_pisentencesdoing")
                 paragraphsImg.image = UIImage.init(named: "dict_piparagraphsdoing")
-                deleteBtn.setTitle("(未下载)", for: .normal)
-                deleteBtn.isUserInteractionEnabled = false
-                deleteBtn.setImage(nil, for: .normal)
+                deleteBtn.isHidden = true
+                stateLb.isHidden = false
             }
         }
     }

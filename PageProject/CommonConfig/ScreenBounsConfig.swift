@@ -60,7 +60,7 @@ class ScreenBounsConfig: NSObject {
 }
 extension UIDevice {
     public func isX() -> Bool {
-        if UIScreen.main.bounds.height == 812 {
+        if UIScreen.main.bounds.height == 812 || UIScreen.main.bounds.height == 896{
             return true
         }
         return false

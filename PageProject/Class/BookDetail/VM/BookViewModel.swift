@@ -14,6 +14,7 @@ import RxDataSources
 protocol BookViewModelDelegate:RootTableViewViewModelDelegate {
     /******* 自定义协议  ********/
     func shareViewShow()
+    func headerAction()
     
 }
 
@@ -72,22 +73,27 @@ class BookViewModel: RootTableViewViewModel {
                     break;
                 case .listen : do {
                     print("听课文")
+                    self.bookDelegate?.headerAction()
                 }
                     break;
                 case .word : do {
                     print("单词")
+                    self.bookDelegate?.headerAction()
                 }
                 break;
                 case .sentence : do {
                     print("短语")
+                    self.bookDelegate?.headerAction()
                 }
                 break;
                 case .keySentence : do {
                     print("重点句型")
+                    self.bookDelegate?.headerAction()
                 }
                 break;
                 case .text : do {
                     print("朗读课文")
+                    self.bookDelegate?.headerAction()
                 }
                 break;
                 }

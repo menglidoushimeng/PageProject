@@ -28,6 +28,9 @@ class WordViewController: RootUnShowStatesViewController {
     lazy var shareView:ShareCommonView = {() -> ShareCommonView in
         let lazyShareView = Bundle.main.loadNibNamed("ShareCommonView", owner: self, options: nil)?.first as! ShareCommonView
         lazyShareView.shareActionStyle = { [weak self](style:ShareActionStyle) in
+            if style != .cancel {
+                self?.shareImgCustion(style)
+            }
             self?.cover.removeFromSuperview()
         }
         return lazyShareView
@@ -53,6 +56,11 @@ class WordViewController: RootUnShowStatesViewController {
     //添加headerView
     func addHeaderView(){
         headerView.delegate = self
+        self.view.addSubview(headerView);
+        self.headerView.snp.makeConstraints { (make) in
+            make.left.right.top.equalTo(self.safe)
+            make.height.equalTo(160)
+        }
     }
     //添加TablaeView
     func addTableView(){
@@ -60,12 +68,12 @@ class WordViewController: RootUnShowStatesViewController {
         
         self.view.addSubview(wordTableView)
         wordTableView.snp.makeConstraints { (make) in
-            make.top.bottom.left.right.equalTo(self.safe)
+            make.bottom.left.right.equalTo(self.safe)
+            make.top.equalTo(self.headerView.snp.bottom)
         }
         wordTableView.delegate = self as UITableViewDelegate
         wordTableView.dataSource = self as UITableViewDataSource
         wordTableView.separatorStyle = .none
-        wordTableView.sectionHeaderHeight = 160
         wordTableView.estimatedRowHeight = 180
         wordTableView.rowHeight =  UITableViewAutomaticDimension
         wordTableView.register(WordSectionTableViewCell.self, forCellReuseIdentifier: "WordSectionTableViewCell")
@@ -74,6 +82,33 @@ class WordViewController: RootUnShowStatesViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    /// 制作分享图
+    func shareImgCustion(_ style:ShareActionStyle) {
+        self.headerView.swCapture { (header) in
+            ImageTool.addUserInfo(header!, UIImage.init(named: "13")!, "昵称", { (headerImg) in
+                self.wordTableView.swContentScrollCapture({ (tableImg) in
+                    let megreImg = ImageTool.jointImges(CGSize.init(width: (headerImg?.size.width)!, height: (headerImg?.size.height)! + (tableImg?.size.height)!), headerImg!, tableImg!, CGRect.init(x: 0, y: (headerImg?.size.height)!, width: (tableImg?.size.width)!, height: (tableImg?.size.height)!))
+
+                    let shareImg = UIImageView.init(image: megreImg)
+                    shareImg.frame = UIScreen.main.bounds
+                    shareImg.contentMode = UIViewContentMode.scaleAspectFit
+                    shareImg.backgroundColor = UIColor.white
+                    UIApplication.shared.keyWindow?.addSubview(shareImg)
+                    shareImg.isUserInteractionEnabled = true;
+                    shareImg.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(self.tapAction(_:))))
+                })
+                
+            })
+            
+            
+            
+        }
+        
+        
+    }
+    @objc func tapAction(_ tap:UITapGestureRecognizer) {
+        tap.view?.removeFromSuperview()
     }
 }
 
@@ -86,9 +121,7 @@ extension WordViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return wordViewModel.cellForRow(tableView,indexPath)
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return self.headerView;
-    }
+    
 }
 extension WordViewController : UITableViewDelegate {
     

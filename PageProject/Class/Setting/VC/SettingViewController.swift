@@ -211,10 +211,14 @@ class SettingViewController: RootViewController {
         }
 
         self.scrollView.addSubview(outBtn)
+        var outTopHeight = self.safe.layoutFrame.size.height - 84;
+        if UIDevice().isX() {
+            outTopHeight = outTopHeight - 52;
+        }
         outBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.scrollView.snp.left).offset(30)
             make.centerX.equalTo(self.scrollView.snp.centerX)
-            make.top.equalTo(self.wechatBtn.snp.bottom).offset(200)
+            make.top.equalTo(self.scrollView.snp.top).offset(outTopHeight)
             make.bottom.equalTo(self.scrollView.snp.bottom).offset(-30)
             make.height.equalTo(40)
         }

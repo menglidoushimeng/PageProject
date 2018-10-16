@@ -17,6 +17,13 @@ class ImageTool: NSObject {
         let resultingImage = UIGraphicsGetImageFromCurrentImageContext()
         return resultingImage!
     }
+    class func jointImges(_ imageSize:CGSize,_ bgImg:UIImage ,_ subImg:UIImage ,_ subImgRect:CGRect) -> UIImage{
+        UIGraphicsBeginImageContext(imageSize)
+        bgImg.draw(in: CGRect.init(x: 0, y: 0, width: bgImg.size.width, height: bgImg.size.height))
+        subImg.draw(in: subImgRect)
+        let resultingImage = UIGraphicsGetImageFromCurrentImageContext()
+        return resultingImage!
+    }
     class func mergeImges(_ bgImg:UIImage ,_ subString:NSString,_ startPoint:CGPoint ,_ textColor:UIColor,_ textFont:UIFont) -> UIImage{
         let textAttributes = [NSAttributedStringKey.foregroundColor:textColor, NSAttributedStringKey.font:textFont]
         let textSize = NSString(string: subString).size(withAttributes: textAttributes)
@@ -91,4 +98,95 @@ class ImageTool: NSObject {
     }
     
     
+    /// 制作分享图
+    class func addUserInfo(_ image:UIImage,_ headImg:UIImage,_ nickName:NSString,_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void)   {
+        
+        
+        let megreImg = self.mergeImges(image, headImg, CGRect.init(x: image.size.width - 70, y: 0, width: 70, height: 70))
+            
+            let headImage = self.cornerImage(headImg, CGSize.init(width: 40, height: 40), 20)
+            
+            let megreHeadImg = self.mergeImges(megreImg, headImage, CGRect.init(x: 10, y: 10, width: 40, height: 40))
+            
+            let megreStringImg = self.mergeImges(megreHeadImg, nickName , CGPoint.init(x: 55, y: 18), ColorExtension().middenGray, UIFont.systemFont(ofSize: 23, weight: UIFont.Weight(rawValue: -1)))
+            
+            completionHandler(megreStringImg)
+            
+       
+        
+    }
+    
+    /// 制作分享图
+   class func shareImgCustion(_ tableView:UITableView,_ headImg:UIImage,_ nickName:NSString,_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void)   {
+        
+        
+        tableView.swContentScrollCapture({ (image) in
+            
+            let megreImg = self.mergeImges(image!, headImg, CGRect.init(x: image!.size.width - 70, y: 0, width: 70, height: 70))
+            
+            let headImage = self.cornerImage(headImg, CGSize.init(width: 40, height: 40), 20)
+            
+            let megreHeadImg = self.mergeImges(megreImg, headImage, CGRect.init(x: 10, y: 10, width: 40, height: 40))
+            
+            let megreStringImg = self.mergeImges(megreHeadImg, nickName , CGPoint.init(x: 55, y: 18), ColorExtension().middenGray, UIFont.systemFont(ofSize: 23, weight: UIFont.Weight(rawValue: -1)))
+            
+            completionHandler(megreStringImg)
+            
+        })
+        
+    }
+    
+   
+}
+extension UITableView {
+    public func wwhContentScrollCapture (_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void) {
+        
+        self.isCapturing = true
+        
+        // Put a fake Cover of View
+        let snapShotView = self.snapshotView(afterScreenUpdates: true)
+        snapShotView?.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: (snapShotView?.frame.size.width)!, height: (snapShotView?.frame.size.height)!)
+        self.superview?.addSubview(snapShotView!)
+        
+        // Backup
+        let bakOffset    = self.contentOffset
+        
+        // Divide
+        let page  = floorf(Float(self.contentSize.height / (self.bounds.height - self.sectionHeaderHeight)))
+        
+        UIGraphicsBeginImageContextWithOptions(self.contentSize, false, UIScreen.main.scale)
+        
+        self.swContentScrollPageDraw(0, maxIndex: Int(page), drawCallback: { [weak self] () -> Void in
+            let strongSelf = self
+            
+            let capturedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            // Recover
+            strongSelf?.setContentOffset(bakOffset, animated: false)
+            snapShotView?.removeFromSuperview()
+            
+            strongSelf?.isCapturing = false
+            
+            completionHandler(capturedImage)
+        })
+        
+    }
+    
+    fileprivate func swContentScrollPageDraw (_ index: Int, maxIndex: Int, drawCallback: @escaping () -> Void) {
+        
+        self.setContentOffset(CGPoint(x: 0, y: CGFloat(index) * self.frame.size.height), animated: false)
+        
+        var splitFrame = CGRect(x: 0, y: CGFloat(index) * self.frame.size.height, width: bounds.size.width, height: bounds.size.height)
+       
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
+            self.drawHierarchy(in: splitFrame, afterScreenUpdates: true)
+            
+            if index < maxIndex {
+                self.swContentScrollPageDraw(index + 1, maxIndex: maxIndex, drawCallback: drawCallback)
+            }else{
+                drawCallback()
+            }
+        }
+    }
 }
