@@ -122,7 +122,9 @@ class ImageTool: NSObject {
         
         tableView.swContentScrollCapture({ (image) in
             
-            let megreImg = self.mergeImges(image!, headImg, CGRect.init(x: image!.size.width - 70, y: 0, width: 70, height: 70))
+            let codeImg = UIImage.init(named: "dict_qr")
+            
+            let megreImg = self.mergeImges(image!, codeImg!, CGRect.init(x: image!.size.width - 70, y: 0, width: 70, height: 70))
             
             let headImage = self.cornerImage(headImg, CGSize.init(width: 40, height: 40), 20)
             

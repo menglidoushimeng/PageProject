@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czrjbgoforit_1" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-os-YTM">
-                        <rect key="frame" x="116.5" y="40" width="230" height="180"/>
+                        <rect key="frame" x="174.5" y="40" width="114" height="180"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="OlK-Au-j9N"/>
                         </constraints>
@@ -82,11 +82,11 @@
                 <outlet property="bookNameLb" destination="DgP-M3-xmh" id="nOW-tx-6Jl"/>
                 <outlet property="bootomView" destination="kHU-Pc-pmA" id="cyj-p4-Vba"/>
             </connections>
-            <point key="canvasLocation" x="543.20000000000005" y="-67.466266866566727"/>
+            <point key="canvasLocation" x="778" y="-144"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="czrjbgoforit_1" width="230" height="300"/>
+        <image name="czrjbgoforit_1" width="114" height="149"/>
         <image name="dict_icontextshare" width="70" height="42"/>
     </resources>
 </document>
