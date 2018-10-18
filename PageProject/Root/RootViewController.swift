@@ -16,22 +16,29 @@ class RootViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    
+    
     lazy var guide:UILayoutGuide = { () -> UILayoutGuide in
         let guide = UILayoutGuide()
         self.view.addLayoutGuide(guide)
         guide.snp.makeConstraints({ (make) in
             make.top.bottom.left.right.equalTo(self.view)
+            
         })
         return guide
     }()
-    
+    var guideLayout:UILayoutGuide {
+        get {
+            return self.guide
+        }
+    }
     
     var safe:UILayoutGuide {
         get {
             if #available(iOS 11.0, *) {
                 return self.view.safeAreaLayoutGuide
             } else {
-                return self.guide
+                return self.guideLayout
             }
             
         }
@@ -43,6 +50,7 @@ class RootViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationBarSetting()
         self.viewSetting()
         // Do any additional setup after loading the view.
@@ -59,6 +67,7 @@ class RootViewController: UIViewController {
     func navigationBarSetting() {
         self.navigationController?.navigationBar.tintColor = ColorExtension().largeGray
         self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
         guard self.navigationController?.viewControllers.count ?? 0 <= 1 else {
             let leftItem = UIBarButtonItem.init(image: UIImage.init(named: "dict_iconbigreturn"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(leftBarItemAction(leftItem:)))
             self.navigationItem.leftBarButtonItem = leftItem
@@ -70,7 +79,7 @@ class RootViewController: UIViewController {
     func viewSetting() {
         self.view.backgroundColor = UIColor.white
     }
-    
+   
     @objc func leftBarItemAction(leftItem:UIBarButtonItem) {
      self.navigationController?.popViewController(animated: true)
     }

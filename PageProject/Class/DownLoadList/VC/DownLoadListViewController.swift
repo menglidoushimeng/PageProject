@@ -22,7 +22,7 @@ class DownLoadListViewController: RootViewController {
     }
     override func viewSetting() {
         super.viewSetting()
-        view.backgroundColor = ColorExtension().bottomGray
+        self.view.backgroundColor = ColorExtension().bottomGray
         view.addSubview(listTableView)
         listTableView.snp.makeConstraints { (make) in
             make.left.bottom.right.equalTo(self.safe)

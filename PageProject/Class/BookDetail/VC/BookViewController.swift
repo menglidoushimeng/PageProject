@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 import SwViewCapture
 
-class BookViewController: RootViewController {
+class BookViewController: RootUnNavigationBarViewController {
     let bookViewModel = BookViewModel()
      var bookTableView = UITableView()
     

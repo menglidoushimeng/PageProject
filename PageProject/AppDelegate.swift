@@ -28,11 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        let story = UIStoryboard.init(name: "Main", bundle: nil)
         //        let bookVc = story.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
         let bookVc = BookViewController()
-        bookVc.navigationBarHidden = true
+//        bookVc.navigationBarHidden = true
         let bookNavi = RootNavigationController(rootViewController: bookVc)
         
         let mineVc = MineViewController()
-        mineVc.navigationBarHidden = true
+//        mineVc.navigationBarHidden = true
         let mineNavi = RootNavigationController(rootViewController: mineVc)
         let tabbar = UITabBarController.init()
         tabbar.viewControllers = [bookNavi,mineNavi]
