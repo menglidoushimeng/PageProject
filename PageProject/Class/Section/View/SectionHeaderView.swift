@@ -11,6 +11,7 @@ import UIKit
 @objc protocol SectionHeaderDelegate {
     @objc optional func stateFunction()
     @objc optional func challengeFunction()
+    func trunBackFunction()
 }
 
 class SectionHeaderView: UITableViewHeaderFooterView {
@@ -31,6 +32,10 @@ class SectionHeaderView: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
+    @IBAction func turnBackAction(_ sender: UIButton) {
+        delegate?.trunBackFunction()
+    }
+    
     @IBAction func stateAction(_ sender: UIButton) {
         delegate?.stateFunction?()
     }

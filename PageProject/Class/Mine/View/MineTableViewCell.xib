@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_red_dot" translatesAutoresizingMaskIntoConstraints="NO" id="eha-YE-e2R">
-                        <rect key="frame" x="97" y="97.5" width="13" height="13"/>
+                        <rect key="frame" x="96" y="97.5" width="13" height="13"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -63,7 +63,7 @@
                     <constraint firstItem="dQv-b7-oXt" firstAttribute="centerY" secondItem="MQk-e6-ZYU" secondAttribute="centerY" id="nBy-4V-eqO"/>
                     <constraint firstItem="MQk-e6-ZYU" firstAttribute="leading" secondItem="xiK-uB-Ksk" secondAttribute="trailing" id="nOL-kX-DCp"/>
                     <constraint firstItem="MQk-e6-ZYU" firstAttribute="top" secondItem="eha-YE-e2R" secondAttribute="bottom" constant="-10" id="qNq-IR-2nU"/>
-                    <constraint firstItem="eha-YE-e2R" firstAttribute="leading" secondItem="MQk-e6-ZYU" secondAttribute="trailing" constant="4" id="ws9-Lb-tgV"/>
+                    <constraint firstItem="eha-YE-e2R" firstAttribute="leading" secondItem="MQk-e6-ZYU" secondAttribute="trailing" constant="3" id="ws9-Lb-tgV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

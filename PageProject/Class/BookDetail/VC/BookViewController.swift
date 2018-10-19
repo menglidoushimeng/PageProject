@@ -40,7 +40,7 @@ class BookViewController: RootUnNavigationBarViewController {
         }
         return lazyShareView
     }()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -49,17 +49,26 @@ class BookViewController: RootUnNavigationBarViewController {
     }
     override func viewSetting() {
         super.viewSetting();
+        if #available(iOS 11.0, *) {
+           self.bookTableView.contentInsetAdjustmentBehavior = .never;
+        } else {
+            self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0);
+           self.automaticallyAdjustsScrollViewInsets = false;
+        }
+        self.bookTableView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleHeight.rawValue | UIViewAutoresizing.flexibleWidth.rawValue)
+            //            UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         self.bookViewModel.bookDelegate = self;
         self.view.addSubview(bookTableView)
         bookTableView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalTo(self.safe)
+            
         }
         self.bookTableView.dataSource = self as UITableViewDataSource
         self.bookTableView.delegate = self as UITableViewDelegate
         self.bookTableView.register(UINib.init(nibName: "BookHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "BookHeaderTableViewCell")
         self.bookTableView.register(UINib.init(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "BookTableViewCell")
         self.bookTableView.separatorStyle = UITableViewCellSeparatorStyle.none
-
+        self.bookTableView.sectionHeaderHeight = 0;
         
         self.bookTableView.rx.itemSelected.subscribe(onNext: { (indexPath) in
              self.bookViewModel.didSelectRowAt(self.bookTableView,  indexPath)

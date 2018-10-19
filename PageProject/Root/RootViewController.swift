@@ -43,6 +43,10 @@ class RootViewController: UIViewController {
             
         }
     }
+    func hiddenNavigationBarLine() {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+    }
     func isHeightVersion() -> Bool {
         let version = UIDevice.current.systemVersion
         let versionFloat = version._bridgeToObjectiveC().floatValue
@@ -55,6 +59,9 @@ class RootViewController: UIViewController {
         self.viewSetting()
         // Do any additional setup after loading the view.
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = navigationBarHidden
@@ -65,6 +72,7 @@ class RootViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     func navigationBarSetting() {
+     
         self.navigationController?.navigationBar.tintColor = ColorExtension().largeGray
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false
@@ -78,12 +86,14 @@ class RootViewController: UIViewController {
     }
     func viewSetting() {
         self.view.backgroundColor = UIColor.white
+       
     }
    
     @objc func leftBarItemAction(leftItem:UIBarButtonItem) {
      self.navigationController?.popViewController(animated: true)
     }
-
+    
+   
     /*
     // MARK: - Navigation
 

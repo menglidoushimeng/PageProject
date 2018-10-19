@@ -34,6 +34,9 @@ class MineViewController: RootUnNavigationBarViewController {
 
         // Do any additional setup after loading the view.
     }
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
     override func viewSetting() {
         super.viewSetting()
         
@@ -59,7 +62,7 @@ class MineViewController: RootUnNavigationBarViewController {
         self.view.addSubview(lvLb)
         lvLb.text = "Lv.12"
         lvLb.textColor = ColorExtension().largeGray
-        lvLb.font = UIFont.boldSystemFont(ofSize: 12)
+        lvLb.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight(rawValue: 3))
         lvLb.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.bottom.equalTo(tableView.snp.top)
@@ -67,7 +70,7 @@ class MineViewController: RootUnNavigationBarViewController {
         
         self.view.addSubview(flashImgView)
         flashImgView.snp.makeConstraints { (make) in
-            make.left.equalTo(lvLb.snp.right).offset(18)
+            make.left.equalTo(lvLb.snp.right).offset(10)
             make.centerY.equalTo(lvLb.snp.centerY)
             make.height.equalTo(19)
             make.width.equalTo(22)
@@ -93,7 +96,7 @@ class MineViewController: RootUnNavigationBarViewController {
         
         self.view.addSubview(starImgView)
         starImgView.snp.makeConstraints { (make) in
-            make.left.equalTo(grayTextLb.snp.right).offset(18)
+            make.left.equalTo(grayTextLb.snp.right).offset(10)
             make.centerY.equalTo(lvLb.snp.centerY)
             make.height.width.equalTo(15)
         }
@@ -103,7 +106,7 @@ class MineViewController: RootUnNavigationBarViewController {
         starLb.text = "67"
         starLb.font = UIFont.systemFont(ofSize: 10)
         starLb.snp.makeConstraints { (make) in
-            make.left.equalTo(starImgView.snp.right).offset(5)
+            make.left.equalTo(starImgView.snp.right).offset(2)
             make.centerY.equalTo(flashImgView.snp.centerY)
         }
         

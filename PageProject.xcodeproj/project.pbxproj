@@ -37,6 +37,7 @@
 		5E53F78021749423000FC704 /* ImageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53F77F21749423000FC704 /* ImageTool.swift */; };
 		5E7E608121747E7700FDF808 /* RootUnShowStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E608021747E7700FDF808 /* RootUnShowStatesViewController.swift */; };
 		5E88BCBF21773F44008901D5 /* RootUnNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E88BCBE21773F44008901D5 /* RootUnNavigationBarViewController.swift */; };
+		5EA076562179E236004E6876 /* RootScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA076552179E236004E6876 /* RootScrollView.swift */; };
 		5ECD6038215F0B4300074438 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECD6037215F0B4300074438 /* SectionHeaderView.swift */; };
 		5ECD603A215F0B8E00074438 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECD6039215F0B8E00074438 /* SectionHeaderView.xib */; };
 		5EE588CB214B3DBA003221A9 /* BookHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */; };
@@ -116,6 +117,7 @@
 		5E53F77F21749423000FC704 /* ImageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTool.swift; sourceTree = "<group>"; };
 		5E7E608021747E7700FDF808 /* RootUnShowStatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUnShowStatesViewController.swift; sourceTree = "<group>"; };
 		5E88BCBE21773F44008901D5 /* RootUnNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUnNavigationBarViewController.swift; sourceTree = "<group>"; };
+		5EA076552179E236004E6876 /* RootScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScrollView.swift; sourceTree = "<group>"; };
 		5ECD6037215F0B4300074438 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		5ECD6039215F0B8E00074438 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		5EE588C9214B3DBA003221A9 /* BookHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */,
 				5E7E608021747E7700FDF808 /* RootUnShowStatesViewController.swift */,
 				5E88BCBE21773F44008901D5 /* RootUnNavigationBarViewController.swift */,
+				5EA076552179E236004E6876 /* RootScrollView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				5E7E608121747E7700FDF808 /* RootUnShowStatesViewController.swift in Sources */,
 				5E3F1CD02160A72D0012FD42 /* RootAlertController.swift in Sources */,
 				5EEECDBA215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.swift in Sources */,
+				5EA076562179E236004E6876 /* RootScrollView.swift in Sources */,
 				5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
@@ -917,7 +921,7 @@
 					"$(PROJECT_DIR)/PageProject/Vonder/SwViewCapture",
 				);
 				INFOPLIST_FILE = PageProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,7 +946,7 @@
 					"$(PROJECT_DIR)/PageProject/Vonder/SwViewCapture",
 				);
 				INFOPLIST_FILE = PageProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

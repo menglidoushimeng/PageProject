@@ -19,18 +19,7 @@ class SectionViewController: RootUnShowStatesViewController {
     override func navigationBarSetting() {
         super.navigationBarSetting()
         
-        let itemLb = UILabel.init()
-        itemLb.text = "人教版新课标必修1 高一上\nMIUI.SectionA"
-        itemLb.numberOfLines = 2;
-        itemLb.textAlignment = .center
-        itemLb.textColor = ColorExtension().largeGray
-        itemLb.font = UIFont.systemFont(ofSize: 13)
-        itemLb.adjustsFontSizeToFitWidth = true
-        self.navigationItem.titleView = itemLb
-        
-        self.navigationController?.navigationBar.barTintColor = ColorExtension().bottomGray
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+       self.navigationBarHidden = true
     }
     override func viewSetting() {
         super.viewSetting()
@@ -40,6 +29,7 @@ class SectionViewController: RootUnShowStatesViewController {
              make.top.left.bottom.right.equalTo(self.safe)
            
         }
+        sectionTableView.bounces = false
         sectionTableView.backgroundColor = ColorExtension().bottomGray
         sectionTableView.delegate = self as UITableViewDelegate
         sectionTableView.dataSource = self as UITableViewDataSource
@@ -49,7 +39,7 @@ class SectionViewController: RootUnShowStatesViewController {
         
         sectionTableView.register(UINib.init(nibName: "SectionTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "SectionTableViewCell")
         
-        sectionTableView.estimatedSectionHeaderHeight = UIScreen.main.bounds.size.width  / 2
+        sectionTableView.estimatedSectionHeaderHeight = UIScreen.main.bounds.size.width  / 2 + 44
         sectionTableView.sectionHeaderHeight = UITableViewAutomaticDimension
         sectionTableView.register(UINib.init(nibName: "SectionHeaderView", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: "SectionHeaderView")
     }
@@ -94,10 +84,15 @@ extension SectionViewController:UITableViewDelegate {
    
 }
 extension SectionViewController:SectionHeaderDelegate {
+    func trunBackFunction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func stateFunction() {
         print("掌握状态")
     }
     func challengeFunction() {
         print("挑战奥金星")
     }
+    
 }

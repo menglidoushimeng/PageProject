@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DownLoadListViewController: RootViewController {
+class DownLoadListViewController: RootUnShowStatesViewController {
     let listTableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class DownLoadListViewController: RootViewController {
     override func navigationBarSetting() {
         super.navigationBarSetting()
         self.navigationItem.title = "课文下载记录"
-        self.navigationController?.navigationBar.shadowImage = UIImage.init()
+        self.hiddenNavigationBarLine();
     }
     override func viewSetting() {
         super.viewSetting()

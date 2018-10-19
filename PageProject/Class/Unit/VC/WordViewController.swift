@@ -59,7 +59,7 @@ class WordViewController: RootUnShowStatesViewController {
         self.view.addSubview(headerView);
         self.headerView.snp.makeConstraints { (make) in
             make.left.right.top.equalTo(self.safe)
-            make.height.equalTo(160)
+            make.height.equalTo(180)
         }
     }
     //添加TablaeView

@@ -134,7 +134,7 @@ class BookViewModel: RootTableViewViewModel {
     
    override func heightForRowAt(_ tableView: UITableView,  _ indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return UITableViewAutomaticDimension
+            return UIScreen.main.bounds.size.width
         } else {
             return 60
         }

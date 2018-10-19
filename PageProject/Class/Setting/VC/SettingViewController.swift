@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SettingViewController: RootViewController {
+class SettingViewController: RootUnShowStatesViewController {
     var newVersion:Bool { // 是否有新版本
         get {
             return !versionRed.isHidden
@@ -20,7 +20,7 @@ class SettingViewController: RootViewController {
         }
     }
     
-    private let scrollView = UIScrollView.init()
+    private let scrollView = RootScrollView.init()
     private let baseView = UIView()
     
     private let iphoneDownLoadView = UIView.init(backgroundColor: UIColor.white);
@@ -64,14 +64,16 @@ class SettingViewController: RootViewController {
     override func navigationBarSetting() {
         super.navigationBarSetting()
         self.navigationItem.title = "设置"
-        self.navigationController?.navigationBar.shadowImage = UIImage.init()
+        self.hiddenNavigationBarLine();
     }
     override func viewSetting() {
         super.viewSetting()
         self.view.backgroundColor = ColorExtension().bottomGray
         
         self.view.addSubview(self.scrollView)
+        self.scrollView.delaysContentTouches = false;
         
+        self.scrollView.canCancelContentTouches = true;
         scrollView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalTo(self.safe)
         }
@@ -142,7 +144,7 @@ class SettingViewController: RootViewController {
         }
         shareImg.snp.makeConstraints { (make) in
             make.centerY.equalTo(shareBtn.snp.centerY)
-            make.right.equalTo(self.safe)
+            make.right.equalTo(self.safe).offset(-15)
         }
 
 
@@ -161,7 +163,7 @@ class SettingViewController: RootViewController {
         }
         questionsImg.snp.makeConstraints { (make) in
             make.centerY.equalTo(questionsBtn.snp.centerY)
-            make.right.equalTo(self.safe)
+            make.right.equalTo(shareImg.snp.right)
         }
 
 
@@ -211,7 +213,7 @@ class SettingViewController: RootViewController {
         }
 
         self.scrollView.addSubview(outBtn)
-        var outTopHeight = self.safe.layoutFrame.size.height - 84;
+        var outTopHeight = self.safe.layoutFrame.size.height - 64;
         if UIDevice().isX() {
             outTopHeight = outTopHeight - 52;
         }
@@ -249,8 +251,6 @@ class SettingViewController: RootViewController {
             }.disposed(by: disposeBag)
     }
 
-    
-   
    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
@@ -287,22 +287,31 @@ extension UIButton {
     convenience init(color:UIColor){
         self.init()
         self.backgroundColor = color
-        self.addTarget(self, action: #selector(touchDown), for:UIControlEvents.touchDown)
-        self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchUpOutside)
-        self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchUpInside)
-        self.addTarget(self, action: #selector(touchOutSide), for:UIControlEvents.touchCancel)
+        self.setBackground(color: ColorExtension().touchGray, state: .highlighted)
     }
-    @objc func touchDown() {
-        self.backgroundColor = ColorExtension().touchGray
-    }
-    @objc func touchOutSide() {
-        self.backgroundColor = UIColor.white
-    }
+
     convenience init(normalImg:String,selectedImg:String){
         self.init()
         self.setImage(UIImage.init(named: normalImg), for: .normal)
         self.setImage(UIImage.init(named: selectedImg), for: .selected)
     }
+    func setBackground(color:UIColor,state:UIControlState) {
+        self.setBackgroundImage(self.imageWithColor(color: color), for: state)
+    
+    }
+    func imageWithColor(color:UIColor) -> UIImage {
+        let rect = CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext();
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect);
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image!
+    }
+    
+    
+   
 }
 
 

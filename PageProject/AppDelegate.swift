@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+       
         // Override point for customization after application launch.
         self.tabbarSetting()
         return true
@@ -26,16 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        //        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        //        let bookVc = story.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
+        
         let bookVc = BookViewController()
-//        bookVc.navigationBarHidden = true
+
         let bookNavi = RootNavigationController(rootViewController: bookVc)
         
         let mineVc = MineViewController()
-//        mineVc.navigationBarHidden = true
+
         let mineNavi = RootNavigationController(rootViewController: mineVc)
         let tabbar = UITabBarController.init()
+        
+        tabbar.tabBar.backgroundColor = UIColor.white
         tabbar.viewControllers = [bookNavi,mineNavi]
         tabbar.tabBar.tintColor = ColorExtension().wordBlue
         
@@ -44,12 +46,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         bookTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
         bookTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
         
+
+        
+       
+        
         let mineTabbarItem = UITabBarItem.init(title: "我的", image: UIImage.init(named: "dict_navigation3off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation3on")?.withRenderingMode(.alwaysOriginal))
         mineTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
         mineTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
         
         bookVc.tabBarItem = bookTabbarItem
         mineVc.tabBarItem = mineTabbarItem
+        let space = UIScreen.main.bounds.size.width / 3;
+        tabbar.tabBar.itemPositioning = .centered;
+        tabbar.tabBar.itemSpacing = space
+        tabbar.tabBar.itemWidth = space
         
         self.window?.rootViewController = tabbar
         self.window?.makeKeyAndVisible()
