@@ -34,7 +34,7 @@ class ColorExtension: NSObject {
     
     
 //    Color
-//    单词蓝 #0EA3F9
+//    单词蓝 基准色 #0EA3F9
     var wordBlue = UIColor.UIColorFromRGB(rgbValue: 0x0EA3F9)
 //    句子绿 #7AC70C
     var sentenceGreen = UIColor.UIColorFromRGB(rgbValue: 0x7AC70C)

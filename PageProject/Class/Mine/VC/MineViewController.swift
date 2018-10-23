@@ -23,8 +23,8 @@ class MineViewController: RootUnNavigationBarViewController {
     let starImgView =  UIImageView.init(image: UIImage.init(named: "dict_aostar"))
     let starLb = UILabel();
     
-    let settingBtn = UIButton();
-    let settingBtnRed = UIImageView.init(image: UIImage.init(named: "menu_red_dot"))
+    let settingBtn = UIButton.init(type: .custom);
+    let settingBtnRed = UIImageView()
     
     let disposetBag = DisposeBag()
     
@@ -111,12 +111,14 @@ class MineViewController: RootUnNavigationBarViewController {
         }
         
         self.view.addSubview(settingBtn)
+        
         settingBtn.snp.makeConstraints { (make) in
             make.right.equalToSuperview()
             make.centerY.equalTo(lvLb.snp.centerY)
             
         }
         settingBtn.setImage(UIImage.init(named: "dict_icontextsetup"), for: .normal)
+        settingBtn.setImage(UIImage.init(named: "dict_icontextsetup"), for: .highlighted)
         
         settingBtn.rx.tap.bind {
             let setVC = SettingViewController()
@@ -124,6 +126,8 @@ class MineViewController: RootUnNavigationBarViewController {
         }.disposed(by: disposetBag)
         
         self.view.addSubview(settingBtnRed)
+        settingBtnRed.backgroundColor = ColorExtension().errorOrange
+        settingBtnRed.layer.cornerRadius = 6
         settingBtnRed.snp.makeConstraints { (make) in
             make.bottom.equalTo(settingBtn.snp.top).offset(22)
             make.right.equalTo(settingBtn.snp.left).offset(4)

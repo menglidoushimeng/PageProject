@@ -65,8 +65,8 @@ class WordSectionTableViewCell: UITableViewCell {
         wordView.snp.makeConstraints { (make) in
             make.left.equalTo(self.snp.left).offset(70)
             make.top.equalTo(self.snp.top).offset(10)
-            make.width.equalTo((viewWidth-100)/2)
-            make.height.equalTo(wordView.snp.width).multipliedBy(1.2)
+            make.width.equalTo((viewWidth-120)/2)
+            make.height.equalTo(wordView.snp.width).multipliedBy(1.1)
             make.bottom.equalToSuperview().offset(-10)
         }
         wordView.showImage = UIImage.init(named: "dict_piexpressionsknowwell")!

@@ -20,12 +20,16 @@ class RootAlertController: UIAlertController {
         self.setValue(messageAttribute,forKey: "attributedMessage")
    
     }
+    func addAction(_ action: UIAlertAction,_ textColor:UIColor) {
+        super.addAction(action)
+         action.setValue(textColor, forKey:"titleTextColor")
+    }
     override func addAction(_ action: UIAlertAction) {
         super.addAction(action)
         if action.style == .cancel {
             action.setValue(ColorExtension().smallGray, forKey:"titleTextColor")
         } else {
-            action.setValue(ColorExtension().textRed, forKey:"titleTextColor")
+            action.setValue(ColorExtension().wordBlue, forKey:"titleTextColor")
         }
     }
 

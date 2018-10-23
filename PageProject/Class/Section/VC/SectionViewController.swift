@@ -30,6 +30,7 @@ class SectionViewController: RootUnShowStatesViewController {
            
         }
         sectionTableView.bounces = false
+        sectionTableView.showsHorizontalScrollIndicator = false
         sectionTableView.backgroundColor = ColorExtension().bottomGray
         sectionTableView.delegate = self as UITableViewDelegate
         sectionTableView.dataSource = self as UITableViewDataSource

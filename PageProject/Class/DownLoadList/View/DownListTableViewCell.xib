@@ -26,37 +26,37 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piwordlistdoing" translatesAutoresizingMaskIntoConstraints="NO" id="5Ze-kB-Y03">
-                        <rect key="frame" x="180.5" y="154.5" width="64" height="55.5"/>
+                        <rect key="frame" x="180.5" y="159.5" width="64" height="55.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="5Ze-kB-Y03" secondAttribute="height" multiplier="110:96" id="ToM-gF-PcV"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesdoing" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-2F-7UY">
-                        <rect key="frame" x="308.5" y="154.5" width="63.5" height="55.5"/>
+                        <rect key="frame" x="308.5" y="159.5" width="63.5" height="55.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-Tv-dEu">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12词" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNb-Tv-dEu">
                         <rect key="frame" x="180.5" y="220" width="64" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imu-tz-KX1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12短语" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imu-tz-KX1">
                         <rect key="frame" x="244.5" y="220" width="64" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-uu-0x7">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12段" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-uu-0x7">
                         <rect key="frame" x="372" y="220" width="64" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piparagraphsdoing" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-lt-KpN">
-                        <rect key="frame" x="372" y="154.5" width="64" height="55.5"/>
+                        <rect key="frame" x="372" y="159.5" width="64" height="55.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89f-2x-5CN">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12句" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89f-2x-5CN">
                         <rect key="frame" x="308.5" y="220" width="63.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,7 +84,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piexpressionsdoing" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-Hy-RSj">
-                        <rect key="frame" x="244.5" y="154.5" width="64" height="55.5"/>
+                        <rect key="frame" x="244.5" y="159.5" width="64" height="55.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未下载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYz-oA-UHe">
                         <rect key="frame" x="433" y="212.5" width="43" height="17"/>
@@ -104,7 +104,7 @@
                     <constraint firstItem="ebu-uu-0x7" firstAttribute="bottom" secondItem="oNb-Tv-dEu" secondAttribute="bottom" id="1os-Zl-PWo"/>
                     <constraint firstItem="SYz-oA-UHe" firstAttribute="trailing" secondItem="Nwp-LA-Tbq" secondAttribute="trailing" id="34l-Yf-RaB"/>
                     <constraint firstItem="UGC-f6-MzZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5KL-g2-o7T"/>
-                    <constraint firstItem="oNb-Tv-dEu" firstAttribute="top" secondItem="5Ze-kB-Y03" secondAttribute="bottom" constant="10" id="65M-tw-rK8"/>
+                    <constraint firstItem="oNb-Tv-dEu" firstAttribute="top" secondItem="5Ze-kB-Y03" secondAttribute="bottom" constant="5" id="65M-tw-rK8"/>
                     <constraint firstAttribute="bottom" secondItem="Nwp-LA-Tbq" secondAttribute="bottom" constant="15" id="91p-gZ-Blw"/>
                     <constraint firstItem="5Ze-kB-Y03" firstAttribute="centerX" secondItem="oNb-Tv-dEu" secondAttribute="centerX" id="9A2-c4-B10"/>
                     <constraint firstItem="z9O-2F-7UY" firstAttribute="centerX" secondItem="89f-2x-5CN" secondAttribute="centerX" id="CLR-oE-y34"/>

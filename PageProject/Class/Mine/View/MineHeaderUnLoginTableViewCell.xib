@@ -27,7 +27,7 @@
                         <attributedString key="attributedText">
                             <fragment content="+">
                                 <attributes>
-                                    <color key="NSColor" red="0.83137254900000002" green="0.20392156859999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="NSColor" red="0.054901960784313725" green="0.63921568627450975" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                     <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -72,7 +72,7 @@
                         <attributedString key="attributedText">
                             <fragment content="+">
                                 <attributes>
-                                    <color key="NSColor" red="0.83137254901960778" green="0.20392156862745098" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="NSColor" red="0.054901960784313725" green="0.63921568627450975" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                     <font key="NSFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>

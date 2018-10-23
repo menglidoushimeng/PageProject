@@ -11,9 +11,16 @@ import UIKit
 class WordViewController: RootUnShowStatesViewController {
 
     var headerView = WordHeaderView()
+    var unitSelectedView:UnitSelectedView?
     let wordViewModel = WordViewModel()
     
     var wordTableView : UITableView!
+    lazy var selectedCover:Cover = { () -> Cover in
+        let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
+            
+        }, color: UIColor.clear, removeSelf: true)
+        return coverView
+    }()
     lazy var cover:Cover = { () -> Cover in
         let coverView = Cover.init(frame: UIScreen.main.bounds, block: {
             
@@ -150,10 +157,30 @@ extension WordViewController : HeaderViewDelegate {
 
 extension WordViewController:RootTableViewViewModelDelegate {
     func didSelectedCell(_ model: RootTableViewCellModel) {
+        
+        unitSelectedView = UnitSelectedView.init(frame: CGRect.init(x:0, y: UIScreen.main.bounds.size.height / 2 - 60, width: UIScreen.main.bounds.size.width, height: 120), selectedModels: [UnitSelectedModel.init("Read and Listen", "1", true, false),UnitSelectedModel.init("Read and Listen", "2", false, true),UnitSelectedModel.init("Read and Listen", "3", false, false),UnitSelectedModel.init("Read and Listen", "4", true, true)])
+        unitSelectedView!.delegate = self
+        UIApplication.shared.keyWindow?.addSubview(self.selectedCover)
+        self.selectedCover.addSubview(unitSelectedView!)
+        self.selectedCover.coverTouch = {() ->() in
+            self.unitSelectedView!.removeFromSuperview()
+        }
+//        let sectionVc =  SectionViewController()
+//        sectionVc.navigationBarHidden = false
+//        self.navigationController?.pushViewController(sectionVc, animated: true)
+        
+       
+    }
+    
+}
+extension WordViewController:UnitSelectedViewDelegate {
+    func didSelectedUnit(_ index: NSInteger, _ model: UnitSelectedModel) {
+        self.cover.removeFromSuperview()
+        self.unitSelectedView!.removeFromSuperview()
         let sectionVc =  SectionViewController()
         sectionVc.navigationBarHidden = false
         self.navigationController?.pushViewController(sectionVc, animated: true)
     }
     
+    
 }
-

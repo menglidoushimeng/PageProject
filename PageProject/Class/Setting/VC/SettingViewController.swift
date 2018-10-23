@@ -30,7 +30,7 @@ class SettingViewController: RootUnShowStatesViewController {
     private let versionBtn = UIButton.init(color: UIColor.white);
     private let versionLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "当前版本", textColor: ColorExtension().largeGray)
     private let version = UILabel.init(font: UIFont.systemFont(ofSize: 14), text: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String, textColor: ColorExtension().smallGray)
-    private let versionRed = UIImageView.init(image: UIImage.init(named: "menu_red_dot"))
+    private let versionRed = UIImageView()
     
     private let shareBtn = UIButton.init(color: UIColor.white);
     private let shareLabel = UILabel.init(font: UIFont.systemFont(ofSize: 16), text: "推荐给朋友", textColor: ColorExtension().largeGray)
@@ -123,9 +123,12 @@ class SettingViewController: RootUnShowStatesViewController {
             make.centerY.equalTo(versionBtn.snp.centerY)
             make.right.equalTo(self.safe).offset(-30)
         }
+        versionRed.backgroundColor = ColorExtension().errorOrange
+        versionRed.layer.cornerRadius = 6
         versionRed.snp.makeConstraints { (make) in
             make.left.equalTo(versionLabel.snp.right).offset(4)
             make.bottom.equalTo(versionLabel.snp.top).offset(10)
+            make.width.height.equalTo(12)
         }
 
 
@@ -215,7 +218,7 @@ class SettingViewController: RootUnShowStatesViewController {
         self.scrollView.addSubview(outBtn)
         var outTopHeight = self.safe.layoutFrame.size.height - 64;
         if UIDevice().isX() {
-            outTopHeight = outTopHeight - 52;
+            outTopHeight = outTopHeight - 72;
         }
         outBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.scrollView.snp.left).offset(30)

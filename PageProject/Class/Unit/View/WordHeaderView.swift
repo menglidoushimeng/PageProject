@@ -86,7 +86,7 @@ class WordHeaderView: RootView {
         turnBackBtn.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.top.equalTo(self.safe).offset(10)
-            make.height.width.equalTo(36)
+            make.height.width.equalTo(48)
         }
         turnBackBtn.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)
         
@@ -94,8 +94,8 @@ class WordHeaderView: RootView {
         shareBtn.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-10)
             make.top.equalTo(turnBackBtn.snp.top)
-            make.width.equalTo(57)
-            make.height.equalTo(36)
+            make.width.equalTo(76)
+            make.height.equalTo(48)
         }
         shareBtn.setImage(UIImage.init(named: "dict_grayroundshare"), for: .normal)
         shareBtn.setTitleColor(UIColor.black, for: .normal)

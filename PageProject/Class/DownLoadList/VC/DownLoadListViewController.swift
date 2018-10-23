@@ -17,7 +17,7 @@ class DownLoadListViewController: RootUnShowStatesViewController {
     }
     override func navigationBarSetting() {
         super.navigationBarSetting()
-        self.navigationItem.title = "课文下载记录"
+        self.navigationItem.title = "课本下载记录"
         self.hiddenNavigationBarLine();
     }
     override func viewSetting() {
@@ -73,14 +73,14 @@ extension DownLoadListViewController:UITableViewDelegate {
 extension DownLoadListViewController:DeleteDelegate {
     func delete(indexPath: IndexPath) {
         let alert = RootAlertController.init(title: nil, message: "确定删除该课本已下载的内容?", preferredStyle: .alert)
-        let cancel = UIAlertAction.init(title: "取消", style: .cancel) { (action) in
+        let cancel = UIAlertAction.init(title: "取消", style: .default) { (action) in
             
         }
         let sure = UIAlertAction.init(title: "删除", style: .default) { (action) in
             
         }
-        alert.addAction(cancel)
-        alert.addAction(sure)
+        alert.addAction(cancel,ColorExtension().smallGray)
+        alert.addAction(sure,ColorExtension().wordBlue)
         
         self.present(alert, animated: true, completion: nil)
     }

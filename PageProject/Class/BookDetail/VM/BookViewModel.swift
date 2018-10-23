@@ -148,9 +148,12 @@ class BookViewModel: RootTableViewViewModel {
     }
     
    override func didSelectRowAt( _ tableView: UITableView,  _ indexPath: IndexPath) {
+    if indexPath.section == 1 {
         let rows = self.dataSource?[indexPath.section]
         let model = rows![indexPath.row]
         bookDelegate?.didSelectedCell?(model)
+    }
+    
     }
 }
 

@@ -19,10 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="463" height="505.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czrjbgoforit_1" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-os-YTM">
-                        <rect key="frame" x="174.5" y="40" width="114" height="180"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czrjbgoforit_1" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-os-YTM">
+                        <rect key="frame" x="162.5" y="40" width="138" height="180"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="OlK-Au-j9N"/>
+                            <constraint firstAttribute="width" secondItem="5dB-os-YTM" secondAttribute="height" multiplier="229:299" id="bEB-Hf-D7C"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="人教版.七上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgP-M3-xmh">

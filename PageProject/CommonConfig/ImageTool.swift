@@ -71,15 +71,18 @@ class ImageTool: NSObject {
     class func cornerImage(_ image:UIImage,_ size:CGSize,_ radius:CGFloat) -> UIImage {
         
             //利用绘图建立上下文
-            UIGraphicsBeginImageContextWithOptions(size, true, 0)
+            UIGraphicsBeginImageContextWithOptions(CGSize.init(width: size.width , height: size.height ), true, 0)
             let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             UIColor.white.setFill()
             UIRectFill(rect)
         
             //利用贝塞尔路径裁切
             let path = UIBezierPath.init(roundedRect: rect, cornerRadius: radius)
+        
             path.addClip()
+        
             image.draw(in: rect)
+        
             //获取结果
             let resultImage = UIGraphicsGetImageFromCurrentImageContext()
             //关闭上下文
@@ -121,17 +124,17 @@ class ImageTool: NSObject {
    class func shareImgCustion(_ tableView:UITableView,_ headImg:UIImage,_ nickName:NSString,_ completionHandler: @escaping (_ capturedImage: UIImage?) -> Void)   {
         
         
-        tableView.swContentScrollCapture({ (image) in
+    tableView.swContentScrollCapture({ (image) in
             
             let codeImg = UIImage.init(named: "dict_qr")
             
             let megreImg = self.mergeImges(image!, codeImg!, CGRect.init(x: image!.size.width - 70, y: 0, width: 70, height: 70))
             
             let headImage = self.cornerImage(headImg, CGSize.init(width: 40, height: 40), 20)
-            
+           
             let megreHeadImg = self.mergeImges(megreImg, headImage, CGRect.init(x: 10, y: 10, width: 40, height: 40))
             
-            let megreStringImg = self.mergeImges(megreHeadImg, nickName , CGPoint.init(x: 55, y: 18), ColorExtension().middenGray, UIFont.systemFont(ofSize: 23, weight: UIFont.Weight(rawValue: -1)))
+            let megreStringImg = self.mergeImges(megreHeadImg, nickName , CGPoint.init(x: 55, y: 15), ColorExtension().middenGray, UIFont.systemFont(ofSize: 17, weight: UIFont.Weight(rawValue: -1)))
             
             completionHandler(megreStringImg)
             
@@ -180,7 +183,7 @@ extension UITableView {
         
         self.setContentOffset(CGPoint(x: 0, y: CGFloat(index) * self.frame.size.height), animated: false)
         
-        var splitFrame = CGRect(x: 0, y: CGFloat(index) * self.frame.size.height, width: bounds.size.width, height: bounds.size.height)
+        let splitFrame = CGRect(x: 0, y: CGFloat(index) * self.frame.size.height, width: bounds.size.width, height: bounds.size.height)
        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
             self.drawHierarchy(in: splitFrame, afterScreenUpdates: true)
