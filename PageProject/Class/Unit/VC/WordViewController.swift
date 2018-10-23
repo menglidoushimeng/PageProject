@@ -175,7 +175,7 @@ extension WordViewController:RootTableViewViewModelDelegate {
 }
 extension WordViewController:UnitSelectedViewDelegate {
     func didSelectedUnit(_ index: NSInteger, _ model: UnitSelectedModel) {
-        self.cover.removeFromSuperview()
+        self.selectedCover.removeFromSuperview()
         self.unitSelectedView!.removeFromSuperview()
         let sectionVc =  SectionViewController()
         sectionVc.navigationBarHidden = false

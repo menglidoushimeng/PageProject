@@ -78,7 +78,7 @@ class WordHeaderView: RootView {
         self.contentView.addSubview(titleLb)
         titleLb.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.snp.centerX)
-            make.top.equalTo(self.bgImg.snp.top).offset(20)
+            make.top.equalTo(self.bgImg.snp.top).offset(10)
         }
         
         contentView.addSubview(turnBackBtn)

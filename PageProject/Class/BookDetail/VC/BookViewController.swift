@@ -49,12 +49,8 @@ class BookViewController: RootUnNavigationBarViewController {
     }
     override func viewSetting() {
         super.viewSetting();
-        if #available(iOS 11.0, *) {
-           self.bookTableView.contentInsetAdjustmentBehavior = .never;
-        } else {
-            self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0);
-           self.automaticallyAdjustsScrollViewInsets = false;
-        }
+        self.automaticallyAdjustsSetting(scrollView: self.bookTableView)
+        
         self.bookTableView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleHeight.rawValue | UIViewAutoresizing.flexibleWidth.rawValue)
             //            UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         self.bookViewModel.bookDelegate = self;

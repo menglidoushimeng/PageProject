@@ -24,8 +24,6 @@ class MineHeaderLoginTableViewCell: UITableViewCell {
         headImgView.layer.borderColor = UIColor.white.cgColor
         shadowView.layer.cornerRadius = UIScreen.main.bounds.size.width / 8;
         shadowView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-//        headImgView.layer.shadowOffset = CGSize.init(width: 5, height: 5)
-      //  headImgView.layer.shadowRadius = 15
         shadowView.layer.shadowOffset = CGSize.init(width: 0, height: 10)
         shadowView.layer.shadowOpacity = 1;
         shadowView.layer.shadowRadius = 10

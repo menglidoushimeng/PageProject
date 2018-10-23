@@ -23,6 +23,7 @@ class SectionViewController: RootUnShowStatesViewController {
     }
     override func viewSetting() {
         super.viewSetting()
+        self.automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = ColorExtension().bottomGray
         view.addSubview(sectionTableView)
         sectionTableView.snp.makeConstraints { (make) in
@@ -31,6 +32,7 @@ class SectionViewController: RootUnShowStatesViewController {
         }
         sectionTableView.bounces = false
         sectionTableView.showsHorizontalScrollIndicator = false
+        sectionTableView.showsVerticalScrollIndicator = false
         sectionTableView.backgroundColor = ColorExtension().bottomGray
         sectionTableView.delegate = self as UITableViewDelegate
         sectionTableView.dataSource = self as UITableViewDataSource
@@ -58,7 +60,7 @@ class SectionViewController: RootUnShowStatesViewController {
 }
 extension SectionViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

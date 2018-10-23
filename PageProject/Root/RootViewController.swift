@@ -43,6 +43,14 @@ class RootViewController: UIViewController {
             
         }
     }
+    func automaticallyAdjustsSetting(scrollView:UIScrollView) {
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never;
+        } else {
+            self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0);
+            self.automaticallyAdjustsScrollViewInsets = false;
+        }
+    }
     func hiddenNavigationBarLine() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
@@ -72,7 +80,6 @@ class RootViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     func navigationBarSetting() {
-     
         self.navigationController?.navigationBar.tintColor = ColorExtension().largeGray
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false

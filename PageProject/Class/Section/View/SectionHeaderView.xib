@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00D-bk-FFv">
-                    <rect key="frame" x="0.0" y="0.0" width="502" height="166"/>
+                    <rect key="frame" x="0.0" y="0.0" width="502" height="151"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGX-hk-XU4">
                             <rect key="frame" x="179" y="20" width="144.5" height="24"/>
@@ -49,11 +49,11 @@ MIUI.SectionA</string>
                     <viewLayoutGuide key="safeArea" id="VE7-CO-6Cl"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WW-RV-5n3">
-                    <rect key="frame" x="0.0" y="166" width="502" height="48"/>
+                    <rect key="frame" x="0.0" y="151" width="502" height="63"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="930-vF-afX">
-                    <rect key="frame" x="202" y="189" width="290" height="10"/>
+                    <rect key="frame" x="202" y="174" width="290" height="10"/>
                     <attributedString key="attributedText">
                         <fragment content="全部达到">
                             <attributes>
@@ -80,32 +80,32 @@ MIUI.SectionA</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="挑战得奥星" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-Tx-kGU">
-                    <rect key="frame" x="120" y="184" width="76" height="20"/>
+                    <rect key="frame" x="120" y="154" width="76" height="50"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesknowwell" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-cw-JGk">
-                    <rect key="frame" x="10" y="60" width="110" height="96"/>
+                    <rect key="frame" x="10" y="45" width="110" height="96"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="110" id="3Tl-XS-IfS"/>
                         <constraint firstAttribute="height" constant="96" id="Htr-U1-cM9"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下一级:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-uC-m7N">
-                    <rect key="frame" x="407" y="79" width="47" height="17"/>
+                    <rect key="frame" x="407" y="64" width="47" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="掌握" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIJ-Kv-ILa">
-                    <rect key="frame" x="459" y="79" width="29" height="17"/>
+                    <rect key="frame" x="459" y="64" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.97647058823529409" green="0.66666666666666663" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-J8-Jvw">
-                    <rect key="frame" x="130" y="96" width="358" height="21.5"/>
+                    <rect key="frame" x="130" y="81" width="358" height="21.5"/>
                     <attributedString key="attributedText">
                         <fragment content="还需升级">
                             <attributes>
@@ -146,14 +146,14 @@ MIUI.SectionA</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_crown" translatesAutoresizingMaskIntoConstraints="NO" id="qhg-DJ-w7L">
-                    <rect key="frame" x="467" y="68" width="13" height="9"/>
+                    <rect key="frame" x="467" y="53" width="13" height="9"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="9" id="SFb-Th-afE"/>
                         <constraint firstAttribute="width" constant="13" id="VVb-46-Hq5"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-gM-UyT">
-                    <rect key="frame" x="120" y="142" width="76" height="48"/>
+                    <rect key="frame" x="120" y="127" width="76" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="76" id="kvU-QT-8yu"/>
                         <constraint firstAttribute="height" constant="48" id="naw-Vx-ALh"/>
@@ -164,7 +164,7 @@ MIUI.SectionA</string>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-h1-l1w">
-                    <rect key="frame" x="202" y="146" width="290" height="40"/>
+                    <rect key="frame" x="202" y="131" width="290" height="40"/>
                     <color key="backgroundColor" red="0.1019607843" green="0.67843137249999996" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Jqr-bQ-UrN"/>
@@ -270,7 +270,7 @@ Cg
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KIJ-Kv-ILa" secondAttribute="trailing" constant="14" id="i2y-rj-fBH"/>
                 <constraint firstItem="930-vF-afX" firstAttribute="leading" secondItem="VwF-h1-l1w" secondAttribute="leading" id="jOw-V4-CCz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="00D-bk-FFv" secondAttribute="top" id="kSK-yg-sO5"/>
-                <constraint firstItem="7Ph-cw-JGk" firstAttribute="top" secondItem="ZwU-zB-vj8" secondAttribute="bottom" constant="10" id="ooS-7M-PPV"/>
+                <constraint firstItem="7Ph-cw-JGk" firstAttribute="top" secondItem="ZwU-zB-vj8" secondAttribute="bottom" constant="-5" id="ooS-7M-PPV"/>
                 <constraint firstItem="4WW-RV-5n3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="pD5-mk-Re6"/>
                 <constraint firstItem="KIJ-Kv-ILa" firstAttribute="top" secondItem="qhg-DJ-w7L" secondAttribute="bottom" constant="2" id="qpE-Bw-C4n"/>
                 <constraint firstItem="4WW-RV-5n3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sDt-IE-wcj"/>
