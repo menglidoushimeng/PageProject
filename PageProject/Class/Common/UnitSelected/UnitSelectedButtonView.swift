@@ -25,8 +25,7 @@ class UnitSelectedButtonView: UIView {
     var model:UnitSelectedModel? {
         didSet {
             if model?.isLight == false {
-//                starImage.image = UIImage.init(named: "dict_piparagraphsmalldoing")
-                starImage.alpha = 0.5
+                starImage.image = UIImage.init(named: "dict_aostardoing")
                 image.image = UIImage.init(named: "dict_piparagraphsmalldoing")
             }
             if model?.isStar == false {

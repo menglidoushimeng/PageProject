@@ -65,7 +65,7 @@ class WordSectionTableViewCell: UITableViewCell {
         wordView.snp.makeConstraints { (make) in
             make.left.equalTo(self.snp.left).offset(70)
             make.top.equalTo(self.snp.top).offset(10)
-            make.width.equalTo((viewWidth-120)/2)
+            make.width.equalTo((viewWidth-90)/2.5)
             make.height.equalTo(wordView.snp.width).multipliedBy(1.1)
             make.bottom.equalToSuperview().offset(-10)
         }
@@ -79,7 +79,7 @@ class WordSectionTableViewCell: UITableViewCell {
      
         self.addSubview(sentenceView)
         sentenceView.snp.makeConstraints { (make) in
-            make.left.equalTo(wordView.snp.right)
+            make.left.equalTo(wordView.snp.right).offset(10)
             make.width.equalTo(wordView.snp.width)
             make.height.equalTo(wordView.snp.height)
             make.centerY.equalTo(wordView.snp.centerY)
@@ -148,12 +148,12 @@ class WordSectionTableViewCell: UITableViewCell {
                 wordView.snp.remakeConstraints { (make) in
                     make.left.equalTo(self.snp.left).offset(70)
                     make.top.equalTo(self.snp.top).offset(10)
-                    make.width.equalTo((viewWidth-100)/2)
+                    make.width.equalTo((viewWidth-90)/2.5)
                     make.height.equalTo(wordView.snp.width).multipliedBy(1.2)
                     make.bottom.equalToSuperview().offset(-10)
                 }
                 sentenceView.snp.remakeConstraints { (make) in
-                        make.left.equalTo(wordView.snp.right)
+                        make.left.equalTo(wordView.snp.right).offset(10)
                         make.width.equalTo(wordView.snp.width)
                         make.height.equalTo(wordView.snp.height)
                         make.centerY.equalTo(wordView.snp.centerY)
@@ -165,15 +165,15 @@ class WordSectionTableViewCell: UITableViewCell {
         case .rightOneQuestion, .rightTwoQuestion:do {
                 let viewWidth = UIScreen.main.bounds.width
             sentenceView.snp.remakeConstraints { (make) in
-                make.right.equalToSuperview().offset(10)
+                make.right.equalToSuperview().offset(-10)
                 make.top.equalTo(self.snp.top).offset(10)
-                make.width.equalTo((viewWidth-100)/2)
+                make.width.equalTo((viewWidth-90)/2.5)
                 make.height.equalTo(sentenceView.snp.width).multipliedBy(1.2)
                 make.bottom.equalToSuperview().offset(-10)
                 
             }
             wordView.snp.remakeConstraints { (make) in
-                make.right.equalTo(sentenceView.snp.left)
+                make.right.equalTo(sentenceView.snp.left).offset(-10)
                 make.width.equalTo(sentenceView.snp.width)
                 make.height.equalTo(sentenceView.snp.height)
                 make.centerY.equalTo(sentenceView.snp.centerY)

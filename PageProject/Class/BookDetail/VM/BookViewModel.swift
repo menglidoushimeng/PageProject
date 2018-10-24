@@ -141,7 +141,7 @@ class BookViewModel: RootTableViewViewModel {
     }
     override func estimatedHeightForRowAt(_ tableView: UITableView, _ indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return UIScreen.main.bounds.size.width
+            return UIScreen.main.bounds.size.width - 20
         } else {
             return 60
         }
