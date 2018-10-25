@@ -17,18 +17,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00D-bk-FFv">
-                    <rect key="frame" x="0.0" y="0.0" width="502" height="151"/>
+                    <rect key="frame" x="0.0" y="0.0" width="502" height="141"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGX-hk-XU4">
-                            <rect key="frame" x="179" y="20" width="144.5" height="24"/>
-                            <string key="text">人教版新课标必修1 高一上
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGX-hk-XU4">
+                            <rect key="frame" x="179" y="10.5" width="144.5" height="29"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">人教版新课标必修1 高一上
 MIUI.SectionA</string>
-                            <fontDescription key="fontDescription" name=".PingFangSC-Regular" family=".PingFang SC" pointSize="12"/>
-                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <attributes>
+                                        <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-zB-vj8">
-                            <rect key="frame" x="5" y="10" width="40" height="40"/>
+                            <rect key="frame" x="5" y="5" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="9e8-46-xju"/>
                                 <constraint firstAttribute="height" constant="40" id="QzS-fA-fXm"/>
@@ -41,19 +48,19 @@ MIUI.SectionA</string>
                     </subviews>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="YGX-hk-XU4" firstAttribute="top" secondItem="VE7-CO-6Cl" secondAttribute="top" constant="20" id="A48-gf-1Hv"/>
                         <constraint firstItem="ZwU-zB-vj8" firstAttribute="leading" secondItem="VE7-CO-6Cl" secondAttribute="leading" constant="5" id="NpW-XU-XUK"/>
+                        <constraint firstItem="YGX-hk-XU4" firstAttribute="centerY" secondItem="ZwU-zB-vj8" secondAttribute="centerY" id="Qb6-DO-30X"/>
                         <constraint firstItem="YGX-hk-XU4" firstAttribute="centerX" secondItem="VE7-CO-6Cl" secondAttribute="centerX" id="SQs-3B-bWF"/>
-                        <constraint firstItem="ZwU-zB-vj8" firstAttribute="top" secondItem="VE7-CO-6Cl" secondAttribute="top" constant="10" id="hXU-Qq-kkc"/>
+                        <constraint firstItem="ZwU-zB-vj8" firstAttribute="top" secondItem="VE7-CO-6Cl" secondAttribute="top" constant="5" id="hXU-Qq-kkc"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="VE7-CO-6Cl"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WW-RV-5n3">
-                    <rect key="frame" x="0.0" y="151" width="502" height="63"/>
+                    <rect key="frame" x="0.0" y="141" width="502" height="73"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="930-vF-afX">
-                    <rect key="frame" x="202" y="174" width="290" height="10"/>
+                    <rect key="frame" x="202" y="164" width="290" height="10"/>
                     <attributedString key="attributedText">
                         <fragment content="全部达到">
                             <attributes>
@@ -80,32 +87,32 @@ MIUI.SectionA</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="挑战得奥星" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-Tx-kGU">
-                    <rect key="frame" x="120" y="154" width="76" height="50"/>
+                    <rect key="frame" x="120" y="134" width="76" height="70"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_pisentencesknowwell" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-cw-JGk">
-                    <rect key="frame" x="10" y="45" width="110" height="96"/>
+                    <rect key="frame" x="10" y="40" width="110" height="96"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="110" id="3Tl-XS-IfS"/>
                         <constraint firstAttribute="height" constant="96" id="Htr-U1-cM9"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下一级:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-uC-m7N">
-                    <rect key="frame" x="407" y="64" width="47" height="17"/>
+                    <rect key="frame" x="407" y="59" width="47" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="掌握" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIJ-Kv-ILa">
-                    <rect key="frame" x="459" y="64" width="29" height="17"/>
+                    <rect key="frame" x="459" y="59" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.97647058823529409" green="0.66666666666666663" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-J8-Jvw">
-                    <rect key="frame" x="130" y="81" width="358" height="21.5"/>
+                    <rect key="frame" x="130" y="76" width="358" height="21.5"/>
                     <attributedString key="attributedText">
                         <fragment content="还需升级">
                             <attributes>
@@ -146,14 +153,14 @@ MIUI.SectionA</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_crown" translatesAutoresizingMaskIntoConstraints="NO" id="qhg-DJ-w7L">
-                    <rect key="frame" x="467" y="53" width="13" height="9"/>
+                    <rect key="frame" x="467" y="48" width="13" height="9"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="9" id="SFb-Th-afE"/>
                         <constraint firstAttribute="width" constant="13" id="VVb-46-Hq5"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-gM-UyT">
-                    <rect key="frame" x="120" y="127" width="76" height="48"/>
+                    <rect key="frame" x="120" y="117" width="76" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="76" id="kvU-QT-8yu"/>
                         <constraint firstAttribute="height" constant="48" id="naw-Vx-ALh"/>
@@ -164,7 +171,7 @@ MIUI.SectionA</string>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-h1-l1w">
-                    <rect key="frame" x="202" y="131" width="290" height="40"/>
+                    <rect key="frame" x="202" y="121" width="290" height="40"/>
                     <color key="backgroundColor" red="0.1019607843" green="0.67843137249999996" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Jqr-bQ-UrN"/>
@@ -249,7 +256,7 @@ Cg
                 <constraint firstItem="uyh-J8-Jvw" firstAttribute="top" secondItem="0ay-uC-m7N" secondAttribute="bottom" id="8iR-9l-Fb8"/>
                 <constraint firstItem="VwF-h1-l1w" firstAttribute="centerY" secondItem="2hb-gM-UyT" secondAttribute="centerY" id="8tR-i7-IVm"/>
                 <constraint firstItem="uyh-J8-Jvw" firstAttribute="leading" secondItem="7Ph-cw-JGk" secondAttribute="trailing" constant="10" id="9C0-8n-I08"/>
-                <constraint firstItem="2hb-gM-UyT" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="bottom" constant="-14" id="CK4-wb-anj"/>
+                <constraint firstItem="2hb-gM-UyT" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="bottom" constant="-19" id="CK4-wb-anj"/>
                 <constraint firstItem="qhg-DJ-w7L" firstAttribute="centerX" secondItem="KIJ-Kv-ILa" secondAttribute="centerX" id="DEz-1m-2FQ"/>
                 <constraint firstItem="fFk-Tx-kGU" firstAttribute="leading" secondItem="2hb-gM-UyT" secondAttribute="leading" id="GeX-BJ-4Gb"/>
                 <constraint firstItem="fFk-Tx-kGU" firstAttribute="centerX" secondItem="2hb-gM-UyT" secondAttribute="centerX" id="HIf-gy-Azc"/>
@@ -265,7 +272,7 @@ Cg
                 <constraint firstItem="uyh-J8-Jvw" firstAttribute="trailing" secondItem="KIJ-Kv-ILa" secondAttribute="trailing" id="VVW-tT-zx0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VwF-h1-l1w" secondAttribute="trailing" constant="10" id="Zo7-Iw-q7C"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="00D-bk-FFv" secondAttribute="trailing" id="ZrG-gU-M3F"/>
-                <constraint firstItem="4WW-RV-5n3" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="bottom" constant="10" id="dc0-76-gOu"/>
+                <constraint firstItem="4WW-RV-5n3" firstAttribute="top" secondItem="7Ph-cw-JGk" secondAttribute="bottom" constant="5" id="dc0-76-gOu"/>
                 <constraint firstItem="930-vF-afX" firstAttribute="trailing" secondItem="VwF-h1-l1w" secondAttribute="trailing" id="gMI-bq-QkE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KIJ-Kv-ILa" secondAttribute="trailing" constant="14" id="i2y-rj-fBH"/>
                 <constraint firstItem="930-vF-afX" firstAttribute="leading" secondItem="VwF-h1-l1w" secondAttribute="leading" id="jOw-V4-CCz"/>
@@ -284,13 +291,13 @@ Cg
                 <outlet property="stateDescLb" destination="930-vF-afX" id="ChY-cW-bDM"/>
                 <outlet property="stateImg" destination="7Ph-cw-JGk" id="bzX-fC-0Ge"/>
             </connections>
-            <point key="canvasLocation" x="84.799999999999997" y="69.265367316341838"/>
+            <point key="canvasLocation" x="-128" y="37"/>
         </view>
     </objects>
     <resources>
-        <image name="dict_challengestar" width="76" height="48"/>
-        <image name="dict_crown" width="26" height="18"/>
-        <image name="dict_iconbigreturn" width="24" height="31"/>
-        <image name="dict_pisentencesknowwell" width="110" height="96"/>
+        <image name="dict_challengestar" width="73" height="46.080001831054688"/>
+        <image name="dict_crown" width="25.440000534057617" height="17.760000228881836"/>
+        <image name="dict_iconbigreturn" width="24" height="31.5"/>
+        <image name="dict_pisentencesknowwell" width="106.08000183105469" height="92.160003662109375"/>
     </resources>
 </document>

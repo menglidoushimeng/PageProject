@@ -66,8 +66,8 @@ class WordSectionTableViewCell: UITableViewCell {
             make.left.equalTo(self.snp.left).offset(70)
             make.top.equalTo(self.snp.top).offset(10)
             make.width.equalTo((viewWidth-90)/2.5)
-            make.height.equalTo(wordView.snp.width).multipliedBy(1.1)
-            make.bottom.equalToSuperview().offset(-10)
+            make.height.equalTo(wordView.snp.width).multipliedBy(1.25)
+            make.bottom.equalToSuperview().offset(-5)
         }
         wordView.showImage = UIImage.init(named: "dict_piexpressionsknowwell")!
         wordView.titleText = "单词"
@@ -149,8 +149,8 @@ class WordSectionTableViewCell: UITableViewCell {
                     make.left.equalTo(self.snp.left).offset(70)
                     make.top.equalTo(self.snp.top).offset(10)
                     make.width.equalTo((viewWidth-90)/2.5)
-                    make.height.equalTo(wordView.snp.width).multipliedBy(1.2)
-                    make.bottom.equalToSuperview().offset(-10)
+                    make.height.equalTo(wordView.snp.width).multipliedBy(1.25)
+                    make.bottom.equalToSuperview().offset(-5)
                 }
                 sentenceView.snp.remakeConstraints { (make) in
                         make.left.equalTo(wordView.snp.right).offset(10)
@@ -168,8 +168,8 @@ class WordSectionTableViewCell: UITableViewCell {
                 make.right.equalToSuperview().offset(-10)
                 make.top.equalTo(self.snp.top).offset(10)
                 make.width.equalTo((viewWidth-90)/2.5)
-                make.height.equalTo(sentenceView.snp.width).multipliedBy(1.2)
-                make.bottom.equalToSuperview().offset(-10)
+                make.height.equalTo(sentenceView.snp.width).multipliedBy(1.25)
+                make.bottom.equalToSuperview().offset(-5)
                 
             }
             wordView.snp.remakeConstraints { (make) in

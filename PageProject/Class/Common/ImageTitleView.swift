@@ -135,7 +135,7 @@ class ImageTitleView: UIView {
             make.centerX.equalToSuperview()
             make.width.lessThanOrEqualTo(self.snp.width)
         }
-        
+
         imageView.layer.addSublayer(imageLayer)
         imageLayer.frame = CGRect.zero
         imageLayer.backgroundColor = UIColor.white.withAlphaComponent(0.5).cgColor

@@ -27,16 +27,16 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="人教版.七上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgP-M3-xmh">
-                        <rect key="frame" x="263.5" y="250" width="92" height="75"/>
+                        <rect key="frame" x="263.5" y="250" width="92" height="93"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-Pc-pmA">
-                        <rect key="frame" x="10" y="345" width="599" height="179.5"/>
+                        <rect key="frame" x="10" y="363" width="599" height="161.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="kHU-Pc-pmA" secondAttribute="height" multiplier="10:3" id="VKs-qU-qBU"/>
+                            <constraint firstAttribute="width" secondItem="kHU-Pc-pmA" secondAttribute="height" multiplier="10:2.7" id="VKs-qU-qBU"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3H-cH-ksT">
@@ -87,7 +87,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="czrjbgoforit_1" width="114" height="149"/>
-        <image name="dict_icontextshare" width="70" height="42"/>
+        <image name="czrjbgoforit_1" width="114.5" height="149.5"/>
+        <image name="dict_icontextshare" width="67.199996948242188" height="40.319999694824219"/>
     </resources>
 </document>

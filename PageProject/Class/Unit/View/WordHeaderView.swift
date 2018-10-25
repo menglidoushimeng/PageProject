@@ -51,7 +51,7 @@ class WordHeaderView: RootView {
             make.left.equalToSuperview()
             make.top.equalToSuperview()
             make.right.equalToSuperview()
-            make.bottom.equalTo(self.snp.bottom).offset(-10)
+            make.bottom.equalTo(self.snp.bottom).offset(-5)
         }
             self.bgImg.contentMode = .scaleAspectFit
             self.contentView.addSubview(self.bgImg)
