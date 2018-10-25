@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         // Override point for customization after application launch.
         self.tabbarSetting()
+        print("git测试")
         return true
     }
     func tabbarSetting () {
