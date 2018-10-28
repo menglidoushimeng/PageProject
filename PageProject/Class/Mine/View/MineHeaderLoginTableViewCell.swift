@@ -25,8 +25,13 @@ class MineHeaderLoginTableViewCell: UITableViewCell {
         shadowView.layer.cornerRadius = UIScreen.main.bounds.size.width / 8;
         shadowView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
         shadowView.layer.shadowOffset = CGSize.init(width: 0, height: 10)
-        shadowView.layer.shadowOpacity = 1;
-        shadowView.layer.shadowRadius = 10
+        shadowView.layer.shadowOpacity = 0.2;
+        shadowView.layer.shadowRadius = 5
+
+        shadowView.layer.shadowColor = UIColor.init(red: 0, green: 101/255.00, blue: 231/255.00, alpha: 0.6).cgColor
+        
+//        shadowView.layer.shadowOffset = CGSize.init(width: 0, height: 15)
+//        shadowView.layer.shadowOpacity = 0.4;
 
     
     }

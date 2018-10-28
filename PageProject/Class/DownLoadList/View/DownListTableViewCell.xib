@@ -95,7 +95,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北师大版（一期）三上" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-b4-5LA">
                         <rect key="frame" x="190.5" y="10" width="290.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -160,11 +160,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="czrjbgoforit_1" width="114" height="149"/>
-        <image name="dict_piexpressionsdoing" width="110" height="96"/>
-        <image name="dict_piparagraphsdoing" width="110" height="96"/>
-        <image name="dict_pisentencesdoing" width="110" height="96"/>
-        <image name="dict_piwordlistdoing" width="110" height="96"/>
-        <image name="dict_trash" width="170" height="170"/>
+        <image name="czrjbgoforit_1" width="114.5" height="149.5"/>
+        <image name="dict_piexpressionsdoing" width="106.08000183105469" height="92.160003662109375"/>
+        <image name="dict_piparagraphsdoing" width="106.08000183105469" height="92.160003662109375"/>
+        <image name="dict_pisentencesdoing" width="106.08000183105469" height="92.160003662109375"/>
+        <image name="dict_piwordlistdoing" width="106.08000183105469" height="92.160003662109375"/>
+        <image name="dict_trash" width="170.5" height="170.5"/>
     </resources>
 </document>
