@@ -64,7 +64,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择登录方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKF-Z9-JNb">
                         <rect key="frame" x="189" y="208.5" width="122" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-mY-9kE">
@@ -114,8 +114,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dict_logonqq" width="40" height="40"/>
-        <image name="dict_logonwechat" width="40" height="40"/>
-        <image name="dict_shadowuser" width="241" height="130"/>
+        <image name="dict_logonqq" width="38.400001525878906" height="38.400001525878906"/>
+        <image name="dict_logonwechat" width="38.400001525878906" height="38.400001525878906"/>
+        <image name="dict_shadowuser" width="361.5" height="195.75"/>
     </resources>
 </document>
