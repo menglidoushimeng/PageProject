@@ -83,6 +83,8 @@ extension SectionViewController:UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let vc = SelectedViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
    
 }

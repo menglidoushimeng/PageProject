@@ -65,6 +65,10 @@
 		5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAA8216EE685009434BB /* RootTableViewViewModel.swift */; };
 		5EF4FAAB216EE78D009434BB /* RootTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */; };
 		5EF4FAAE216F30E4009434BB /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAD216F30E4009434BB /* WordViewModel.swift */; };
+		F248A38A21991C9900C775C2 /* RootUnNaviProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */; };
+		F248A38B21991C9900C775C2 /* RootUnNaviProgressBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */; };
+		F248A390219922E300C775C2 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A38E219922E300C775C2 /* SelectedViewController.swift */; };
+		F248A391219922E300C775C2 /* SelectedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F248A38F219922E300C775C2 /* SelectedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +156,10 @@
 		61B29C1AA2071859559610AB /* Pods_PageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D30B28AC5DD032E51AA6B /* Pods-PageProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D07E8CD7BB9F8AB1F85CB87F /* Pods-PageProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.release.xcconfig"; sourceTree = "<group>"; };
+		F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUnNaviProgressBarViewController.swift; sourceTree = "<group>"; };
+		F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootUnNaviProgressBarViewController.xib; sourceTree = "<group>"; };
+		F248A38E219922E300C775C2 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		F248A38F219922E300C775C2 /* SelectedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +321,7 @@
 		5E2E03C62154C318001D6C48 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F248A38C2199227100C775C2 /* Selected */,
 				5E3F1CCB21605D430012FD42 /* Setting */,
 				5E1FCE4C215E228B006264CE /* Section */,
 				5E210E93215DB9A900EE80F1 /* DownLoadList */,
@@ -387,6 +396,8 @@
 				5E7E608021747E7700FDF808 /* RootUnShowStatesViewController.swift */,
 				5E88BCBE21773F44008901D5 /* RootUnNavigationBarViewController.swift */,
 				5EA076552179E236004E6876 /* RootScrollView.swift */,
+				F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */,
+				F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -517,6 +528,23 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
+		F248A38C2199227100C775C2 /* Selected */ = {
+			isa = PBXGroup;
+			children = (
+				F248A38D219922C700C775C2 /* VC */,
+			);
+			path = Selected;
+			sourceTree = "<group>";
+		};
+		F248A38D219922C700C775C2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F248A38E219922E300C775C2 /* SelectedViewController.swift */,
+				F248A38F219922E300C775C2 /* SelectedViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -623,6 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F248A391219922E300C775C2 /* SelectedViewController.xib in Resources */,
 				5E0354A0214A355D0040BC2E /* LaunchScreen.storyboard in Resources */,
 				5E1FCE4B215DCB8B006264CE /* DownListTableViewCell.xib in Resources */,
 				5E1FCE58215E236D006264CE /* SectionTableViewCell.xib in Resources */,
@@ -635,6 +664,7 @@
 				5EE588CC214B3DBA003221A9 /* BookHeaderTableViewCell.xib in Resources */,
 				5EE588D0214B3DCE003221A9 /* BookTableViewCell.xib in Resources */,
 				5EEECDBF215B5972000FB516 /* MineHeaderLoginTableViewCell.xib in Resources */,
+				F248A38B21991C9900C775C2 /* RootUnNaviProgressBarViewController.xib in Resources */,
 				5EEECDBB215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,10 +755,12 @@
 			files = (
 				5E03549B214A355C0040BC2E /* PageProject.xcdatamodeld in Sources */,
 				5E1FCE57215E236D006264CE /* SectionTableViewCell.swift in Sources */,
+				F248A38A21991C9900C775C2 /* RootUnNaviProgressBarViewController.swift in Sources */,
 				5E035495214A355C0040BC2E /* ViewController.swift in Sources */,
 				5EF4FAAB216EE78D009434BB /* RootTableViewCellModel.swift in Sources */,
 				5E1FCE50215E22C3006264CE /* SectionViewController.swift in Sources */,
 				5EEECDAA2159C742000FB516 /* ScreenBounsConfig.swift in Sources */,
+				F248A390219922E300C775C2 /* SelectedViewController.swift in Sources */,
 				5EF4FAAE216F30E4009434BB /* WordViewModel.swift in Sources */,
 				5E9EFA06217F075A00D2C687 /* UnitSelectedModel.swift in Sources */,
 				15A4C5A2214CEAC2008D2B52 /* WordViewController.swift in Sources */,

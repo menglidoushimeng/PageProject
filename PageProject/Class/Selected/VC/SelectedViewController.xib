@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedViewController" customModule="PageProject" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OET-Qa-qEB">
+                    <rect key="frame" x="291" y="625" width="84" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="Idl-ee-ZSE"/>
+                        <constraint firstAttribute="height" constant="42" id="kSV-22-reN"/>
+                    </constraints>
+                    <state key="normal" image="dict_retry"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euG-Tf-aE9">
+                    <rect key="frame" x="0.0" y="505" width="375" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkO-tv-fpg">
+                    <rect key="frame" x="0.0" y="445" width="375" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEz-aE-1h6">
+                    <rect key="frame" x="0.0" y="385" width="375" height="60"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ih-oM-SKn">
+                    <rect key="frame" x="0.0" y="565" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="nL3-AZ-Pdd"/>
+                    </constraints>
+                    <state key="normal" title="手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表手表">
+                        <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OET-Qa-qEB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="547-bL-ivg"/>
+                <constraint firstItem="4ih-oM-SKn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="99h-hW-0PE"/>
+                <constraint firstItem="KEz-aE-1h6" firstAttribute="height" secondItem="euG-Tf-aE9" secondAttribute="height" id="9uV-bg-Fyl"/>
+                <constraint firstItem="euG-Tf-aE9" firstAttribute="height" secondItem="4ih-oM-SKn" secondAttribute="height" id="F0Z-ot-0Lm"/>
+                <constraint firstItem="QkO-tv-fpg" firstAttribute="height" secondItem="euG-Tf-aE9" secondAttribute="height" id="GBG-Zi-9zr"/>
+                <constraint firstItem="euG-Tf-aE9" firstAttribute="leading" secondItem="4ih-oM-SKn" secondAttribute="leading" id="Hcm-he-1EG"/>
+                <constraint firstItem="OET-Qa-qEB" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="HzU-qd-seZ"/>
+                <constraint firstItem="4ih-oM-SKn" firstAttribute="top" secondItem="euG-Tf-aE9" secondAttribute="bottom" id="NE9-Ll-Bx5"/>
+                <constraint firstItem="KEz-aE-1h6" firstAttribute="trailing" secondItem="euG-Tf-aE9" secondAttribute="trailing" id="TO1-EP-m6I"/>
+                <constraint firstItem="QkO-tv-fpg" firstAttribute="trailing" secondItem="euG-Tf-aE9" secondAttribute="trailing" id="VB5-tz-Awn"/>
+                <constraint firstItem="euG-Tf-aE9" firstAttribute="trailing" secondItem="4ih-oM-SKn" secondAttribute="trailing" id="Vj8-QO-sMP"/>
+                <constraint firstItem="QkO-tv-fpg" firstAttribute="leading" secondItem="euG-Tf-aE9" secondAttribute="leading" id="YLJ-TK-h6J"/>
+                <constraint firstItem="KEz-aE-1h6" firstAttribute="leading" secondItem="euG-Tf-aE9" secondAttribute="leading" id="brS-P8-Wum"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4ih-oM-SKn" secondAttribute="trailing" id="rrZ-GF-MMs"/>
+                <constraint firstItem="QkO-tv-fpg" firstAttribute="top" secondItem="KEz-aE-1h6" secondAttribute="bottom" id="sqd-0S-Uh7"/>
+                <constraint firstItem="euG-Tf-aE9" firstAttribute="top" secondItem="QkO-tv-fpg" secondAttribute="bottom" id="ueP-Jz-4om"/>
+                <constraint firstItem="OET-Qa-qEB" firstAttribute="top" secondItem="4ih-oM-SKn" secondAttribute="bottom" id="vtl-G9-9vZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dict_retry" width="84" height="42"/>
+    </resources>
+</document>

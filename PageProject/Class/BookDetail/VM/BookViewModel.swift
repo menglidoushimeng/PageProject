@@ -45,12 +45,7 @@ class BookViewModel: RootTableViewViewModel {
             
             bookUnits.add(unitModel)
         }
-//        for unit in BookModel().dict_book_units ?? []{
-//            let unitModel = RootTableViewCellModel()
-//            unitModel.cellIdentifier = String(describing: type(of:BookTableViewCell()))
-//            unitModel.cellModel = unit
-//            bookUnits.add(unitModel)
-//        }
+
         return [headers,bookUnits as! Array<RootTableViewCellModel>]
     }
     
