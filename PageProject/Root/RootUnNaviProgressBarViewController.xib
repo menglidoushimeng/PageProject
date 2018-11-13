@@ -12,8 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootUnNaviProgressBarViewController" customModule="PageProject" customModuleProvider="target">
             <connections>
-                <outlet property="playBtn" destination="VSm-M3-gLH" id="ju7-mO-HVO"/>
-                <outlet property="progressWidthLayout" destination="qm5-JM-nTP" id="WF8-m4-wfu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,9 +42,6 @@
                         <constraint firstAttribute="height" constant="42" id="eqQ-qH-4av"/>
                     </constraints>
                     <state key="normal" image="dict_iconbigreturn"/>
-                    <connections>
-                        <action selector="turnBackAction:" destination="-1" eventType="touchUpInside" id="fdP-uS-VZL"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-M3-gLH">
                     <rect key="frame" x="333" y="8" width="42" height="42"/>
@@ -55,9 +50,6 @@
                         <constraint firstAttribute="width" constant="42" id="nT6-ja-YK8"/>
                     </constraints>
                     <state key="normal" image="dict_playsound"/>
-                    <connections>
-                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="qeA-aO-DVe"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

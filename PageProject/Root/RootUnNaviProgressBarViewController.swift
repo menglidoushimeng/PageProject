@@ -10,8 +10,16 @@ import UIKit
 
 class RootUnNaviProgressBarViewController: RootUnShowStatesViewController {
 
-    @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var progressWidthLayout: NSLayoutConstraint!
+    
+   
+    
+    
+    var backgroundView = UIView()
+    var progressView = UIView()
+    
+    var turnBackBtn = UIButton()
+    var playBtn = UIButton()
+    
     
     override func navigationBarSetting() {
         super.navigationBarSetting()
@@ -22,12 +30,53 @@ class RootUnNaviProgressBarViewController: RootUnShowStatesViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func turnBackAction(_ sender: UIButton) {
+    override func viewSetting() {
+        super.viewSetting()
+        
+        self.view.addSubview(backgroundView)
+        backgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.safe)
+            make.left.equalTo(self.safe)
+            make.right.equalTo(self.safe)
+            make.height.equalTo(8)
+        }
+        backgroundView.backgroundColor = ColorExtension().bottomGray
+        
+        self.view.addSubview(progressView)
+        progressView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.safe)
+            make.left.equalTo(self.safe)
+            make.width.equalTo(100)
+            make.height.equalTo(8)
+        }
+        progressView.backgroundColor = ColorExtension().rightGreen
+        
+        self.view.addSubview(turnBackBtn)
+        turnBackBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(self.backgroundView.snp.bottom)
+            make.left.equalTo(self.safe)
+            make.width.equalTo(32)
+            make.height.equalTo(42)
+        }
+        turnBackBtn.setImage(UIImage.init(named: "dict_iconbigreturn"), for: .normal)
+        turnBackBtn.addTarget(self, action: #selector(turnBackAction(_:)), for: .touchUpInside)
+        
+        self.view.addSubview(playBtn)
+        playBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(self.backgroundView.snp.bottom)
+            make.right.equalTo(self.safe)
+            make.width.equalTo(42)
+            make.height.equalTo(42)
+        }
+        playBtn.setImage(UIImage.init(named: "dict_playsound"), for: .normal)
+        playBtn.addTarget(self, action: #selector(playAction(_:)), for: .touchUpInside)
+        
+    }
+    @objc func turnBackAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func playAction(_ sender: UIButton) {
+    @objc func playAction(_ sender: UIButton) {
         
         
     }
