@@ -65,8 +65,8 @@
 		5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAA8216EE685009434BB /* RootTableViewViewModel.swift */; };
 		5EF4FAAB216EE78D009434BB /* RootTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAA216EE78D009434BB /* RootTableViewCellModel.swift */; };
 		5EF4FAAE216F30E4009434BB /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4FAAD216F30E4009434BB /* WordViewModel.swift */; };
+		F244871A219BF477000E4809 /* CombinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2448719219BF477000E4809 /* CombinationViewController.swift */; };
 		F248A38A21991C9900C775C2 /* RootUnNaviProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */; };
-		F248A38B21991C9900C775C2 /* RootUnNaviProgressBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */; };
 		F248A390219922E300C775C2 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F248A38E219922E300C775C2 /* SelectedViewController.swift */; };
 		F248A391219922E300C775C2 /* SelectedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F248A38F219922E300C775C2 /* SelectedViewController.xib */; };
 /* End PBXBuildFile section */
@@ -156,8 +156,8 @@
 		61B29C1AA2071859559610AB /* Pods_PageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06D30B28AC5DD032E51AA6B /* Pods-PageProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D07E8CD7BB9F8AB1F85CB87F /* Pods-PageProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageProject/Pods-PageProject.release.xcconfig"; sourceTree = "<group>"; };
+		F2448719219BF477000E4809 /* CombinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationViewController.swift; sourceTree = "<group>"; };
 		F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootUnNaviProgressBarViewController.swift; sourceTree = "<group>"; };
-		F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootUnNaviProgressBarViewController.xib; sourceTree = "<group>"; };
 		F248A38E219922E300C775C2 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		F248A38F219922E300C775C2 /* SelectedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +321,7 @@
 		5E2E03C62154C318001D6C48 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F2448717219BF43D000E4809 /* Combination */,
 				F248A38C2199227100C775C2 /* Selected */,
 				5E3F1CCB21605D430012FD42 /* Setting */,
 				5E1FCE4C215E228B006264CE /* Section */,
@@ -397,7 +398,6 @@
 				5E88BCBE21773F44008901D5 /* RootUnNavigationBarViewController.swift */,
 				5EA076552179E236004E6876 /* RootScrollView.swift */,
 				F248A38821991C9900C775C2 /* RootUnNaviProgressBarViewController.swift */,
-				F248A38921991C9900C775C2 /* RootUnNaviProgressBarViewController.xib */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -526,6 +526,22 @@
 				5EF4FAAD216F30E4009434BB /* WordViewModel.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		F2448717219BF43D000E4809 /* Combination */ = {
+			isa = PBXGroup;
+			children = (
+				F2448718219BF446000E4809 /* VC */,
+			);
+			path = Combination;
+			sourceTree = "<group>";
+		};
+		F2448718219BF446000E4809 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F2448719219BF477000E4809 /* CombinationViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		F248A38C2199227100C775C2 /* Selected */ = {
@@ -664,7 +680,6 @@
 				5EE588CC214B3DBA003221A9 /* BookHeaderTableViewCell.xib in Resources */,
 				5EE588D0214B3DCE003221A9 /* BookTableViewCell.xib in Resources */,
 				5EEECDBF215B5972000FB516 /* MineHeaderLoginTableViewCell.xib in Resources */,
-				F248A38B21991C9900C775C2 /* RootUnNaviProgressBarViewController.xib in Resources */,
 				5EEECDBB215B2CEF000FB516 /* MineHeaderUnLoginTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,6 +802,7 @@
 				5EF4FAA9216EE685009434BB /* RootTableViewViewModel.swift in Sources */,
 				5EE588D2214B3E2F003221A9 /* BookViewController.swift in Sources */,
 				5E035493214A355C0040BC2E /* AppDelegate.swift in Sources */,
+				F244871A219BF477000E4809 /* CombinationViewController.swift in Sources */,
 				5EEECDC8215B83C4000FB516 /* MineModel.swift in Sources */,
 				15A4C5A7214CF303008D2B52 /* WordSectionTableViewCell.swift in Sources */,
 				5EEECDB7215B2AFB000FB516 /* MineViewController.swift in Sources */,

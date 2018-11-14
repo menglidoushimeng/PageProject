@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
+
+enum ViewStatesEmum {
+    case viewStateUnAnswer /// 没有答题
+    case viewStateDidAnswer /// 已经答题
+}
 enum AnswerEnum:NSInteger {
     case A = 0
     case B = 1
@@ -41,7 +48,7 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
     
     var rightAnswer:AnswerEnum?
     var selectedAnswer:AnswerEnum?
-    
+    var answerStates:ViewStatesEmum = .viewStateUnAnswer
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +56,28 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func tryAgainAction(_ sender: UIButton) {
+        tryAgainBtn.isHidden = true;
+        self.viewStateBackUnAnswer(lb: answerALb, image: answerAImg,textColor:ColorExtension().questionGemostenBlue)
+        self.viewStateBackUnAnswer(lb: answerBLb, image: answerBImg,textColor:ColorExtension().questionGemostenBlue)
+        self.viewStateBackUnAnswer(lb: answerCLb, image: answerCImg,textColor:ColorExtension().questionGemostenBlue)
+        self.viewStateBackUnAnswer(lb: answerDLb, image: answerDImg,textColor:ColorExtension().questionGemostenBlue)
+        answerStates = .viewStateUnAnswer
+    }
+    func viewStateBackUnAnswer(lb:UILabel,image:UIImageView,textColor:UIColor) {
+        lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:textColor])
+        image.isHidden = true
     }
     @IBAction func selectedAnswerAction(_ sender: UIButton) {
-        selectedAnswer = AnswerEnum(rawValue: sender.tag)
-        tryAgainBtn.isHidden = false
-        self.updateViewStates(state: self.stateReturn(answer: .A), lb: answerALb, image: answerAImg)
-        self.updateViewStates(state: self.stateReturn(answer: .B), lb: answerBLb, image: answerBImg)
-        self.updateViewStates(state: self.stateReturn(answer: .C), lb: answerCLb, image: answerCImg)
-        self.updateViewStates(state: self.stateReturn(answer: .D), lb: answerDLb, image: answerDImg)
+        if answerStates == .viewStateUnAnswer {
+            answerStates = .viewStateDidAnswer
+            selectedAnswer = AnswerEnum(rawValue: sender.tag)
+            tryAgainBtn.isHidden = false
+            self.updateViewStates(state: self.stateReturn(answer: .A), lb: answerALb, image: answerAImg)
+            self.updateViewStates(state: self.stateReturn(answer: .B), lb: answerBLb, image: answerBImg)
+            self.updateViewStates(state: self.stateReturn(answer: .C), lb: answerCLb, image: answerCImg)
+            self.updateViewStates(state: self.stateReturn(answer: .D), lb: answerDLb, image: answerDImg)
+        }
+        
     }
     func stateReturn(answer:AnswerEnum) -> SelectedStates {
         if answer != selectedAnswer && answer != rightAnswer {
@@ -70,16 +91,17 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
         }
     }
     func updateViewStates(state:SelectedStates,lb:UILabel,image:UIImageView) {
+        
         switch state {
         case .statesNormal:
             do {
-                lb.textColor = ColorExtension().whiteGray
+                lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().whiteGray])
                 image.isHidden = true
             }
         break;
         case .statesRightUnselected:
             do {
-                lb.textColor = ColorExtension().rightGreen
+                lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().rightGreen])
                 image.isHidden = true
             }
             break;
@@ -87,26 +109,38 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
             do {
                 let priceLb = UILabel();
                 priceLb.text = "+5"
+                priceLb.minimumScaleFactor = 5
+                priceLb.textAlignment = .center
                 priceLb.textColor = ColorExtension().starGold
-                priceLb.frame = CGRect.init(x: image.frame.origin.x - image.frame.size.width / 2, y: image.frame.origin.y, width: 0, height: 0)
+                priceLb.frame = CGRect.init(x: image.frame.origin.x + image.frame.size.width / 2 - 30, y: image.frame.origin.y + 10, width: 60, height: 0)
                 self.view.addSubview(priceLb)
-                UIView.animate(withDuration: 0.5, animations: {
-                    var frame = priceLb.frame;
-                    frame.origin.y += 50;
-                    frame.size.width = 20;
-                    frame.size.height = 20
-                    priceLb.frame = frame
-                }) { (bool) in
-                    priceLb.removeFromSuperview()
-                }
-                lb.textColor = ColorExtension().rightGreen
+                //Observable序列（每隔0.5秒钟发出一个索引数）
+                let observable = Observable<Int>.interval(0.05, scheduler: MainScheduler.instance)
+                
+                observable.takeWhile{$0 < 30}.subscribe(onNext: { (time) in
+                    if time < 25 {
+                        priceLb.font = UIFont.systemFont(ofSize: CGFloat(time))
+                        var frame = priceLb.frame;
+                        frame.origin.y -= 2;
+                        frame.size.height = CGFloat(time)
+                        priceLb.frame = frame
+                    }
+                }, onCompleted: {
+                    UIView.animate(withDuration: 1, animations: {
+                        priceLb.alpha = 0
+                    }, completion: { (bool) in
+                        priceLb.removeFromSuperview()
+                    })
+                    
+                }).disposed(by: disposeBag)
+                lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().rightGreen])
                 image.isHidden = false
                 image.image = UIImage.init(named: "dict_tickgreen")
         }
         break;
         case .statesError:
             do {
-//                lb.textColor = ColorExtension().errorOrange
+                
                 lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughStyle:NSUnderlineStyle.styleSingle.rawValue])
                 image.isHidden = false
                 image.image = UIImage.init(named: "dict_crossred")
@@ -126,3 +160,5 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
     */
 
 }
+
+
