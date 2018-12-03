@@ -107,32 +107,7 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
             break;
         case .statesRight:
             do {
-                let priceLb = UILabel();
-                priceLb.text = "+5"
-                priceLb.minimumScaleFactor = 5
-                priceLb.textAlignment = .center
-                priceLb.textColor = ColorExtension().starGold
-                priceLb.frame = CGRect.init(x: image.frame.origin.x + image.frame.size.width / 2 - 30, y: image.frame.origin.y + 10, width: 60, height: 0)
-                self.view.addSubview(priceLb)
-                //Observable序列（每隔0.5秒钟发出一个索引数）
-                let observable = Observable<Int>.interval(0.05, scheduler: MainScheduler.instance)
-                
-                observable.takeWhile{$0 < 30}.subscribe(onNext: { (time) in
-                    if time < 25 {
-                        priceLb.font = UIFont.systemFont(ofSize: CGFloat(time))
-                        var frame = priceLb.frame;
-                        frame.origin.y -= 2;
-                        frame.size.height = CGFloat(time)
-                        priceLb.frame = frame
-                    }
-                }, onCompleted: {
-                    UIView.animate(withDuration: 1, animations: {
-                        priceLb.alpha = 0
-                    }, completion: { (bool) in
-                        priceLb.removeFromSuperview()
-                    })
-                    
-                }).disposed(by: disposeBag)
+               CommonViewTool.addPriceView(image, self.view, disposeBag)
                 lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().rightGreen])
                 image.isHidden = false
                 image.image = UIImage.init(named: "dict_tickgreen")

@@ -18,7 +18,7 @@ class RootUnNaviProgressBarViewController: RootUnShowStatesViewController {
     var progressView = UIView()
     
     var turnBackBtn = UIButton()
-    var playBtn = UIButton()
+    var rightBtn = UIButton()
     
     
     override func navigationBarSetting() {
@@ -61,22 +61,22 @@ class RootUnNaviProgressBarViewController: RootUnShowStatesViewController {
         turnBackBtn.setImage(UIImage.init(named: "dict_iconbigreturn"), for: .normal)
         turnBackBtn.addTarget(self, action: #selector(turnBackAction(_:)), for: .touchUpInside)
         
-        self.view.addSubview(playBtn)
-        playBtn.snp.makeConstraints { (make) in
+        self.view.addSubview(rightBtn)
+        rightBtn.snp.makeConstraints { (make) in
             make.top.equalTo(self.backgroundView.snp.bottom)
             make.right.equalTo(self.safe)
-            make.width.equalTo(42)
-            make.height.equalTo(42)
+//            make.width.equalTo(42)
+//            make.height.equalTo(42)
         }
-        playBtn.setImage(UIImage.init(named: "dict_playsound"), for: .normal)
-        playBtn.addTarget(self, action: #selector(playAction(_:)), for: .touchUpInside)
+        rightBtn.setImage(UIImage.init(named: "dict_playsound"), for: .normal)
+        rightBtn.addTarget(self, action: #selector(rightAction(_:)), for: .touchUpInside)
         
     }
     @objc func turnBackAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func playAction(_ sender: UIButton) {
+    @objc func rightAction(_ sender: UIButton) {
         
         
     }

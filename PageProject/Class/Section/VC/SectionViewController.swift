@@ -83,8 +83,32 @@ extension SectionViewController:UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = SelectedViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let alert = UIAlertController.init(title: "选择页面", message: "", preferredStyle: .actionSheet)
+        let action1 = UIAlertAction.init(title: "页面1", style: .default) { (action) in
+            let vc = SelectedViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        alert.addAction(action1)
+        
+        let action2 = UIAlertAction.init(title: "页面2", style: .default) { (action) in
+            let vc = CombinationViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        alert.addAction(action2)
+        
+        let action3 = UIAlertAction.init(title: "页面3", style: .default) { (action) in
+            let vc = SelectedSectenceViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        alert.addAction(action3)
+        
+        let action4 = UIAlertAction.init(title: "页面4", style: .default) { (action) in
+            let vc = SoundsViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        alert.addAction(action4)
+        self.navigationController?.present(alert, animated: true, completion: nil)
     }
    
 }
