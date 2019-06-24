@@ -213,7 +213,10 @@ extension MineViewController:UITableViewDelegate {
             return
         }
         let model = listDataSource[indexPath.row - 1] as! MineModel
-        if model.title == "课本下载记录" {
+        if model.title == "课本" {
+            let vc = SelectedGradeViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if model.title == "课本下载记录" {
             let vc = DownLoadListViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if model.title == "推荐给朋友" {

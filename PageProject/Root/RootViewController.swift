@@ -65,6 +65,7 @@ class RootViewController: UIViewController {
         
         self.navigationBarSetting()
         self.viewSetting()
+        self.viewDidSet()
         // Do any additional setup after loading the view.
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -94,6 +95,9 @@ class RootViewController: UIViewController {
     func viewSetting() {
         self.view.backgroundColor = UIColor.white
        
+    }
+    func viewDidSet() {
+        
     }
    
     @objc func leftBarItemAction(leftItem:UIBarButtonItem) {

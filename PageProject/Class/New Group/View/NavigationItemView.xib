@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationItemView" customModule="PageProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三上" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trU-FE-Oi8">
+                    <rect key="frame" x="0.0" y="0.0" width="41" height="156"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="dict_arrowdown" translatesAutoresizingMaskIntoConstraints="NO" id="vHQ-D6-ai4">
+                    <rect key="frame" x="41" y="58" width="30" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Vjp-nZ-jrG"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vHQ-D6-ai4" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="0MY-0T-E7C"/>
+                <constraint firstItem="trU-FE-Oi8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7h9-du-QsB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vHQ-D6-ai4" secondAttribute="trailing" id="7pX-j6-KsK"/>
+                <constraint firstItem="vHQ-D6-ai4" firstAttribute="leading" secondItem="trU-FE-Oi8" secondAttribute="trailing" id="RpJ-dr-SCT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="trU-FE-Oi8" secondAttribute="bottom" id="boG-HQ-bnX"/>
+                <constraint firstItem="trU-FE-Oi8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ey0-sT-tJb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="101.59999999999999" y="-102.54872563718142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dict_arrowdown" width="30.719999313354492" height="40.319999694824219"/>
+    </resources>
+</document>

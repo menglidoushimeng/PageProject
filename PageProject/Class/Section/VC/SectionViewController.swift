@@ -109,6 +109,13 @@ extension SectionViewController:UITableViewDelegate {
         }
         alert.addAction(action4)
         self.navigationController?.present(alert, animated: true, completion: nil)
+        
+        let action5 = UIAlertAction.init(title: "页面5", style: .default) { (action) in
+            let vc = WriteSentenceViewController.init(keyBoardType: .normal, textViewType: .normal)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        alert.addAction(action5)
+        
     }
    
 }

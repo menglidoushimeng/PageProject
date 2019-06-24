@@ -33,13 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let bookNavi = RootNavigationController(rootViewController: bookVc)
         
+        let searchVc = SearchViewController()
+        let searchNavi = RootNavigationController(rootViewController: searchVc)
+        
         let mineVc = MineViewController()
 
         let mineNavi = RootNavigationController(rootViewController: mineVc)
+        
+        
         let tabbar = UITabBarController.init()
         
         tabbar.tabBar.backgroundColor = UIColor.white
-        tabbar.viewControllers = [bookNavi,mineNavi]
+        tabbar.viewControllers = [bookNavi,searchNavi,mineNavi]
         tabbar.tabBar.tintColor = ColorExtension().wordBlue
         
         let bookTabbarItem = UITabBarItem.init(title: "课本", image: UIImage.init(named: "dict_navigation1off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation1on")?.withRenderingMode(.alwaysOriginal))
@@ -47,7 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         bookTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
         bookTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
         
-
+        let searchTabbarItem = UITabBarItem.init(title: "发现", image: UIImage.init(named: "dict_navigation1off")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: "dict_navigation1on")?.withRenderingMode(.alwaysOriginal))
+        
+        searchTabbarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0)
+        searchTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
         
        
         
@@ -56,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mineTabbarItem.titlePositionAdjustment = UIOffsetMake(0, -3)
         
         bookVc.tabBarItem = bookTabbarItem
+        searchVc.tabBarItem = searchTabbarItem
         mineVc.tabBarItem = mineTabbarItem
         let space = UIScreen.main.bounds.size.width / 3;
         tabbar.tabBar.itemPositioning = .centered;

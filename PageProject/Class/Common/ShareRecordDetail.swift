@@ -13,9 +13,9 @@ class ShareRecordDetail: UIView {
     @IBOutlet weak var headerImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        headerImg.layer.borderWidth = 2
-        headerImg.layer.borderColor = UIColor.white.cgColor
-        headerImg.layer.cornerRadius = 26
+//        headerImg.layer.borderWidth = 2
+//        headerImg.layer.borderColor = UIColor.white.cgColor
+//        headerImg.layer.cornerRadius = 26
     }
     @IBAction func tapAction(_ sender: UITapGestureRecognizer) {
         self.removeFromSuperview()

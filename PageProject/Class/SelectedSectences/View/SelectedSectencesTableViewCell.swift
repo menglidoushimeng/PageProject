@@ -17,7 +17,7 @@ class SelectedSectencesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         nuberButton.layer.cornerRadius = 5
         nuberButton.layer.borderWidth = 1
-        nuberButton.layer.borderColor = ColorExtension().lineGray.cgColor
+        nuberButton.layer.borderColor = ColorExtension().smallGray.cgColor
         nuberButton.layer.masksToBounds = true
         
         rightLb.layer.cornerRadius = 14

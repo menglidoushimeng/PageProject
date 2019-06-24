@@ -46,6 +46,11 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
     
     @IBOutlet weak var tryAgainBtn: UIButton!
     
+    
+    @IBOutlet weak var errorBgImg: UIImageView!
+    @IBOutlet weak var errorMsg: UILabel!
+    
+    
     var rightAnswer:AnswerEnum?
     var selectedAnswer:AnswerEnum?
     var answerStates:ViewStatesEmum = .viewStateUnAnswer
@@ -57,10 +62,12 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
     }
     @IBAction func tryAgainAction(_ sender: UIButton) {
         tryAgainBtn.isHidden = true;
-        self.viewStateBackUnAnswer(lb: answerALb, image: answerAImg,textColor:ColorExtension().questionGemostenBlue)
-        self.viewStateBackUnAnswer(lb: answerBLb, image: answerBImg,textColor:ColorExtension().questionGemostenBlue)
-        self.viewStateBackUnAnswer(lb: answerCLb, image: answerCImg,textColor:ColorExtension().questionGemostenBlue)
-        self.viewStateBackUnAnswer(lb: answerDLb, image: answerDImg,textColor:ColorExtension().questionGemostenBlue)
+        errorMsg.isHidden = true
+        errorBgImg.isHidden = true
+        self.viewStateBackUnAnswer(lb: answerALb, image: answerAImg,textColor:ColorExtension().questionSnowBlue)
+        self.viewStateBackUnAnswer(lb: answerBLb, image: answerBImg,textColor:ColorExtension().questionSkyBlue)
+        self.viewStateBackUnAnswer(lb: answerCLb, image: answerCImg,textColor:ColorExtension().questionGold)
+        self.viewStateBackUnAnswer(lb: answerDLb, image: answerDImg,textColor:ColorExtension().questionBlue)
         answerStates = .viewStateUnAnswer
     }
     func viewStateBackUnAnswer(lb:UILabel,image:UIImageView,textColor:UIColor) {
@@ -71,7 +78,12 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
         if answerStates == .viewStateUnAnswer {
             answerStates = .viewStateDidAnswer
             selectedAnswer = AnswerEnum(rawValue: sender.tag)
-            tryAgainBtn.isHidden = false
+            if selectedAnswer != rightAnswer {
+                tryAgainBtn.isHidden = false
+                errorMsg.isHidden = false
+                errorBgImg.isHidden = false
+            }
+            
             self.updateViewStates(state: self.stateReturn(answer: .A), lb: answerALb, image: answerAImg)
             self.updateViewStates(state: self.stateReturn(answer: .B), lb: answerBLb, image: answerBImg)
             self.updateViewStates(state: self.stateReturn(answer: .C), lb: answerCLb, image: answerCImg)
@@ -116,7 +128,7 @@ class SelectedViewController: RootUnNaviProgressBarViewController {
         case .statesError:
             do {
                 
-                lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.foregroundColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughStyle:NSUnderlineStyle.styleSingle.rawValue])
+                lb.attributedText = NSAttributedString.init(string: lb.text!, attributes: [NSAttributedStringKey.baselineOffset:(0),NSAttributedStringKey.foregroundColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughColor:ColorExtension().errorOrange,NSAttributedStringKey.strikethroughStyle:NSUnderlineStyle.styleSingle.rawValue])
                 image.isHidden = false
                 image.image = UIImage.init(named: "dict_crossred")
         }

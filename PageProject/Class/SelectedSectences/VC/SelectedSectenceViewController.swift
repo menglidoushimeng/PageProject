@@ -28,74 +28,108 @@ class SelectedSectenceViewController: RootUnNaviProgressBarViewController {
     
     let question = UILabel()
     let headerView = UIView()
-    let tryAgainBtn = UIButton()
-    let footerView = UIView()
+    let footerView = Bundle.main.loadNibNamed("SelectedSectencesFooter", owner: self, options: nil)?.first as! SelectedSectencesFooter
     override func viewSetting() {
         super.viewSetting()
+        self.view.addSubview(footerView)
+        footerView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(40)
+        }
+        footerView.tryAgainSender.isHidden = viewStates != .checkError
+        footerView.tryAgainBlock = { ()  in
+            for sourceModel in self.questionTableSource {
+                sourceModel.selectedNum = nil
+            }
+            self.selectedIndex = 1
+            self.viewStates = .selected
+            self.questionTable.reloadData()
+        }
         self.view.addSubview(questionTable)
         questionTable.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalTo(self.safe)
+            make.left.right.equalTo(self.safe)
+            make.bottom.equalTo(footerView.snp.top)
             make.top.equalTo(self.turnBackBtn.snp.bottom)
         }
         questionTable.register(UINib.init(nibName: String(describing: type(of:SelectedSectencesTableViewCell())), bundle: nil), forCellReuseIdentifier:  String(describing: type(of:SelectedSectencesTableViewCell())))
         questionTable.delegate = self
         questionTable.dataSource = self
-        questionTable.rowHeight = 58
-        questionTable.estimatedSectionFooterHeight = 36
-        questionTable.sectionFooterHeight = UITableViewAutomaticDimension
-        questionTable.estimatedSectionHeaderHeight = 200
-        questionTable.sectionHeaderHeight = UITableViewAutomaticDimension
+        questionTable.bounces = false
+        
+
+        questionTable.sectionHeaderHeight = UIScreen.main.bounds.size.height - 424 - 50
+
         questionTable.separatorStyle  = .none
+        questionTable.showsHorizontalScrollIndicator = false
+        questionTable.showsVerticalScrollIndicator = false
         
         headerView.backgroundColor = UIColor.white
         headerView.addSubview(question)
         question.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(30)
-            make.bottom.equalToSuperview().offset(-30)
+            make.top.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().offset(-20)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
+          
         }
-        question.text  = "问题"
+        question.text  = "事实上，提高情商是可能的，这意味着学校需要确保，他们的学生正接受者他们真正的教育，并指导他们的未来不是完全取决于他们的智商"
         question.textAlignment = .center
+        question.numberOfLines = 0
         
-        tryAgainBtn.setImage(UIImage.init(named: "dict_retry"), for: .normal)
-        footerView.addSubview(tryAgainBtn)
-        tryAgainBtn.snp.makeConstraints { (make) in
-            make.right.equalTo(footerView.snp.right)
-            make.top.equalTo(footerView.snp.top)
-            make.bottom.equalTo(footerView.snp.bottom)
-        }
-        tryAgainBtn.isHidden = false
-        tryAgainBtn.addTarget(self, action: #selector(tryAgainAction(_:)), for: .touchDown)
+        self.forExampleSource()
+       
+       
         
-       let model1 =  SelectedSectencesModel()
-        model1.answerString = "选项A"
-        model1.rightNum = 2
-        model1.answerStringColor = ColorExtension().questionBlue
+    }
+    func forExampleSource() {
+        let model1 =  SelectedSectencesModel()
+        model1.answerString = "And the fact"
+        model1.rightNum = 1
+        model1.answerStringColor = ColorExtension().questionSnowBlue
         questionTableSource.append(model1)
         
         let model2 =  SelectedSectencesModel()
-        model2.answerString = "选项B"
-        model2.rightNum = 3
-        model2.answerStringColor = ColorExtension().questionRed
+        model2.answerString = "and know"
+        model2.rightNum = 7
+        model2.answerStringColor = ColorExtension().questionSkyBlue
         questionTableSource.append(model2)
         
         let model3 =  SelectedSectencesModel()
-        model3.answerString = "选项C"
-        model3.rightNum = 1
+        model3.answerString = "means"
+        model3.rightNum = 3
         model3.answerStringColor = ColorExtension().questionOrange
         questionTableSource.append(model3)
         
-        questionTable.reloadData()
+        let model4 =  SelectedSectencesModel()
+        model4.answerString = "that schools need to make sure"
+        model4.rightNum = 4
+        model4.answerStringColor = ColorExtension().questionBlue
+        questionTableSource.append(model4)
         
-    }
-
-    @objc func tryAgainAction(_ sender:UIButton) {
-        for sourceModel in questionTableSource {
-           sourceModel.selectedNum = nil
-        }
-        selectedIndex = 1
-        viewStates = .selected
+        let model5 =  SelectedSectencesModel()
+        model5.answerString = "that is might be possible to raise EQs.,"
+        model5.rightNum = 2
+        model5.answerStringColor = ColorExtension().questionGreen
+        questionTableSource.append(model5)
+        
+        let model6 =  SelectedSectencesModel()
+        model6.answerString = "that their sudents are receiving the education"
+        model6.rightNum = 5
+        model6.answerStringColor = ColorExtension().questionRed
+        questionTableSource.append(model6)
+        
+        let model7 =  SelectedSectencesModel()
+        model7.answerString = "that their futures are not entirely determined by their IQs"
+        model7.rightNum = 8
+        model7.answerStringColor = ColorExtension().questionWitheredGreen
+        questionTableSource.append(model7)
+        
+        let model8 =  SelectedSectencesModel()
+        model8.answerString = "they really need"
+        model8.rightNum = 6
+        model8.answerStringColor = ColorExtension().questionGemostenBlue
+        questionTableSource.append(model8)
+        
         questionTable.reloadData()
     }
     /*
@@ -110,12 +144,17 @@ class SelectedSectenceViewController: RootUnNaviProgressBarViewController {
 
 }
 extension SelectedSectenceViewController:UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return headerView;
     }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-       tryAgainBtn.isHidden = viewStates == .selected
-        return footerView
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row >= questionTableSource.count {
+            return 40
+        } else {
+            return 48
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if viewStates != .selected {
@@ -126,6 +165,16 @@ extension SelectedSectenceViewController:UITableViewDelegate {
             selectedModel.selectedNum = selectedIndex
             selectedIndex += 1
             tableView.reloadRows(at: [indexPath], with: .none)
+        } else {
+            selectedIndex = selectedModel.selectedNum!
+            for sourceModel in questionTableSource {
+                if sourceModel.selectedNum ?? 0 >= selectedIndex {
+                    sourceModel.selectedNum = nil
+                }
+            }
+            tableView.reloadData()
+          
+           
         }
         if selectedIndex > questionTableSource.count {
             var allRight = true
@@ -151,6 +200,7 @@ extension SelectedSectenceViewController:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        footerView.tryAgainSender.isHidden = viewStates != .checkError
         let cell = tableView.dequeueReusableCell(withIdentifier:  String(describing: type(of:SelectedSectencesTableViewCell())), for: indexPath) as! SelectedSectencesTableViewCell
         let selectedModel = questionTableSource[indexPath.row]
         cell.answerLb.text = selectedModel.answerString ?? ""

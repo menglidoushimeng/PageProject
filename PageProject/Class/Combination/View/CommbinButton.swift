@@ -11,9 +11,10 @@ import UIKit
 class CommbinButton: UIButton {
 
     var model:CommbinationModel?
+    
     var errorAttribut:NSAttributedString?
-    var normalAttribut:NSAttributedString?
     func errorState()  {
+        self.isSelected = false
         if errorAttribut == nil {
               errorAttribut =  self.titleLabel?.errorLine(font: UIFont.systemFont(ofSize: 18), textColor: ColorExtension().errorOrange, lineSpace: 0, text:  self.model?.title ?? "", lineColor: ColorExtension().errorOrange)
         }
@@ -21,12 +22,11 @@ class CommbinButton: UIButton {
         self.setAttributedTitle(errorAttribut, for: .normal)
     }
     func normalState() {
-        if normalAttribut == nil {
-             normalAttribut =  self.titleLabel?.attributString(font: UIFont.systemFont(ofSize: 18), textColor: self.model?.titleColor! ?? ColorExtension().errorOrange, lineSpace: 0, text: self.model?.title ?? "")
-        }
-        
-        self.setAttributedTitle(normalAttribut, for: .normal)
+        self.isSelected = false
+        self.isUserInteractionEnabled = true
+        self.setAttributedTitle(nil, for: .normal)
     }
+   
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

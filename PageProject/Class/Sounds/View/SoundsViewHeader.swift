@@ -54,7 +54,7 @@ class SoundsViewHeader: UIView {
         activity.startAnimating()
         sender.setImage(nil, for: .normal)
         sender.isUserInteractionEnabled = false
-        self.recordStatesLb.text = "打分中..."
+        self.recordStatesLb.text = "打分..."
          let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         observable.takeWhile{$0 < 4}.subscribe(onNext: { (time) in
            

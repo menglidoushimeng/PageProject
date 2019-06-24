@@ -19,7 +19,7 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksR-lc-HiQ">
                     <rect key="frame" x="28" y="172" width="319" height="343.5"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_rightupbluetick" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-rb-cRt">
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_rightupbluetick" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-rb-cRt">
                             <rect key="frame" x="271" y="0.0" width="48" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="NyE-p6-RCO"/>
@@ -32,7 +32,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRp-lx-WFH">
                             <rect key="frame" x="0.0" y="83" width="106.5" height="60"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课文与读数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-aU-OEn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课文跟读数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-aU-OEn">
                                     <rect key="frame" x="0.0" y="0.0" width="106.5" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,10 +112,17 @@
                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
-                                <fragment content=" we are going to have">
+                                <fragment content=" we are going to have ">
                                     <attributes>
                                         <color key="NSColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <font key="NSFont" metaFont="system" size="14"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="we are going to have">
+                                    <attributes>
+                                        <color key="NSColor" red="0.65098" green="0.65098" blue="0.65098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                     </attributes>
                                 </fragment>
@@ -135,16 +142,23 @@
                                 <constraint firstAttribute="width" secondItem="eup-tN-GnH" secondAttribute="height" multiplier="23:30" id="FRV-n9-Loz"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017年7月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O09-qG-QqE">
-                            <rect key="frame" x="202.5" y="319" width="61.5" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苏教版牛津(三七) 五上" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O09-qG-QqE">
+                            <rect key="frame" x="140" y="319" width="124" height="14.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                             <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit 6 We've got a lot of fun in the playroom." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-AF-NBa">
-                            <rect key="frame" x="10" y="299.5" width="254" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-AF-NBa">
+                            <rect key="frame" x="40" y="285" width="224" height="29"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Unit 6 We've got a lot of fun in the playroom.">
+                                    <attributes>
+                                        <color key="NSColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -167,9 +181,9 @@
                         <constraint firstItem="1YJ-fk-CoD" firstAttribute="centerX" secondItem="PX0-sT-Kee" secondAttribute="centerX" id="SyG-Ef-FpC"/>
                         <constraint firstItem="lvz-00-p3D" firstAttribute="centerX" secondItem="1YJ-fk-CoD" secondAttribute="centerX" id="UK2-xt-Bhw"/>
                         <constraint firstItem="O09-qG-QqE" firstAttribute="bottom" secondItem="eup-tN-GnH" secondAttribute="bottom" id="WuO-Qu-C0S"/>
+                        <constraint firstItem="q3z-AF-NBa" firstAttribute="width" secondItem="lvz-00-p3D" secondAttribute="width" multiplier="3:4" id="axl-Gq-OVh"/>
                         <constraint firstItem="9L4-9G-zBi" firstAttribute="centerX" secondItem="Lk9-Db-OwT" secondAttribute="centerX" id="eqR-iF-C9c"/>
                         <constraint firstItem="eup-tN-GnH" firstAttribute="top" secondItem="lvz-00-p3D" secondAttribute="bottom" constant="20" id="f3U-Oz-8ZB"/>
-                        <constraint firstItem="q3z-AF-NBa" firstAttribute="leading" secondItem="lvz-00-p3D" secondAttribute="leading" id="f6y-7y-GWM"/>
                         <constraint firstItem="yRp-lx-WFH" firstAttribute="centerY" secondItem="Lk9-Db-OwT" secondAttribute="centerY" constant="5" id="g8X-J7-XST"/>
                         <constraint firstItem="Lk9-Db-OwT" firstAttribute="leading" secondItem="yRp-lx-WFH" secondAttribute="trailing" id="p3N-kV-nTU"/>
                         <constraint firstItem="ZWQ-rb-cRt" firstAttribute="top" secondItem="ksR-lc-HiQ" secondAttribute="top" id="pOr-Ua-7sy"/>
@@ -185,6 +199,15 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCn-we-b7D">
+                    <rect key="frame" x="161.5" y="148" width="52" height="52"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="26"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -206,12 +229,17 @@
                     <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="13" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-pv-6Zd">
-                    <rect key="frame" x="161.5" y="146" width="52" height="52"/>
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="13" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-pv-6Zd">
+                    <rect key="frame" x="163.5" y="150" width="48" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="52" id="Yys-Mk-c0y"/>
-                        <constraint firstAttribute="width" constant="52" id="oab-uS-JFI"/>
+                        <constraint firstAttribute="height" constant="48" id="Yys-Mk-c0y"/>
+                        <constraint firstAttribute="width" constant="48" id="oab-uS-JFI"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_qr" translatesAutoresizingMaskIntoConstraints="NO" id="mAf-I3-9H8">
                     <rect key="frame" x="0.0" y="615" width="52" height="52"/>
@@ -251,6 +279,8 @@
             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
             <constraints>
+                <constraint firstItem="QgB-pv-6Zd" firstAttribute="centerY" secondItem="aCn-we-b7D" secondAttribute="centerY" id="0sj-iM-Ymc"/>
+                <constraint firstItem="QgB-pv-6Zd" firstAttribute="leading" secondItem="aCn-we-b7D" secondAttribute="leading" constant="2" id="5Tu-fX-yxZ"/>
                 <constraint firstItem="6F1-PW-ZVq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Bmt-4J-Tp3"/>
                 <constraint firstItem="ksR-lc-HiQ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="DkO-El-bfz"/>
                 <constraint firstItem="xbc-kw-Ru2" firstAttribute="leading" secondItem="mAf-I3-9H8" secondAttribute="trailing" constant="5" id="FXa-zv-Wic"/>
@@ -264,8 +294,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xbc-kw-Ru2" secondAttribute="trailing" constant="10" id="klo-Qw-uoI"/>
                 <constraint firstItem="ksR-lc-HiQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="oeb-rB-4WZ"/>
                 <constraint firstItem="ktE-g1-nCS" firstAttribute="bottom" secondItem="kUn-EO-B5B" secondAttribute="bottom" constant="-9" id="okT-hN-noh"/>
+                <constraint firstItem="QgB-pv-6Zd" firstAttribute="centerX" secondItem="aCn-we-b7D" secondAttribute="centerX" id="qlQ-ct-haA"/>
                 <constraint firstItem="6F1-PW-ZVq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="qus-GA-S6Z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mAf-I3-9H8" secondAttribute="bottom" id="r7x-9b-edY"/>
+                <constraint firstItem="QgB-pv-6Zd" firstAttribute="top" secondItem="aCn-we-b7D" secondAttribute="top" constant="2" id="tT2-bq-iKe"/>
                 <constraint firstItem="ksR-lc-HiQ" firstAttribute="top" secondItem="QgB-pv-6Zd" secondAttribute="bottom" constant="-26" id="vfx-2g-QEX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -273,7 +305,7 @@
                 <outlet property="headerImg" destination="QgB-pv-6Zd" id="VAv-Zq-Ahj"/>
                 <outletCollection property="gestureRecognizers" destination="byh-Ca-x33" appends="YES" id="ibK-3p-GmF"/>
             </connections>
-            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+            <point key="canvasLocation" x="110" y="19"/>
         </view>
         <tapGestureRecognizer id="byh-Ca-x33">
             <connections>

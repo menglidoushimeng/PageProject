@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectedSectencesFooter" customModule="PageProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN2-Yk-Qof">
+                    <rect key="frame" x="295" y="323.5" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="uly-Lw-RAQ"/>
+                        <constraint firstAttribute="width" constant="80" id="xqq-QH-4cu"/>
+                    </constraints>
+                    <state key="normal" image="dict_retry"/>
+                    <connections>
+                        <action selector="tryAgainAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1TD-lR-hTa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RN2-Yk-Qof" secondAttribute="trailing" id="H9V-Hk-Hdf"/>
+                <constraint firstItem="RN2-Yk-Qof" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="fgu-Gy-HCQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tryAgainSender" destination="RN2-Yk-Qof" id="KM6-0F-D2y"/>
+            </connections>
+            <point key="canvasLocation" x="130" y="177"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dict_retry" width="80.639999389648438" height="40.319999694824219"/>
+    </resources>
+</document>

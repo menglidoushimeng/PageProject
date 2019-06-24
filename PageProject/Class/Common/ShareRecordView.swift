@@ -10,6 +10,7 @@ import UIKit
 
 @objc protocol ShareRecordViewDelegate {
     func shareAchievementFunc()
+    func shareSoundsFunc()
 }
 
 class ShareRecordView: UIView {
@@ -22,6 +23,14 @@ class ShareRecordView: UIView {
     @IBAction func shareAchievementAction(_ sender: UIButton) {
         delegate?.shareAchievementFunc()
     }
+    
+    @IBAction func shareSoundsAction(_ sender: UIButton) {
+        delegate?.shareSoundsFunc()
+    }
+    @IBAction func headerAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

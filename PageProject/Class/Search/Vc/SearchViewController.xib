@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="PageProject" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtE-v0-pIG">
+                    <rect key="frame" x="156.5" y="328.5" width="62" height="30"/>
+                    <state key="normal" title="临时按钮"/>
+                    <connections>
+                        <action selector="action:" destination="-1" eventType="touchUpInside" id="cvg-bB-6Kv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckk-iI-E7u">
+                    <rect key="frame" x="153.5" y="368.5" width="68" height="30"/>
+                    <state key="normal" title="临时按钮1"/>
+                    <connections>
+                        <action selector="action1:" destination="-1" eventType="touchUpInside" id="Kyz-TX-PRR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFU-fg-k02">
+                    <rect key="frame" x="152" y="408.5" width="71" height="30"/>
+                    <state key="normal" title="临时按钮2"/>
+                    <connections>
+                        <action selector="action2:" destination="-1" eventType="touchUpInside" id="G5e-2j-STZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0C-GU-7dm">
+                    <rect key="frame" x="152" y="448.5" width="71" height="30"/>
+                    <state key="normal" title="临时按钮3"/>
+                    <connections>
+                        <action selector="action3:" destination="-1" eventType="touchUpInside" id="Lj1-uC-QYL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ckk-iI-E7u" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="3c3-oi-C0U"/>
+                <constraint firstItem="YtE-v0-pIG" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="DZ0-LQ-mgm"/>
+                <constraint firstItem="SFU-fg-k02" firstAttribute="centerX" secondItem="ckk-iI-E7u" secondAttribute="centerX" id="EAP-Z8-4qc"/>
+                <constraint firstItem="a0C-GU-7dm" firstAttribute="centerX" secondItem="SFU-fg-k02" secondAttribute="centerX" id="JgM-gw-AJM"/>
+                <constraint firstItem="a0C-GU-7dm" firstAttribute="top" secondItem="SFU-fg-k02" secondAttribute="bottom" constant="10" id="PmU-gs-exb"/>
+                <constraint firstItem="SFU-fg-k02" firstAttribute="top" secondItem="ckk-iI-E7u" secondAttribute="bottom" constant="10" id="efI-dk-Z7z"/>
+                <constraint firstItem="ckk-iI-E7u" firstAttribute="top" secondItem="YtE-v0-pIG" secondAttribute="bottom" constant="10" id="tcQ-WG-X0R"/>
+                <constraint firstItem="YtE-v0-pIG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xra-d2-lrQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

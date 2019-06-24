@@ -41,12 +41,16 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="m7Y-7N-wP0"/>
                     </constraints>
-                    <state key="normal" image="dict_lockscreenplay" backgroundImage="13"/>
+                    <state key="normal" image="dict_passageplayback" backgroundImage="13"/>
+                    <state key="selected" image="dict_passageplaybackpause"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="headerAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="G9O-kv-3VT"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_piparagraphsknowwell" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-7f-NcW">
                     <rect key="frame" x="170.5" y="50" width="170" height="92"/>
@@ -54,7 +58,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70q-Qq-ySd">
                     <rect key="frame" x="0.0" y="71" width="170.5" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课文与读数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at6-3p-PwB">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课文跟读数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at6-3p-PwB">
                             <rect key="frame" x="0.0" y="0.0" width="170.5" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,6 +162,9 @@
                             <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="shareSoundsAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Jmm-Kp-oqz"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,7 +216,8 @@
     </objects>
     <resources>
         <image name="13" width="1280" height="720"/>
-        <image name="dict_lockscreenplay" width="82.55999755859375" height="82.55999755859375"/>
+        <image name="dict_passageplayback" width="57.599998474121094" height="57.599998474121094"/>
+        <image name="dict_passageplaybackpause" width="57.599998474121094" height="57.599998474121094"/>
         <image name="dict_piparagraphsknowwell" width="106.08000183105469" height="92.160003662109375"/>
         <image name="dict_rightupbluetick" width="46.080001831054688" height="46.080001831054688"/>
     </resources>
