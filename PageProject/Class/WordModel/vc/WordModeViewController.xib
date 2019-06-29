@@ -23,11 +23,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Otr-cE-hUw">
                     <rect key="frame" x="40" y="74" width="334" height="555"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYm-Fg-Ych">
-                            <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="x1w-wv-8RD"/>
-                            </constraints>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dict_defaultunitbanner" translatesAutoresizingMaskIntoConstraints="NO" id="iYm-Fg-Ych">
+                            <rect key="frame" x="0.0" y="-30" width="334" height="132"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ˈsʌmə(r)/" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dV-L8-61n">
                             <rect key="frame" x="20" y="498" width="294" height="17"/>
@@ -88,7 +85,7 @@
                         <constraint firstItem="Jaq-la-neY" firstAttribute="top" secondItem="Otr-cE-hUw" secondAttribute="top" constant="25" id="dsI-f6-CGp"/>
                         <constraint firstItem="S3I-MB-hIm" firstAttribute="top" secondItem="mKA-VS-fFP" secondAttribute="bottom" id="fGj-ne-2KT"/>
                         <constraint firstAttribute="bottom" secondItem="3dV-L8-61n" secondAttribute="bottom" constant="40" id="fPr-EQ-MXh"/>
-                        <constraint firstItem="iYm-Fg-Ych" firstAttribute="top" secondItem="Otr-cE-hUw" secondAttribute="top" id="hN2-LS-29E"/>
+                        <constraint firstItem="iYm-Fg-Ych" firstAttribute="top" secondItem="Otr-cE-hUw" secondAttribute="top" constant="-30" id="hN2-LS-29E"/>
                         <constraint firstItem="uXN-mX-pZ2" firstAttribute="centerY" secondItem="Otr-cE-hUw" secondAttribute="centerY" id="iLp-vN-xwD"/>
                         <constraint firstItem="S3I-MB-hIm" firstAttribute="centerX" secondItem="Jaq-la-neY" secondAttribute="centerX" id="lU3-gf-WiM"/>
                         <constraint firstAttribute="trailing" secondItem="iYm-Fg-Ych" secondAttribute="trailing" id="o2J-vM-NxJ"/>
@@ -169,4 +166,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
     </objects>
+    <resources>
+        <image name="dict_defaultunitbanner" width="720" height="132"/>
+    </resources>
 </document>

@@ -28,6 +28,7 @@ class ReadingViewController: RootViewController {
     
     override func navigationBarSetting() {
         super.navigationBarSetting()
+        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexString: "#F4F5F6")
         self.hiddenNavigationBarLine()
         self.navigationItem.title = "单词卡"
         let rightItem = UIBarButtonItem.init(image: UIImage.init(named: "dict_icontextshare")!.withRenderingMode(.alwaysOriginal), style: UIBarButtonItemStyle.plain, target: self, action: #selector(rightBarItemAction(rightItem:)))
