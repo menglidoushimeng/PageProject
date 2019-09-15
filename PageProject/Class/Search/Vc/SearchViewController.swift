@@ -8,6 +8,8 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 class SearchViewController: RootUnNavigationBarViewController {
 
     override func viewDidLoad() {
@@ -17,7 +19,7 @@ class SearchViewController: RootUnNavigationBarViewController {
     }
 
     @IBAction func action(_ sender: UIButton) {
-        self.navigationController?.pushViewController(SentencePlayListViewController(), animated: true)
+        self.navigationController?.pushViewController(WordModeListViewController(), animated: true)
     }
     @IBAction func action1(_ sender: UIButton) {
         let vc = WriteSentenceViewController.init(keyBoardType: .normal, textViewType: .normal  )
@@ -28,6 +30,7 @@ class SearchViewController: RootUnNavigationBarViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @available(iOS 10.0, *)
     @IBAction func action3(_ sender: UIButton) {
         let vc = ReadingViewController.init()
         self.navigationController?.pushViewController(vc, animated: true);

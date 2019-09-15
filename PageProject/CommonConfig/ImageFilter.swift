@@ -19,7 +19,7 @@ typealias Filter = (CIImage) -> CIImage
 func gaussianBlur(radius: Double) -> Filter {
     return { image in
         let parameters: [String: Any] = [kCIInputRadiusKey: radius, kCIInputImageKey: image]
-        guard let filter = CIFilter(name: "CIGaussianBlur", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CIGaussianBlur", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage
@@ -33,7 +33,7 @@ func gaussianBlur(radius: Double) -> Filter {
 func colorGenerator(color: CIColor) -> Filter {
     return { image in
         let parameters: [String: Any] = [kCIInputColorKey: color]
-        guard let filter = CIFilter(name: "CIConstantColorGenerator", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CIConstantColorGenerator", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage.cropped(to: image.extent)
@@ -47,7 +47,7 @@ func colorGenerator(color: CIColor) -> Filter {
 func compositeSourceOver(overLay: CIImage) -> Filter {
     return { image in
         let parameters: [String: Any] = [kCIInputBackgroundImageKey: image, kCIInputImageKey: overLay]
-        guard let filter = CIFilter(name: "CISourceOverCompositing", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CISourceOverCompositing", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage.cropped(to: image.extent)
@@ -117,7 +117,7 @@ struct Filter1 {
 func gaussianBlur1(radius: CGFloat) -> Filter1 {
     return Filter1(output: { image in
         let parameters: [String: Any] = [kCIInputRadiusKey: radius, kCIInputImageKey: image]
-        guard let filter = CIFilter(name: "CIGaussianBlur", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CIGaussianBlur", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage
@@ -126,7 +126,7 @@ func gaussianBlur1(radius: CGFloat) -> Filter1 {
 func colorGenerator1(color: CIColor) -> Filter1 {
     return Filter1(output: { _ in
         let parameters: [String: Any] = [kCIInputColorKey: color]
-        guard let filter = CIFilter(name: "CIConstantColorGenerator", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CIConstantColorGenerator", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage
@@ -135,7 +135,7 @@ func colorGenerator1(color: CIColor) -> Filter1 {
 func compositeSourceOver1(image: CIImage) -> Filter1 {
     return Filter1(output: { backImage in
         let parameters: [String: Any] = [kCIInputBackgroundImageKey: backImage, kCIInputImageKey: image]
-        guard let filter = CIFilter(name: "CISourceOverCompositing", parameters: parameters) else { fatalError() }
+        guard let filter = CIFilter(name: "CISourceOverCompositing", withInputParameters: parameters) else { fatalError() }
         guard let outputImage = filter.outputImage else { fatalError() }
         
         return outputImage.cropped(to: image.extent)

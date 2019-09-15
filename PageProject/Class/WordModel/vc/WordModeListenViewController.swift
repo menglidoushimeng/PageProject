@@ -15,7 +15,15 @@ class WordModeListenViewController: RootViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    override func navigationBarSetting() {
+        super.navigationBarSetting()
+        self.hiddenNavigationBarLine()
+        self.navigationItem.title = "听写模式"
+    }
+    override func viewSetting() {
+        super.viewSetting()
+        self.view.backgroundColor = UIColor.hex(hexString: "#f4f5f6")
+    }
 
     /*
     // MARK: - Navigation

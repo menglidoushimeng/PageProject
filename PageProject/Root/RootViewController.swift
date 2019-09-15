@@ -55,6 +55,11 @@ class RootViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
     }
+    func hiddenNavigationLeftItem() {
+        let leftEmptyItem = UIBarButtonItem.init()
+        self.navigationItem.leftBarButtonItem = leftEmptyItem;
+       
+    }
     func isHeightVersion() -> Bool {
         let version = UIDevice.current.systemVersion
         let versionFloat = version._bridgeToObjectiveC().floatValue
@@ -62,7 +67,6 @@ class RootViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationBarSetting()
         self.viewSetting()
         self.viewDidSet()
@@ -89,8 +93,6 @@ class RootViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = leftItem
             return
         }
-        
-        
     }
     func viewSetting() {
         self.view.backgroundColor = UIColor.white

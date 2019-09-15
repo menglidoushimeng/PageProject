@@ -323,12 +323,22 @@
                         <constraint firstItem="YjP-m0-0V0" firstAttribute="height" secondItem="wbf-oD-MC8" secondAttribute="height" id="zrl-gX-mny"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-0Z-m1k">
+                    <rect key="frame" x="0.0" y="44" width="414" height="518.5"/>
+                    <connections>
+                        <action selector="rmAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LkL-xg-Bf1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5991452660891089" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="w0a-xZ-kM9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Myq-Q2-ECi"/>
+                <constraint firstItem="TUA-0Z-m1k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uzb-9B-rr4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="w0a-xZ-kM9" secondAttribute="bottom" id="Y9b-6e-cln"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w0a-xZ-kM9" secondAttribute="trailing" id="Zx3-uJ-qRF"/>
+                <constraint firstItem="TUA-0Z-m1k" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="bXg-9l-9fi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TUA-0Z-m1k" secondAttribute="trailing" id="k2Y-y2-YmC"/>
+                <constraint firstItem="w0a-xZ-kM9" firstAttribute="top" secondItem="TUA-0Z-m1k" secondAttribute="bottom" id="olo-gO-Zcq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

@@ -17,13 +17,19 @@ class WordModeListViewController: RootViewController {
     }
 
     @IBOutlet weak var wordListTable: UITableView!
-    
+    override func navigationBarSetting() {
+        super.navigationBarSetting()
+        self.hiddenNavigationBarLine()
+        self.navigationItem.title = "已播放28次"
+        self.hiddenNavigationLeftItem()
+    }
     override func viewSetting() {
          super.viewSetting()
-        
+         self.view.backgroundColor = UIColor.hex(hexString: "#F4F5F6")
         self.wordListTable.register(UINib.init(nibName: "WordModeListTableViewCell", bundle: nil), forCellReuseIdentifier: "WordModeListTableViewCell");
-        self.wordListTable.rowHeight = 20
+        self.wordListTable.rowHeight = 30
         self.wordListTable.dataSource = self
+        self.wordListTable.layer.cornerRadius = 5
     }
     /*
     // MARK: - Navigation
@@ -34,7 +40,14 @@ class WordModeListViewController: RootViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func turnbackAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func shareAction(_ sender: UIButton) {
+    }
+    
 }
 
 extension WordModeListViewController : UITableViewDataSource {

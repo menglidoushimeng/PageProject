@@ -10,6 +10,10 @@ import UIKit
 
 class ReadBrowseSetView: UIView {
 
+    
+    @IBAction func rmAction(_ sender: UIButton) {
+        self.removeFromSuperview()
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
